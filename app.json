@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "LingoScroll",
+    "slug": "lingoscroll",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "lingoscroll",
+    "newArchEnabled": true,
+    "splash": {
+      "backgroundColor": "#0E1116",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1116"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    }
+  }
+}
