@@ -38,6 +38,7 @@ export const t = {
     speakPrompt: 'Sprich den Satz laut nach',
     speakTap: 'Zum Sprechen tippen',
     speakListening: 'Ich höre zu …',
+    speakStop: 'Fertig? Zum Stoppen tippen',
     speakGood: 'Super ausgesprochen! 👏',
     speakClose: 'Fast! Ich habe gehört:',
     speakRetry: 'Nochmal versuchen',

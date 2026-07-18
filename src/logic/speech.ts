@@ -1,10 +1,10 @@
 /**
  * Aussprache-Erkennung über die Web Speech API (Browser).
  *
- * Die App nimmt über das Mikrofon auf, wandelt die Aussprache in Text um und
- * vergleicht diesen mit dem Zielsatz. Funktioniert im Web (am besten in Chrome /
- * Android; auf iPhone je nach Browser eingeschränkt). Auf nativen Builds ist die
- * API nicht verfügbar – dort greift ein Fallback.
+ * Die App nimmt über das Mikrofon auf, wandelt die Aussprache live in Text um und
+ * vergleicht ihn mit dem Zielsatz. Funktioniert im Web (am besten Chrome /
+ * Android). Auf nativen Builds ist die API nicht verfügbar – dort greift ein
+ * Fallback.
  */
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -19,43 +19,99 @@ export function isSpeechSupported(): boolean {
   return getRecognition() !== null;
 }
 
+export interface SpeechSession {
+  /** Aufnahme beenden und das Ergebnis auswerten. */
+  stop: () => void;
+  /** Aufnahme abbrechen (ohne Ergebnis). */
+  abort: () => void;
+}
+
+interface StartOptions {
+  lang?: string;
+  /** Live-Zwischenstand während des Sprechens. */
+  onInterim?: (text: string) => void;
+  /** Endergebnis (erkannte Varianten, beste zuerst). */
+  onResult: (alternatives: string[]) => void;
+  onError: (error: string) => void;
+}
+
 /**
- * Hört einmalig zu und liefert die erkannten Textvarianten (Alternativen).
- * Wirft einen Fehler, wenn nichts verstanden wurde oder abgebrochen wird.
+ * Startet eine Erkennungssitzung mit Live-Zwischenergebnissen. Gibt eine Sitzung
+ * mit stop()/abort() zurück – so kann der Nutzer die Aufnahme selbst beenden,
+ * ohne auf die automatische Sprechpause-Erkennung zu warten.
  */
-export function recognizeOnce(lang = 'en-US'): Promise<string[]> {
-  return new Promise((resolve, reject) => {
-    const SR = getRecognition();
-    if (!SR) {
-      reject(new Error('unsupported'));
-      return;
-    }
-    const rec = new SR();
-    rec.lang = lang;
-    rec.interimResults = false;
-    rec.maxAlternatives = 5;
-    let settled = false;
+export function startRecognition(opts: StartOptions): SpeechSession | null {
+  const SR = getRecognition();
+  if (!SR) {
+    opts.onError('unsupported');
+    return null;
+  }
 
-    rec.onresult = (event: any) => {
-      settled = true;
-      const result = event.results[0];
-      const alternatives: string[] = [];
-      for (let i = 0; i < result.length; i++) alternatives.push(result[i].transcript);
-      resolve(alternatives);
-    };
-    rec.onerror = (event: any) => {
-      if (!settled) reject(new Error(event.error || 'error'));
-    };
-    rec.onend = () => {
-      if (!settled) reject(new Error('no-speech'));
-    };
+  const rec = new SR();
+  rec.lang = opts.lang ?? 'en-US';
+  rec.interimResults = true;
+  rec.continuous = false;
+  rec.maxAlternatives = 5;
 
-    try {
-      rec.start();
-    } catch (err) {
-      reject(err as Error);
+  let finalAlts: string[] | null = null;
+  let lastInterim = '';
+  let stopped = false;
+
+  rec.onresult = (event: any) => {
+    let interim = '';
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const result = event.results[i];
+      if (result.isFinal) {
+        finalAlts = [];
+        for (let j = 0; j < result.length; j++) finalAlts.push(result[j].transcript);
+      } else {
+        interim += result[0].transcript;
+      }
     }
-  });
+    if (finalAlts) {
+      opts.onResult(finalAlts);
+    } else if (interim) {
+      lastInterim = interim;
+      opts.onInterim?.(interim);
+    }
+  };
+
+  rec.onerror = (event: any) => {
+    if (!finalAlts) opts.onError(event.error || 'error');
+  };
+
+  rec.onend = () => {
+    // Falls kein finales Ergebnis kam, aber ein Zwischenstand da ist: den werten.
+    if (!finalAlts) {
+      if (lastInterim.trim()) opts.onResult([lastInterim]);
+      else if (!stopped) opts.onError('no-speech');
+    }
+  };
+
+  try {
+    rec.start();
+  } catch (err) {
+    opts.onError((err as Error)?.message ?? 'error');
+    return null;
+  }
+
+  return {
+    stop: () => {
+      try {
+        rec.stop();
+      } catch {
+        /* ignorieren */
+      }
+    },
+    abort: () => {
+      stopped = true;
+      try {
+        rec.abort();
+      } catch {
+        /* ignorieren */
+      }
+    },
+  };
 }
 
 /** Text vereinheitlichen: klein, ohne Satzzeichen, einfache Leerzeichen. */
@@ -79,11 +135,7 @@ function levenshtein(a: string, b: string): number {
     row[0] = i;
     for (let j = 1; j <= n; j++) {
       const temp = row[j];
-      row[j] = Math.min(
-        row[j] + 1, // Löschen
-        row[j - 1] + 1, // Einfügen
-        prev + (a[i - 1] === b[j - 1] ? 0 : 1), // Ersetzen
-      );
+      row[j] = Math.min(row[j] + 1, row[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1));
       prev = temp;
     }
   }
@@ -104,7 +156,6 @@ export function scorePronunciation(target: string, saidVariants: string[]): numb
     const s = normalize(raw);
     if (!s) continue;
 
-    // Wort-Überdeckung (Reihenfolge egal, Mehrfachvorkommen berücksichtigt).
     const pool = s.split(' ').filter(Boolean);
     let matched = 0;
     for (const w of tWords) {
@@ -116,7 +167,6 @@ export function scorePronunciation(target: string, saidVariants: string[]): numb
     }
     const wordRatio = tWords.length ? matched / tWords.length : 0;
 
-    // Zeichen-Ähnlichkeit über die ganze Phrase.
     const dist = levenshtein(t, s);
     const charSim = 1 - dist / Math.max(t.length, s.length, 1);
 
@@ -125,5 +175,5 @@ export function scorePronunciation(target: string, saidVariants: string[]): numb
   return best;
 }
 
-/** Schwelle, ab der die Aussprache als korrekt gilt (etwas nachsichtig). */
-export const PRONUNCIATION_THRESHOLD = 0.6;
+/** Schwelle, ab der die Aussprache als korrekt gilt (nachsichtig für Akzente). */
+export const PRONUNCIATION_THRESHOLD = 0.5;

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -16,8 +16,9 @@ import { shuffle } from '../utils/shuffle';
 import {
   isSpeechSupported,
   PRONUNCIATION_THRESHOLD,
-  recognizeOnce,
   scorePronunciation,
+  startRecognition,
+  SpeechSession,
 } from '../logic/speech';
 import { PrimaryButton } from './ui/PrimaryButton';
 
@@ -199,29 +200,46 @@ function QuizView({ card, onResult }: { card: QuizCard; onResult: (c: boolean) =
   );
 }
 
-type SpeakState = 'idle' | 'listening' | 'correct' | 'close' | 'error';
+type SpeakState = 'idle' | 'listening' | 'correct' | 'close' | 'error' | 'denied';
 
 function SpeakingView({ card }: { card: SpeakingCard }) {
   const supported = useMemo(() => isSpeechSupported(), []);
   const [state, setState] = useState<SpeakState>('idle');
+  const [interim, setInterim] = useState('');
   const [heard, setHeard] = useState('');
+  const sessionRef = useRef<SpeechSession | null>(null);
 
-  const listen = async () => {
-    if (!supported || state === 'listening') return;
-    setState('listening');
-    setHeard('');
-    try {
-      const variants = await recognizeOnce('en-US');
-      const score = scorePronunciation(card.text, variants);
-      setHeard(variants[0] ?? '');
-      setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
-    } catch {
-      setState('error');
+  // Beim Verlassen der Karte laufende Aufnahme abbrechen.
+  useEffect(() => () => sessionRef.current?.abort(), []);
+
+  const evaluate = (alts: string[]) => {
+    sessionRef.current = null;
+    const score = scorePronunciation(card.text, alts);
+    setHeard(alts[0] ?? '');
+    setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
+  };
+
+  const onMicPress = () => {
+    if (state === 'listening') {
+      // Nutzer beendet die Aufnahme selbst -> sofort auswerten.
+      sessionRef.current?.stop();
+      return;
     }
+    setInterim('');
+    setHeard('');
+    setState('listening');
+    sessionRef.current = startRecognition({
+      lang: 'en-US',
+      onInterim: (text) => setInterim(text),
+      onResult: evaluate,
+      onError: (err) => {
+        sessionRef.current = null;
+        setState(err === 'not-allowed' || err === 'service-not-allowed' ? 'denied' : 'error');
+      },
+    });
   };
 
   const isDone = state === 'correct';
-  const micDisabled = state === 'listening';
 
   return (
     <View style={styles.center}>
@@ -231,14 +249,13 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
       {supported ? (
         <>
           <Pressable
-            onPress={listen}
-            disabled={micDisabled}
+            onPress={onMicPress}
             style={[
               styles.micButton,
               state === 'listening' && styles.micButtonListening,
               isDone && styles.micButtonDone,
-              state === 'close' && styles.micButtonRetry,
-              state === 'error' && styles.micButtonRetry,
+              (state === 'close' || state === 'error' || state === 'denied') &&
+                styles.micButtonRetry,
             ]}
           >
             <Text style={styles.micIcon}>{isDone ? '✓' : '🎤'}</Text>
@@ -246,7 +263,13 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
 
           {state === 'idle' && <Text style={styles.spokenHint}>{t.lesson.speakTap}</Text>}
           {state === 'listening' && (
-            <Text style={styles.spokenHint}>{t.lesson.speakListening}</Text>
+            <View style={styles.center}>
+              <Text style={[styles.spokenHint, { color: theme.colors.accent }]}>
+                {t.lesson.speakListening}
+              </Text>
+              {interim ? <Text style={styles.interimText}>“{interim}”</Text> : null}
+              <Text style={styles.retryHint}>{t.lesson.speakStop}</Text>
+            </View>
           )}
           {state === 'correct' && (
             <Text style={[styles.spokenHint, { color: theme.colors.success }]}>
@@ -264,6 +287,11 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
           {state === 'error' && (
             <Text style={[styles.spokenHint, { color: theme.colors.error }]}>
               {t.lesson.speakError}
+            </Text>
+          )}
+          {state === 'denied' && (
+            <Text style={[styles.spokenHint, { color: theme.colors.error }]}>
+              {t.lesson.speakAllow}
             </Text>
           )}
         </>
@@ -444,6 +472,13 @@ const styles = StyleSheet.create({
     fontSize: theme.font.small,
     marginTop: 2,
     textDecorationLine: 'underline',
+  },
+  interimText: {
+    color: theme.colors.text,
+    fontSize: theme.font.body,
+    fontWeight: '700',
+    marginTop: theme.spacing(1),
+    textAlign: 'center',
   },
 
   // Tip
