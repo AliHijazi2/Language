@@ -75,4 +75,6 @@ export interface AppState {
   level: Level | null;
   onboarded: boolean;
   progress: Record<string, LessonProgress>;
+  /** Ausgewählte Themen-Filter. Leer = alle Themen anzeigen. */
+  topics: string[];
 }

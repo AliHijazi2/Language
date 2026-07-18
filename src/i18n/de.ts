@@ -41,6 +41,9 @@ export const t = {
   settings: {
     title: 'Einstellungen',
     level: 'Niveau',
+    topics: 'Themen',
+    topicsHint: 'Wähle Themen, um den Feed einzugrenzen.',
+    allTopics: 'Alle Themen',
     resetProgress: 'Fortschritt zurücksetzen',
     resetConfirm: 'Wirklich den gesamten Lernfortschritt löschen?',
     cancel: 'Abbrechen',

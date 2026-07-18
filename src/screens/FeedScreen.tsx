@@ -32,7 +32,8 @@ interface FeedItem {
  * die adaptive buildFeed-Logik (Spaced Repetition + Niveau).
  */
 export function FeedScreen() {
-  const { state, recordAnswer, setLevel, resetProgress } = useAppState();
+  const { state, recordAnswer, setLevel, toggleTopic, clearTopics, resetProgress } =
+    useAppState();
   const insets = useSafeAreaInsets();
 
   const level = state.level ?? 'beginner';
@@ -43,6 +44,19 @@ export function FeedScreen() {
     () => LESSONS.filter((l) => l.courseId === state.courseId),
     [state.courseId],
   );
+
+  // Alle Themen dieser Sprachrichtung (in Reihenfolge des ersten Auftretens).
+  const allTopics = useMemo(() => {
+    const seen: string[] = [];
+    for (const l of courseLessons) if (!seen.includes(l.topic)) seen.push(l.topic);
+    return seen;
+  }, [courseLessons]);
+
+  // Auf die ausgewählten Themen eingegrenzte Lektionen (leer = alle).
+  const activeLessons = useMemo(() => {
+    if (state.topics.length === 0) return courseLessons;
+    return courseLessons.filter((l) => state.topics.includes(l.topic));
+  }, [courseLessons, state.topics]);
 
   const [height, setHeight] = useState(0);
   const [items, setItems] = useState<FeedItem[]>([]);
@@ -60,10 +74,10 @@ export function FeedScreen() {
   const toItems = (lessons: Lesson[]): FeedItem[] =>
     lessons.map((lesson) => ({ key: `${lesson.id}#${keyCounter.current++}`, lesson }));
 
-  // (Neu-)Aufbau des Feeds bei Start, Höhenänderung oder Niveauwechsel.
+  // (Neu-)Aufbau des Feeds bei Start, Höhenänderung, Niveau- oder Themenwechsel.
   useEffect(() => {
     if (height <= 0) return;
-    const built = buildFeed(courseLessons, level, progressRef.current, Date.now(), {
+    const built = buildFeed(activeLessons, level, progressRef.current, Date.now(), {
       size: 8,
     });
     setItems(toItems(built));
@@ -72,12 +86,12 @@ export function FeedScreen() {
       flatListRef.current?.scrollToOffset({ offset: 0, animated: false }),
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height, level, courseLessons]);
+  }, [height, level, activeLessons]);
 
   const appendMore = () => {
     setItems((prev) => {
       const recent = new Set(prev.slice(-6).map((i) => i.lesson.id));
-      const more = buildFeed(courseLessons, levelRef.current, progressRef.current, Date.now(), {
+      const more = buildFeed(activeLessons, levelRef.current, progressRef.current, Date.now(), {
         exclude: recent,
         size: 6,
       });
@@ -172,7 +186,11 @@ export function FeedScreen() {
         course={course}
         level={level}
         progress={state.progress}
+        allTopics={allTopics}
+        selectedTopics={state.topics}
         onChangeLevel={handleChangeLevel}
+        onToggleTopic={toggleTopic}
+        onClearTopics={clearTopics}
         onReset={handleReset}
         onClose={() => setSettingsOpen(false)}
       />

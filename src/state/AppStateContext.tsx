@@ -18,6 +18,8 @@ interface AppStateContextValue {
   completeOnboarding: (courseId: string, level: Level) => void;
   recordAnswer: (lessonId: string, correct: boolean) => void;
   setLevel: (level: Level) => void;
+  toggleTopic: (topic: string) => void;
+  clearTopics: () => void;
   resetProgress: () => void;
 }
 
@@ -58,6 +60,20 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
     setState((prev) => ({ ...prev, level }));
   }, []);
 
+  const toggleTopic = useCallback((topic: string) => {
+    setState((prev) => {
+      const active = prev.topics.includes(topic);
+      return {
+        ...prev,
+        topics: active ? prev.topics.filter((t) => t !== topic) : [...prev.topics, topic],
+      };
+    });
+  }, []);
+
+  const clearTopics = useCallback(() => {
+    setState((prev) => ({ ...prev, topics: [] }));
+  }, []);
+
   const recordAnswer = useCallback((lessonId: string, correct: boolean) => {
     setState((prev) => {
       const now = Date.now();
@@ -77,8 +93,26 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const value = useMemo<AppStateContextValue>(
-    () => ({ state, ready, completeOnboarding, recordAnswer, setLevel, resetProgress }),
-    [state, ready, completeOnboarding, recordAnswer, setLevel, resetProgress],
+    () => ({
+      state,
+      ready,
+      completeOnboarding,
+      recordAnswer,
+      setLevel,
+      toggleTopic,
+      clearTopics,
+      resetProgress,
+    }),
+    [
+      state,
+      ready,
+      completeOnboarding,
+      recordAnswer,
+      setLevel,
+      toggleTopic,
+      clearTopics,
+      resetProgress,
+    ],
   );
 
   return <AppStateContext.Provider value={value}>{children}</AppStateContext.Provider>;

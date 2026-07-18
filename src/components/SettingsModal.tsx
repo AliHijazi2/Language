@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { t } from '../i18n/de';
 import { Course, Level, LessonProgress } from '../types';
@@ -12,7 +12,11 @@ interface Props {
   course: Course | undefined;
   level: Level;
   progress: Record<string, LessonProgress>;
+  allTopics: string[];
+  selectedTopics: string[];
   onChangeLevel: (level: Level) => void;
+  onToggleTopic: (topic: string) => void;
+  onClearTopics: () => void;
   onReset: () => void;
   onClose: () => void;
 }
@@ -23,10 +27,15 @@ export function SettingsModal({
   course,
   level,
   progress,
+  allTopics,
+  selectedTopics,
   onChangeLevel,
+  onToggleTopic,
+  onClearTopics,
   onReset,
   onClose,
 }: Props) {
+  const allActive = selectedTopics.length === 0;
   const entries = Object.values(progress);
   const now = Date.now();
   const learned = entries.filter(isLearned).length;
@@ -36,6 +45,7 @@ export function SettingsModal({
     <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
       <View style={styles.backdrop}>
         <View style={styles.sheet}>
+          <ScrollView showsVerticalScrollIndicator={false}>
           <Text style={styles.title}>{t.settings.title}</Text>
 
           {course ? (
@@ -75,6 +85,34 @@ export function SettingsModal({
             })}
           </View>
 
+          {/* Themen filtern */}
+          <Text style={styles.section}>{t.settings.topics}</Text>
+          <Text style={styles.topicsHint}>{t.settings.topicsHint}</Text>
+          <View style={styles.topicWrap}>
+            <Pressable
+              onPress={onClearTopics}
+              style={[styles.topicChip, allActive && styles.topicChipSelected]}
+            >
+              <Text style={[styles.topicText, allActive && styles.topicTextSelected]}>
+                {t.settings.allTopics}
+              </Text>
+            </Pressable>
+            {allTopics.map((topic) => {
+              const selected = selectedTopics.includes(topic);
+              return (
+                <Pressable
+                  key={topic}
+                  onPress={() => onToggleTopic(topic)}
+                  style={[styles.topicChip, selected && styles.topicChipSelected]}
+                >
+                  <Text style={[styles.topicText, selected && styles.topicTextSelected]}>
+                    {topic}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+
           <PrimaryButton
             label={t.settings.resetProgress}
             variant="ghost"
@@ -86,6 +124,7 @@ export function SettingsModal({
             onPress={onClose}
             style={{ marginTop: theme.spacing(1.5) }}
           />
+          </ScrollView>
         </View>
       </View>
     </Modal>
@@ -104,6 +143,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: theme.radius.lg,
     padding: theme.spacing(3),
     paddingBottom: theme.spacing(5),
+    maxHeight: '88%',
   },
   title: {
     color: theme.colors.text,
@@ -167,6 +207,36 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   levelTextSelected: {
+    color: theme.colors.text,
+  },
+  topicsHint: {
+    color: theme.colors.textMuted,
+    fontSize: theme.font.small,
+    marginBottom: theme.spacing(1.5),
+  },
+  topicWrap: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: theme.spacing(1),
+  },
+  topicChip: {
+    backgroundColor: theme.colors.surfaceAlt,
+    borderRadius: theme.radius.pill,
+    paddingVertical: theme.spacing(1),
+    paddingHorizontal: theme.spacing(1.75),
+    borderWidth: 2,
+    borderColor: 'transparent',
+  },
+  topicChipSelected: {
+    borderColor: theme.colors.primary,
+    backgroundColor: theme.colors.primaryDark,
+  },
+  topicText: {
+    color: theme.colors.textMuted,
+    fontSize: theme.font.small,
+    fontWeight: '700',
+  },
+  topicTextSelected: {
     color: theme.colors.text,
   },
 });
