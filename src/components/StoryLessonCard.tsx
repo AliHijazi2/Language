@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 import { t } from '../i18n/de';
@@ -13,14 +13,9 @@ import {
 } from '../types';
 import { theme } from '../theme';
 import { shuffle } from '../utils/shuffle';
-import {
-  isIOS,
-  isSpeechSupported,
-  PRONUNCIATION_THRESHOLD,
-  scorePronunciation,
-  startRecognition,
-  SpeechSession,
-} from '../logic/speech';
+import { PRONUNCIATION_THRESHOLD, scorePronunciation } from '../logic/speech';
+import { Recording, startRecording } from '../logic/recorder';
+import { ensureTranscriber, isModelReady, isWhisperCapable, transcribe } from '../logic/whisper';
 import { PrimaryButton } from './ui/PrimaryButton';
 
 interface Props {
@@ -41,6 +36,14 @@ export function StoryLessonCard({ lesson, isReview, height, onComplete, onNext }
   const [step, setStep] = useState(0);
   const [allCorrect, setAllCorrect] = useState(true);
   const [answered, setAnswered] = useState<Record<number, boolean>>({});
+
+  // Whisper-Modell im Hintergrund vorladen, sobald die Lektion eine Sprechen-
+  // Karte hat – dann ist es fertig, wenn der Nutzer dort ankommt.
+  useEffect(() => {
+    if (isWhisperCapable() && cards.some((c) => c.type === 'speaking')) {
+      ensureTranscriber().catch(() => {});
+    }
+  }, [cards]);
 
   const card = cards[step];
   const isLast = step === cards.length - 1;
@@ -201,45 +204,48 @@ function QuizView({ card, onResult }: { card: QuizCard; onResult: (c: boolean) =
   );
 }
 
-type SpeakState = 'idle' | 'listening' | 'correct' | 'close' | 'error' | 'denied';
+type SpeakState = 'idle' | 'recording' | 'processing' | 'correct' | 'close' | 'error' | 'denied';
 
 function SpeakingView({ card }: { card: SpeakingCard }) {
-  const supported = useMemo(() => isSpeechSupported(), []);
-  const ios = useMemo(() => isIOS(), []);
+  const capable = useMemo(() => isWhisperCapable(), []);
   const [state, setState] = useState<SpeakState>('idle');
-  const [interim, setInterim] = useState('');
   const [heard, setHeard] = useState('');
-  const sessionRef = useRef<SpeechSession | null>(null);
+  const [progress, setProgress] = useState(0);
+  const recordingRef = useRef<Recording | null>(null);
 
   // Beim Verlassen der Karte laufende Aufnahme abbrechen.
-  useEffect(() => () => sessionRef.current?.abort(), []);
+  useEffect(() => () => recordingRef.current?.cancel(), []);
 
-  const evaluate = (alts: string[]) => {
-    sessionRef.current = null;
-    const score = scorePronunciation(card.text, alts);
-    setHeard(alts[0] ?? '');
-    setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
-  };
+  const onMicPress = async () => {
+    if (state === 'processing') return;
 
-  const onMicPress = () => {
-    if (state === 'listening') {
-      // Nutzer beendet die Aufnahme selbst -> sofort auswerten.
-      sessionRef.current?.stop();
+    if (state === 'recording') {
+      // Aufnahme beenden und auswerten.
+      const rec = recordingRef.current;
+      recordingRef.current = null;
+      if (!rec) return;
+      setState('processing');
+      try {
+        const audio = await rec.stop();
+        const text = await transcribe(audio, 'english', setProgress);
+        setHeard(text);
+        const score = scorePronunciation(card.text, [text]);
+        setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
+      } catch {
+        setState('error');
+      }
       return;
     }
-    setInterim('');
+
+    // Aufnahme starten.
     setHeard('');
-    setState('listening');
-    sessionRef.current = startRecognition({
-      lang: 'en-US',
-      phrase: card.text,
-      onInterim: (text) => setInterim(text),
-      onResult: evaluate,
-      onError: (err) => {
-        sessionRef.current = null;
-        setState(err === 'not-allowed' || err === 'service-not-allowed' ? 'denied' : 'error');
-      },
-    });
+    setProgress(0);
+    try {
+      recordingRef.current = await startRecording();
+      setState('recording');
+    } catch {
+      setState('denied');
+    }
   };
 
   const isDone = state === 'correct';
@@ -249,30 +255,38 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
       <Text style={styles.speakPrompt}>{t.lesson.speakPrompt}</Text>
       <Text style={styles.speakText}>{card.text}</Text>
 
-      {supported ? (
+      {capable ? (
         <>
           <Pressable
             onPress={onMicPress}
+            disabled={state === 'processing'}
             style={[
               styles.micButton,
-              state === 'listening' && styles.micButtonListening,
+              state === 'recording' && styles.micButtonListening,
               isDone && styles.micButtonDone,
               (state === 'close' || state === 'error' || state === 'denied') &&
                 styles.micButtonRetry,
             ]}
           >
-            <Text style={styles.micIcon}>{isDone ? '✓' : '🎤'}</Text>
+            {state === 'processing' ? (
+              <ActivityIndicator color={theme.colors.primary} />
+            ) : (
+              <Text style={styles.micIcon}>{isDone ? '✓' : state === 'recording' ? '■' : '🎤'}</Text>
+            )}
           </Pressable>
 
-          {state === 'idle' && <Text style={styles.spokenHint}>{t.lesson.speakTap}</Text>}
-          {state === 'listening' && (
-            <View style={styles.center}>
-              <Text style={[styles.spokenHint, { color: theme.colors.accent }]}>
-                {t.lesson.speakListening}
-              </Text>
-              {interim ? <Text style={styles.interimText}>“{interim}”</Text> : null}
-              <Text style={styles.retryHint}>{t.lesson.speakStop}</Text>
-            </View>
+          {state === 'idle' && <Text style={styles.spokenHint}>{t.lesson.speakTapRecord}</Text>}
+          {state === 'recording' && (
+            <Text style={[styles.spokenHint, { color: theme.colors.accent }]}>
+              {t.lesson.speakRecording}
+            </Text>
+          )}
+          {state === 'processing' && (
+            <Text style={styles.spokenHint}>
+              {!isModelReady() || (progress > 0 && progress < 1)
+                ? `${t.lesson.speakLoadingModel} ${Math.round(progress * 100)}%`
+                : t.lesson.speakProcessing}
+            </Text>
           )}
           {state === 'correct' && (
             <View style={styles.center}>
@@ -285,7 +299,7 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
           {state === 'close' && (
             <View style={styles.center}>
               <Text style={[styles.spokenHint, { color: theme.colors.error }]}>
-                {t.lesson.speakClose} “{heard}”
+                {t.lesson.speakClose} „{heard}“
               </Text>
               <Text style={styles.retryHint}>{t.lesson.speakRetry}</Text>
             </View>
@@ -300,7 +314,6 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
               {t.lesson.speakAllow}
             </Text>
           )}
-          {ios && <Text style={styles.iosTip}>{t.lesson.speakIosTip}</Text>}
         </>
       ) : (
         <Text style={styles.spokenHint}>{t.lesson.speakUnsupported}</Text>
