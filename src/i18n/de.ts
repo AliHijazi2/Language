@@ -45,6 +45,8 @@ export const t = {
     speakError: 'Ich habe nichts verstanden. Nochmal?',
     speakAllow: 'Bitte den Mikrofon-Zugriff erlauben.',
     speakUnsupported: 'Spracherkennung ist in diesem Browser nicht verfügbar – tippe zum Weitermachen.',
+    speakIosTip:
+      'iPhone-Tipp: Safari nutzt die Diktatsprache deines Handys. Stelle sie auf Englisch (Einstellungen → Allgemein → Tastatur → Diktatsprachen → Englisch), dann erkennt es dein Englisch viel besser.',
     meaning: 'Bedeutung',
     tipLabel: 'Tipp',
     xp: 'XP',

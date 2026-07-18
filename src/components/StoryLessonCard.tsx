@@ -14,6 +14,7 @@ import {
 import { theme } from '../theme';
 import { shuffle } from '../utils/shuffle';
 import {
+  isIOS,
   isSpeechSupported,
   PRONUNCIATION_THRESHOLD,
   scorePronunciation,
@@ -204,6 +205,7 @@ type SpeakState = 'idle' | 'listening' | 'correct' | 'close' | 'error' | 'denied
 
 function SpeakingView({ card }: { card: SpeakingCard }) {
   const supported = useMemo(() => isSpeechSupported(), []);
+  const ios = useMemo(() => isIOS(), []);
   const [state, setState] = useState<SpeakState>('idle');
   const [interim, setInterim] = useState('');
   const [heard, setHeard] = useState('');
@@ -298,6 +300,7 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
               {t.lesson.speakAllow}
             </Text>
           )}
+          {ios && <Text style={styles.iosTip}>{t.lesson.speakIosTip}</Text>}
         </>
       ) : (
         <Text style={styles.spokenHint}>{t.lesson.speakUnsupported}</Text>
@@ -490,6 +493,13 @@ const styles = StyleSheet.create({
     marginTop: 4,
     fontStyle: 'italic',
     textAlign: 'center',
+  },
+  iosTip: {
+    color: theme.colors.textMuted,
+    fontSize: theme.font.small - 2,
+    marginTop: theme.spacing(2.5),
+    textAlign: 'center',
+    lineHeight: 18,
   },
 
   // Tip

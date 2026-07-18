@@ -19,6 +19,11 @@ export function isSpeechSupported(): boolean {
   return getRecognition() !== null;
 }
 
+/** Läuft die App auf einem iPhone/iPad (Safari-Spracherkennung ist dort tückisch)? */
+export function isIOS(): boolean {
+  return typeof navigator !== 'undefined' && /iP(hone|ad|od)/.test(navigator.userAgent);
+}
+
 export interface SpeechSession {
   /** Aufnahme beenden und das Ergebnis auswerten. */
   stop: () => void;
@@ -186,15 +191,51 @@ function soundex(word: string): string {
   return (result + '000').slice(0, 4);
 }
 
-/** Ähnlichkeit zweier Wörter (1 = identisch): Buchstaben + Klang. */
+/**
+ * Sprachübergreifender Klang-Schlüssel: kodiert alle Konsonanten grob nach Laut
+ * (c/k/q gleich, s/z gleich, umlaute vereinfacht …), Vokale/h/y fallen weg.
+ * Damit passt auch ein deutsch-verhörtes Wort auf das englische Ziel
+ * (z. B. "coffee" ~ "kaffee", "card" ~ "kart").
+ */
+function phoneticKey(word: string): string {
+  const mapped = word
+    .toLowerCase()
+    .replace(/ä/g, 'a')
+    .replace(/ö/g, 'o')
+    .replace(/ü/g, 'u')
+    .replace(/ß/g, 's')
+    .replace(/[^a-z]/g, '');
+  const code: Record<string, string> = {
+    b: '1', p: '1', f: '1', v: '1', w: '1',
+    c: '2', k: '2', g: '2', j: '2', q: '2', x: '2', s: '2', z: '2',
+    d: '3', t: '3',
+    l: '4',
+    m: '5', n: '5',
+    r: '6',
+  };
+  let out = '';
+  let prev = '';
+  for (const ch of mapped) {
+    const c = code[ch] ?? '';
+    if (c && c !== prev) out += c;
+    prev = c;
+  }
+  return out;
+}
+
+/** Ähnlichkeit zweier Wörter (1 = identisch): Buchstaben + Klang (2 Verfahren). */
 function wordSimilarity(a: string, b: string): number {
   if (a === b) return 1;
   const dist = levenshtein(a, b);
   const letterSim = 1 - dist / Math.max(a.length, b.length, 1);
-  // Gleicher Klang zählt fast wie ein Treffer (fängt Verhörer der Engine ab).
+
+  // Klang-Abgleich, fängt Verhörer (auch sprachübergreifend) ab.
   const sa = soundex(a);
-  const phonetic = sa && sa === soundex(b) ? 0.9 : 0;
-  return Math.max(letterSim, phonetic);
+  const soundexSim = sa && sa === soundex(b) ? 0.9 : 0;
+  const ka = phoneticKey(a);
+  const keySim = ka && ka === phoneticKey(b) ? 0.85 : 0;
+
+  return Math.max(letterSim, soundexSim, keySim);
 }
 
 /**
