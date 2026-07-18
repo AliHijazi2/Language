@@ -14,6 +14,12 @@ import path from 'node:path';
 
 const DIST = 'dist';
 const OUT = '_site';
+const APP_NAME = 'Paly';
+
+// App-Icon als Data-URI einbetten (favicon, Home-Bildschirm-Icon, Ladeanzeige),
+// damit die Seite eigenständig bleibt.
+const iconBase64 = fs.readFileSync('assets/web-icon.png').toString('base64');
+const iconDataUri = `data:image/png;base64,${iconBase64}`;
 
 let html = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
 
@@ -42,29 +48,39 @@ html = html.replace('<body>', '<body style="background-color:#0E1116;margin:0">'
 // wir, dass das HTML lädt, aber das JavaScript nicht startet.
 const fallback =
   '<div id="ls-loading" style="position:fixed;inset:0;display:flex;align-items:center;' +
-  'justify-content:center;background-color:#0E1116;color:#5B8DEF;' +
-  "font-family:-apple-system,BlinkMacSystemFont,system-ui,sans-serif;" +
-  'font-size:22px;font-weight:800;letter-spacing:3px;">LINGOSCROLL</div>';
-html = html.replace('<div id="root"></div>', `<div id="root">${fallback}</div>`);
+  'justify-content:center;background-color:#0E1116;">' +
+  `<img src="${iconDataUri}" alt="${APP_NAME}" ` +
+  'style="width:128px;height:128px;border-radius:28px;box-shadow:0 8px 40px rgba(0,0,0,0.4);" />' +
+  '</div>';
+html = html.replace('<div id="root"></div>', () => `<div id="root">${fallback}</div>`);
 
 // Als installierbare Web-App im Vollbild lauffähig machen (ohne Browser-Leiste),
 // wenn die Seite vom Home-Bildschirm gestartet wird.
 const manifest = {
-  name: 'LingoScroll',
-  short_name: 'LingoScroll',
+  name: APP_NAME,
+  short_name: APP_NAME,
   start_url: '.',
   scope: '.',
   display: 'standalone',
   background_color: '#0E1116',
   theme_color: '#0E1116',
   orientation: 'portrait',
+  icons: [
+    { src: iconDataUri, sizes: '256x256', type: 'image/png', purpose: 'any' },
+  ],
 };
+// Evtl. von Expo eingefügte Standard-Favicon-Verweise entfernen (könnten auf
+// eine externe Datei zeigen), damit nur unser eingebettetes Icon greift.
+html = html.replace(/<link[^>]*rel="(shortcut icon|icon|apple-touch-icon)"[^>]*>/g, '');
+
 const webAppTags = [
   '<meta name="apple-mobile-web-app-capable" content="yes">',
   '<meta name="mobile-web-app-capable" content="yes">',
   '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">',
-  '<meta name="apple-mobile-web-app-title" content="LingoScroll">',
+  `<meta name="apple-mobile-web-app-title" content="${APP_NAME}">`,
   '<meta name="theme-color" content="#0E1116">',
+  `<link rel="apple-touch-icon" href="${iconDataUri}">`,
+  `<link rel="icon" type="image/png" href="${iconDataUri}">`,
   `<link rel="manifest" href='data:application/manifest+json,${encodeURIComponent(
     JSON.stringify(manifest),
   )}'>`,

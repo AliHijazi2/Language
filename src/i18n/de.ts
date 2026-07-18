@@ -4,7 +4,7 @@
  * erweitern, ohne die Komponenten anzufassen.
  */
 export const t = {
-  appName: 'LingoScroll',
+  appName: 'Paly',
   tagline: 'Sprachen lernen wie beim Scrollen.',
 
   onboarding: {

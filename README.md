@@ -1,4 +1,4 @@
-# LingoScroll
+# Paly
 
 Sprachen lernen wie beim Scrollen: ein TikTok-artiger, vertikaler Feed, in dem
 jede „Karte" eine kurze, interaktive Sprachlektion ist.
