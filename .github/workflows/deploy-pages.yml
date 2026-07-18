@@ -1,0 +1,62 @@
+name: Web zu GitHub Pages deployen
+
+# Baut die Web-Version der App und veröffentlicht sie auf GitHub Pages.
+# Läuft auf GitHubs Servern (voller Internetzugang) – unabhängig von der
+# Entwicklungsumgebung.
+
+on:
+  push:
+    branches: ['claude/language-learning-scroll-app-29tznj']
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Immer nur ein Deploy gleichzeitig.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Web-Version exportieren
+        run: npx expo export --platform web
+        env:
+          EXPO_NO_TELEMETRY: '1'
+          CI: '1'
+
+      - name: Zu einer eigenständigen Seite bündeln
+        run: node scripts/build-web-singlefile.mjs
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Seite hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Auf GitHub Pages deployen
+        id: deploy
+        uses: actions/deploy-pages@v4
