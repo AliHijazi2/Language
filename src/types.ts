@@ -1,70 +1,91 @@
 /**
- * Kern-Datenmodell der App.
+ * Kern-Datenmodell der App (Story-Lektionsformat).
  *
- * Grundsatz aus den Anforderungen: Die *Sprache* ist nur austauschbarer "Inhalt".
- * Eine Lektion kennt daher ihre Ziel-/Ausgangssprache über `courseId`, nicht fest
- * verdrahtet. So lassen sich später beliebige Sprachrichtungen ergänzen.
+ * Eine Lektion besteht aus mehreren Karten, durch die man Schritt für Schritt
+ * geht: Intro → Erklärung → Quiz → Sprechen → Tipp.
  */
 
 export type Level = 'beginner' | 'advanced';
 
-/** Für das MVP freigeschaltete Aufgabentypen. */
-export type ExerciseType = 'multipleChoice' | 'sentenceBuilder' | 'matching';
+/** Niveaustufen nach europäischem Referenzrahmen. */
+export type Cefr = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 
-/** Eine Sprachrichtung, z. B. "aus dem Deutschen Englisch lernen". */
+/** Sprachrichtung (im MVP nur Deutsch → Englisch). */
 export interface Course {
-  id: string; // z. B. 'de-en'
-  fromLanguage: string; // Menü-/Erklärsprache, z. B. 'Deutsch'
-  targetLanguage: string; // Lernsprache, z. B. 'Englisch'
-  flag: string; // Emoji-Flagge für die Auswahl
-  available: boolean; // Im MVP nur 'de-en' = true
-}
-
-interface LessonBase {
   id: string;
-  courseId: string;
-  level: Level;
-  type: ExerciseType;
-  topic: string; // z. B. 'Restaurant' – für spätere thematische Steuerung
-  /** Kurzer Titel auf der Karte, in der Menüsprache. */
+  fromLanguage: string;
+  targetLanguage: string;
+  flag: string;
+  available: boolean;
+}
+
+// ── Kartentypen einer Lektion ──
+export interface IntroCard {
+  type: 'lesson';
   title: string;
+  emoji: string;
+  english: string;
+  german: string;
+  audio: string;
 }
 
-export interface MultipleChoiceLesson extends LessonBase {
-  type: 'multipleChoice';
-  prompt: string; // Frage in der Menüsprache
-  options: string[]; // Antwortmöglichkeiten (Lernsprache)
-  correctIndex: number;
-  explanation?: string; // optionaler Merksatz nach dem Lösen
+export interface ExplanationCard {
+  type: 'explanation';
+  word: string;
+  meaning: string;
+  description: string;
 }
 
-export interface SentenceBuilderLesson extends LessonBase {
-  type: 'sentenceBuilder';
-  prompt: string; // z. B. 'Baue den Satz: „Kann ich bitte die Rechnung haben?"'
-  solution: string[]; // korrekte Wortreihenfolge (Lernsprache)
-  distractors?: string[]; // zusätzliche, falsche Wörter zum Erschweren
-  explanation?: string;
+export interface QuizAnswer {
+  text: string;
+  correct: boolean;
 }
 
-export interface MatchingPair {
-  target: string; // Lernsprache, z. B. 'bill'
-  from: string; // Menüsprache, z. B. 'Rechnung'
+export interface QuizCard {
+  type: 'quiz';
+  question: string;
+  answers: QuizAnswer[];
+  explanation: string;
 }
 
-export interface MatchingLesson extends LessonBase {
-  type: 'matching';
-  prompt: string;
-  pairs: MatchingPair[]; // 3–4 Paare pro Lektion
-  explanation?: string;
+export interface SpeakingCard {
+  type: 'speaking';
+  text: string;
 }
 
-export type Lesson = MultipleChoiceLesson | SentenceBuilderLesson | MatchingLesson;
+export interface TipCard {
+  type: 'tip';
+  title: string;
+  text: string;
+}
+
+export type LessonCard = IntroCard | ExplanationCard | QuizCard | SpeakingCard | TipCard;
+
+/** Eine vollständige Lektion (mehrere Karten). */
+export interface StoryLesson {
+  id: number;
+  language: string;
+  level: Cefr;
+  category: string;
+  topic: string;
+  duration: number;
+  xp: number;
+  cards: LessonCard[];
+}
+
+/** Für die adaptive Feed-Logik normalisierte Lektion. */
+export interface FeedItem {
+  id: string;
+  level: Level;
+  topic: string;
+  lesson: StoryLesson;
+}
 
 /** Persistierter Spaced-Repetition-Zustand pro Lektion (Leitner-Box-Modell). */
 export interface LessonProgress {
   lessonId: string;
-  box: number; // 0 = neu/schwer … höher = besser beherrscht
-  dueAt: number; // Zeitstempel (ms), ab wann die Lektion wieder fällig ist
+  box: number;
+  dueAt: number;
   lastResult: 'correct' | 'wrong' | null;
   seenCount: number;
 }
@@ -75,6 +96,8 @@ export interface AppState {
   level: Level | null;
   onboarded: boolean;
   progress: Record<string, LessonProgress>;
-  /** Ausgewählte Themen-Filter. Leer = alle Themen anzeigen. */
+  /** Ausgewählte Themen-Filter (Kategorien). Leer = alle. */
   topics: string[];
+  /** Gesammelte Erfahrungspunkte. */
+  xp: number;
 }

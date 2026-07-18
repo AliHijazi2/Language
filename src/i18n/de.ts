@@ -23,19 +23,24 @@ export const t = {
   },
 
   feed: {
-    checkAnswer: 'Antwort prüfen',
-    correct: 'Richtig!',
-    wrong: 'Nicht ganz.',
-    solutionWas: 'Richtig wäre:',
-    continue: 'Weiter',
-    swipeHint: 'Nach oben wischen für die nächste Lektion',
-    tapWordsHint: 'Tippe die Wörter in der richtigen Reihenfolge an.',
-    matchHint: 'Ordne jedem englischen Wort die deutsche Bedeutung zu.',
-    reset: 'Zurücksetzen',
     newBadge: 'Neu',
     reviewBadge: 'Wiederholung',
     loading: 'Lektionen werden geladen …',
     settings: 'Einstellungen',
+    swipeHint: 'Nach oben wischen für die nächste Lektion',
+  },
+
+  lesson: {
+    continue: 'Weiter',
+    finish: 'Fertig',
+    correct: 'Richtig!',
+    wrong: 'Nicht ganz.',
+    speakPrompt: 'Sprich den Satz laut nach',
+    speakButton: 'Nachsprechen',
+    spoken: 'Super gemacht! 👏',
+    meaning: 'Bedeutung',
+    tipLabel: 'Tipp',
+    xp: 'XP',
   },
 
   settings: {
@@ -48,7 +53,8 @@ export const t = {
     resetConfirm: 'Wirklich den gesamten Lernfortschritt löschen?',
     cancel: 'Abbrechen',
     close: 'Schließen',
-    learned: 'Gelernte Lektionen',
-    dueToday: 'Heute fällig',
+    learned: 'Gelernt',
+    dueToday: 'Fällig',
+    xp: 'Punkte',
   },
 } as const;

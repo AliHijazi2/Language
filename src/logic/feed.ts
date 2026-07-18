@@ -1,4 +1,4 @@
-import { Lesson, LessonProgress, Level } from '../types';
+import { LessonProgress, Level } from '../types';
 import { isDue } from './spacedRepetition';
 
 /**
@@ -7,20 +7,25 @@ import { isDue } from './spacedRepetition';
  * Anforderung: "adaptive Mischung" – ein roter Faden im Hintergrund, aber das
  * System wählt die nächste Lektion passend zu Niveau und bisherigem Können.
  *
- * Umsetzung in Prioritäts-Ebenen (Tiers):
+ * Arbeitet generisch mit allem, was id/level/topic hat (z. B. FeedItem).
+ *
+ * Prioritäts-Ebenen:
  *   0) passendes Niveau, fällige Wiederholung   (Spaced Repetition treibt)
  *   1) passendes Niveau, noch nie gesehen       (neuer Stoff)
  *   2) anderes Niveau, noch nie gesehen         (Fallback, damit es nie leer wird)
  *   3) anderes Niveau, fällige Wiederholung
  *   4) alles Übrige nach Fälligkeit             (endloser Feed)
- *
- * Fällige Wiederholungen (Tier 0) und neuer Stoff (Tier 1) werden verzahnt, damit
- * sich der Feed nicht wie "erst alle Wiederholungen, dann alles Neue" anfühlt.
  */
 
+interface FeedLike {
+  id: string;
+  level: Level;
+  topic: string;
+}
+
 interface BuildOptions {
-  exclude?: Set<string>; // zuletzt gezeigte IDs (nicht sofort wiederholen)
-  size?: number; // gewünschte Anzahl
+  exclude?: Set<string>;
+  size?: number;
 }
 
 /** Verzahnt zwei Listen abwechselnd (a[0], b[0], a[1], b[1], …). */
@@ -34,52 +39,48 @@ function interleave<T>(a: T[], b: T[]): T[] {
   return out;
 }
 
-export function buildFeed(
-  lessons: Lesson[],
+export function buildFeed<T extends FeedLike>(
+  items: T[],
   level: Level,
   progress: Record<string, LessonProgress>,
   now: number,
   options: BuildOptions = {},
-): Lesson[] {
+): T[] {
   const { exclude, size = 12 } = options;
 
-  const preferredDue: Lesson[] = [];
-  const preferredNew: Lesson[] = [];
-  const otherNew: Lesson[] = [];
-  const otherDue: Lesson[] = [];
-  const rest: Lesson[] = [];
+  const preferredDue: T[] = [];
+  const preferredNew: T[] = [];
+  const otherNew: T[] = [];
+  const otherDue: T[] = [];
+  const rest: T[] = [];
 
-  for (const lesson of lessons) {
-    const p = progress[lesson.id];
-    const isPreferred = lesson.level === level;
+  for (const item of items) {
+    const p = progress[item.id];
+    const isPreferred = item.level === level;
     if (!p) {
-      (isPreferred ? preferredNew : otherNew).push(lesson);
+      (isPreferred ? preferredNew : otherNew).push(item);
     } else if (isDue(p, now)) {
-      (isPreferred ? preferredDue : otherDue).push(lesson);
+      (isPreferred ? preferredDue : otherDue).push(item);
     } else {
-      rest.push(lesson);
+      rest.push(item);
     }
   }
 
-  // Fällige Wiederholungen: die am längsten überfälligen zuerst.
-  const byDue = (a: Lesson, b: Lesson) =>
-    (progress[a.id]?.dueAt ?? 0) - (progress[b.id]?.dueAt ?? 0);
+  const byDue = (a: T, b: T) => (progress[a.id]?.dueAt ?? 0) - (progress[b.id]?.dueAt ?? 0);
   preferredDue.sort(byDue);
   otherDue.sort(byDue);
   rest.sort(byDue);
 
-  const ordered: Lesson[] = [
+  const ordered: T[] = [
     ...interleave(preferredDue, preferredNew),
     ...otherNew,
     ...otherDue,
     ...rest,
   ];
 
-  // Kürzlich gezeigte Lektionen möglichst überspringen – aber niemals einen
-  // leeren Feed erzeugen (dann Ausschluss ignorieren).
   let result = ordered;
   if (exclude && exclude.size > 0) {
-    const filtered = ordered.filter((l) => !exclude.has(l.id));
+    const filtered = ordered.filter((item) => !exclude.has(item.id));
     if (filtered.length > 0) result = filtered;
   }
 

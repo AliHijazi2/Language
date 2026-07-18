@@ -12,6 +12,7 @@ interface Props {
   course: Course | undefined;
   level: Level;
   progress: Record<string, LessonProgress>;
+  xp: number;
   allTopics: string[];
   selectedTopics: string[];
   onChangeLevel: (level: Level) => void;
@@ -27,6 +28,7 @@ export function SettingsModal({
   course,
   level,
   progress,
+  xp,
   allTopics,
   selectedTopics,
   onChangeLevel,
@@ -56,6 +58,10 @@ export function SettingsModal({
 
           {/* Statistik */}
           <View style={styles.stats}>
+            <View style={styles.stat}>
+              <Text style={styles.statValue}>{xp}</Text>
+              <Text style={styles.statLabel}>{t.settings.xp}</Text>
+            </View>
             <View style={styles.stat}>
               <Text style={styles.statValue}>{learned}</Text>
               <Text style={styles.statLabel}>{t.settings.learned}</Text>

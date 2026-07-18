@@ -17,6 +17,7 @@ interface AppStateContextValue {
   ready: boolean; // true, sobald der gespeicherte Zustand geladen wurde
   completeOnboarding: (courseId: string, level: Level) => void;
   recordAnswer: (lessonId: string, correct: boolean) => void;
+  addXp: (amount: number) => void;
   setLevel: (level: Level) => void;
   toggleTopic: (topic: string) => void;
   clearTopics: () => void;
@@ -86,10 +87,13 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
     });
   }, []);
 
+  const addXp = useCallback((amount: number) => {
+    setState((prev) => ({ ...prev, xp: prev.xp + amount }));
+  }, []);
+
   const resetProgress = useCallback(() => {
-    // Kurs/Niveau bleiben erhalten; nur der Lernfortschritt wird geleert.
-    // Der Save-Effekt persistiert den neuen (leeren) Fortschritt automatisch.
-    setState((prev) => ({ ...prev, progress: {} }));
+    // Kurs/Niveau bleiben erhalten; Lernfortschritt und XP werden geleert.
+    setState((prev) => ({ ...prev, progress: {}, xp: 0 }));
   }, []);
 
   const value = useMemo<AppStateContextValue>(
@@ -98,6 +102,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       ready,
       completeOnboarding,
       recordAnswer,
+      addXp,
       setLevel,
       toggleTopic,
       clearTopics,
@@ -108,6 +113,7 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
       ready,
       completeOnboarding,
       recordAnswer,
+      addXp,
       setLevel,
       toggleTopic,
       clearTopics,

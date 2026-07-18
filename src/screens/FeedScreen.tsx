@@ -10,61 +10,48 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { LessonCard } from '../components/LessonCard';
+import { StoryLessonCard } from '../components/StoryLessonCard';
 import { SettingsModal } from '../components/SettingsModal';
 import { GradientBackground } from '../components/ui/GradientBackground';
 import { getCourse } from '../data/courses';
-import { LESSONS } from '../data/lessons';
+import { ALL_TOPICS, FEED_ITEMS } from '../data/lessons';
 import { t } from '../i18n/de';
 import { buildFeed } from '../logic/feed';
 import { useAppState } from '../state/AppStateContext';
-import { Lesson, Level } from '../types';
+import { FeedItem, Level } from '../types';
 import { theme } from '../theme';
 
-interface FeedItem {
+interface FeedEntry {
   key: string;
-  lesson: Lesson;
+  item: FeedItem;
 }
 
 /**
  * Der Haupt-Feed: ein vertikaler, seitenweiser Scroll-Feed. Jede "Seite" ist
- * eine Lektion (LessonCard). Neue Lektionen werden nachgeladen, sobald man sich
- * dem Ende nähert – so fühlt sich der Feed endlos an. Die Reihenfolge liefert
- * die adaptive buildFeed-Logik (Spaced Repetition + Niveau).
+ * eine ganze Lektion (StoryLessonCard), durch deren Karten man steppt. Neue
+ * Lektionen werden nachgeladen, sobald man sich dem Ende nähert. Die Reihenfolge
+ * liefert die adaptive buildFeed-Logik (Spaced Repetition + Niveau).
  */
 export function FeedScreen() {
-  const { state, recordAnswer, setLevel, toggleTopic, clearTopics, resetProgress } =
+  const { state, recordAnswer, addXp, setLevel, toggleTopic, clearTopics, resetProgress } =
     useAppState();
   const insets = useSafeAreaInsets();
 
   const level = state.level ?? 'beginner';
   const course = getCourse(state.courseId);
 
-  // Nur Lektionen der gewählten Sprachrichtung.
-  const courseLessons = useMemo(
-    () => LESSONS.filter((l) => l.courseId === state.courseId),
-    [state.courseId],
-  );
-
-  // Alle Themen dieser Sprachrichtung (in Reihenfolge des ersten Auftretens).
-  const allTopics = useMemo(() => {
-    const seen: string[] = [];
-    for (const l of courseLessons) if (!seen.includes(l.topic)) seen.push(l.topic);
-    return seen;
-  }, [courseLessons]);
-
   // Auf die ausgewählten Themen eingegrenzte Lektionen (leer = alle).
-  const activeLessons = useMemo(() => {
-    if (state.topics.length === 0) return courseLessons;
-    return courseLessons.filter((l) => state.topics.includes(l.topic));
-  }, [courseLessons, state.topics]);
+  const activeItems = useMemo(() => {
+    if (state.topics.length === 0) return FEED_ITEMS;
+    return FEED_ITEMS.filter((i) => state.topics.includes(i.topic));
+  }, [state.topics]);
 
   const [height, setHeight] = useState(0);
-  const [items, setItems] = useState<FeedItem[]>([]);
+  const [items, setItems] = useState<FeedEntry[]>([]);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   // Refs, damit Callbacks stets die aktuellen Werte sehen (keine veralteten Closures).
-  const flatListRef = useRef<FlatList<FeedItem>>(null);
+  const flatListRef = useRef<FlatList<FeedEntry>>(null);
   const currentIndexRef = useRef(0);
   const keyCounter = useRef(0);
   const progressRef = useRef(state.progress);
@@ -72,31 +59,29 @@ export function FeedScreen() {
   progressRef.current = state.progress;
   levelRef.current = level;
 
-  const toItems = (lessons: Lesson[]): FeedItem[] =>
-    lessons.map((lesson) => ({ key: `${lesson.id}#${keyCounter.current++}`, lesson }));
+  const toEntries = (list: FeedItem[]): FeedEntry[] =>
+    list.map((item) => ({ key: `${item.id}#${keyCounter.current++}`, item }));
 
   // (Neu-)Aufbau des Feeds bei Start, Höhenänderung, Niveau- oder Themenwechsel.
   useEffect(() => {
     if (height <= 0) return;
-    const built = buildFeed(activeLessons, level, progressRef.current, Date.now(), {
-      size: 8,
-    });
-    setItems(toItems(built));
+    const built = buildFeed(activeItems, level, progressRef.current, Date.now(), { size: 8 });
+    setItems(toEntries(built));
     currentIndexRef.current = 0;
     requestAnimationFrame(() =>
       flatListRef.current?.scrollToOffset({ offset: 0, animated: false }),
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [height, level, activeLessons]);
+  }, [height, level, activeItems]);
 
   const appendMore = () => {
     setItems((prev) => {
-      const recent = new Set(prev.slice(-6).map((i) => i.lesson.id));
-      const more = buildFeed(activeLessons, levelRef.current, progressRef.current, Date.now(), {
+      const recent = new Set(prev.slice(-6).map((e) => e.item.id));
+      const more = buildFeed(activeItems, levelRef.current, progressRef.current, Date.now(), {
         exclude: recent,
         size: 6,
       });
-      return [...prev, ...toItems(more)];
+      return [...prev, ...toEntries(more)];
     });
   };
 
@@ -105,7 +90,7 @@ export function FeedScreen() {
     if (next >= items.length - 2) appendMore();
     const scroll = () => flatListRef.current?.scrollToIndex({ index: next, animated: true });
     if (next < items.length) scroll();
-    else setTimeout(scroll, 60); // auf das Nachladen warten
+    else setTimeout(scroll, 60);
   };
 
   const onLayout = (e: LayoutChangeEvent) => {
@@ -113,12 +98,10 @@ export function FeedScreen() {
     if (h > 0 && h !== height) setHeight(h);
   };
 
-  const onViewRef = useRef(
-    (info: { viewableItems: Array<{ index: number | null }> }) => {
-      const first = info.viewableItems[0];
-      if (first && first.index != null) currentIndexRef.current = first.index;
-    },
-  );
+  const onViewRef = useRef((info: { viewableItems: Array<{ index: number | null }> }) => {
+    const first = info.viewableItems[0];
+    if (first && first.index != null) currentIndexRef.current = first.index;
+  });
   const viewConfigRef = useRef({ itemVisiblePercentThreshold: 60 });
 
   const handleChangeLevel = (lv: Level) => {
@@ -138,16 +121,22 @@ export function FeedScreen() {
         <FlatList
           ref={flatListRef}
           data={items}
-          keyExtractor={(item) => item.key}
-          renderItem={({ item }) => (
-            <LessonCard
-              lesson={item.lesson}
-              progress={progressRef.current[item.lesson.id]}
-              height={height}
-              onResult={(correct) => recordAnswer(item.lesson.id, correct)}
-              onContinue={goNext}
-            />
-          )}
+          keyExtractor={(e) => e.key}
+          renderItem={({ item: entry }) => {
+            const progress = progressRef.current[entry.item.id];
+            return (
+              <StoryLessonCard
+                lesson={entry.item.lesson}
+                isReview={progress ? progress.seenCount > 0 : false}
+                height={height}
+                onComplete={(correct) => {
+                  recordAnswer(entry.item.id, correct);
+                  addXp(entry.item.lesson.xp);
+                }}
+                onNext={goNext}
+              />
+            );
+          }}
           pagingEnabled
           snapToInterval={height}
           snapToAlignment="start"
@@ -172,6 +161,11 @@ export function FeedScreen() {
         </View>
       )}
 
+      {/* XP-Anzeige (Overlay) */}
+      <View style={[styles.xpPill, { top: insets.top + theme.spacing(1) }]}>
+        <Text style={styles.xpText}>⚡ {state.xp} XP</Text>
+      </View>
+
       {/* Einstellungen-Button (Overlay) */}
       <Pressable
         onPress={() => setSettingsOpen(true)}
@@ -188,7 +182,8 @@ export function FeedScreen() {
         course={course}
         level={level}
         progress={state.progress}
-        allTopics={allTopics}
+        xp={state.xp}
+        allTopics={ALL_TOPICS}
         selectedTopics={state.topics}
         onChangeLevel={handleChangeLevel}
         onToggleTopic={toggleTopic}
@@ -214,6 +209,23 @@ const styles = StyleSheet.create({
   loadingText: {
     color: theme.colors.textMuted,
     fontSize: theme.font.small,
+  },
+  xpPill: {
+    position: 'absolute',
+    left: theme.spacing(2),
+    backgroundColor: 'rgba(255,255,255,0.9)',
+    borderRadius: theme.radius.pill,
+    paddingHorizontal: theme.spacing(1.75),
+    height: 40,
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+    ...theme.shadow.soft,
+  },
+  xpText: {
+    color: theme.colors.text,
+    fontSize: theme.font.small,
+    fontWeight: '800',
   },
   settingsButton: {
     position: 'absolute',

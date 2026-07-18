@@ -18,6 +18,7 @@ export const emptyState: AppState = {
   onboarded: false,
   progress: {},
   topics: [],
+  xp: 0,
 };
 
 export async function loadState(): Promise<AppState> {
@@ -31,6 +32,7 @@ export async function loadState(): Promise<AppState> {
       ...parsed,
       progress: parsed.progress ?? {},
       topics: parsed.topics ?? [],
+      xp: parsed.xp ?? 0,
     };
   } catch {
     return { ...emptyState };
