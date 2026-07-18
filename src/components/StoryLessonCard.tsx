@@ -230,6 +230,7 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
     setState('listening');
     sessionRef.current = startRecognition({
       lang: 'en-US',
+      phrase: card.text,
       onInterim: (text) => setInterim(text),
       onResult: evaluate,
       onError: (err) => {

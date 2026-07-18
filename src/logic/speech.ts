@@ -28,6 +28,8 @@ export interface SpeechSession {
 
 interface StartOptions {
   lang?: string;
+  /** Erwarteter Satz – biast die Erkennung (wo unterstützt). */
+  phrase?: string;
   /** Live-Zwischenstand während des Sprechens. */
   onInterim?: (text: string) => void;
   /** Endergebnis (erkannte Varianten, beste zuerst). */
@@ -52,6 +54,21 @@ export function startRecognition(opts: StartOptions): SpeechSession | null {
   rec.interimResults = true;
   rec.continuous = false;
   rec.maxAlternatives = 5;
+
+  // Erwarteten Satz als Grammatik hinterlegen, um die Erkennung darauf zu lenken
+  // (wird nicht von jeder Engine unterstützt – dann einfach ignoriert).
+  const SGL = (window as any).SpeechGrammarList || (window as any).webkitSpeechGrammarList;
+  if (SGL && opts.phrase) {
+    try {
+      const words = opts.phrase.replace(/[^\p{L}\p{N}\s]/gu, '').trim();
+      const grammar = `#JSGF V1.0; grammar phrase; public <phrase> = ${words} ;`;
+      const list = new SGL();
+      list.addFromString(grammar, 1);
+      rec.grammars = list;
+    } catch {
+      /* Grammatik nicht unterstützt – ignorieren */
+    }
+  }
 
   let finalAlts: string[] | null = null;
   let lastInterim = '';
@@ -142,11 +159,42 @@ function levenshtein(a: string, b: string): number {
   return row[n];
 }
 
-/** Ähnlichkeit zweier Wörter (1 = identisch), tolerant gegenüber Kleinigkeiten. */
+/**
+ * Soundex-Code eines Wortes (grobe Klang-Signatur). Damit gelten klanglich
+ * ähnliche Wörter als gleich – wichtig, weil die Erkennungs-Engine oft ein
+ * ähnlich klingendes, falsch geschriebenes Wort ausgibt (z. B. "copy" für
+ * "coffee").
+ */
+function soundex(word: string): string {
+  const a = word.toUpperCase().replace(/[^A-Z]/g, '');
+  if (!a) return '';
+  const code: Record<string, number> = {
+    B: 1, F: 1, P: 1, V: 1,
+    C: 2, G: 2, J: 2, K: 2, Q: 2, S: 2, X: 2, Z: 2,
+    D: 3, T: 3,
+    L: 4,
+    M: 5, N: 5,
+    R: 6,
+  };
+  let result = a[0];
+  let prev = code[a[0]] ?? 0;
+  for (let i = 1; i < a.length && result.length < 4; i++) {
+    const c = code[a[i]] ?? 0;
+    if (c !== 0 && c !== prev) result += c;
+    prev = 'AEIOUY'.includes(a[i]) ? 0 : c;
+  }
+  return (result + '000').slice(0, 4);
+}
+
+/** Ähnlichkeit zweier Wörter (1 = identisch): Buchstaben + Klang. */
 function wordSimilarity(a: string, b: string): number {
   if (a === b) return 1;
   const dist = levenshtein(a, b);
-  return 1 - dist / Math.max(a.length, b.length, 1);
+  const letterSim = 1 - dist / Math.max(a.length, b.length, 1);
+  // Gleicher Klang zählt fast wie ein Treffer (fängt Verhörer der Engine ab).
+  const sa = soundex(a);
+  const phonetic = sa && sa === soundex(b) ? 0.9 : 0;
+  return Math.max(letterSim, phonetic);
 }
 
 /**
