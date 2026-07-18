@@ -13,6 +13,12 @@ import {
 } from '../types';
 import { theme } from '../theme';
 import { shuffle } from '../utils/shuffle';
+import {
+  isSpeechSupported,
+  PRONUNCIATION_THRESHOLD,
+  recognizeOnce,
+  scorePronunciation,
+} from '../logic/speech';
 import { PrimaryButton } from './ui/PrimaryButton';
 
 interface Props {
@@ -193,19 +199,77 @@ function QuizView({ card, onResult }: { card: QuizCard; onResult: (c: boolean) =
   );
 }
 
+type SpeakState = 'idle' | 'listening' | 'correct' | 'close' | 'error';
+
 function SpeakingView({ card }: { card: SpeakingCard }) {
-  const [spoken, setSpoken] = useState(false);
+  const supported = useMemo(() => isSpeechSupported(), []);
+  const [state, setState] = useState<SpeakState>('idle');
+  const [heard, setHeard] = useState('');
+
+  const listen = async () => {
+    if (!supported || state === 'listening') return;
+    setState('listening');
+    setHeard('');
+    try {
+      const variants = await recognizeOnce('en-US');
+      const score = scorePronunciation(card.text, variants);
+      setHeard(variants[0] ?? '');
+      setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
+    } catch {
+      setState('error');
+    }
+  };
+
+  const isDone = state === 'correct';
+  const micDisabled = state === 'listening';
+
   return (
     <View style={styles.center}>
       <Text style={styles.speakPrompt}>{t.lesson.speakPrompt}</Text>
       <Text style={styles.speakText}>{card.text}</Text>
-      <Pressable
-        onPress={() => setSpoken(true)}
-        style={[styles.micButton, spoken && styles.micButtonDone]}
-      >
-        <Text style={styles.micIcon}>{spoken ? '✓' : '🎤'}</Text>
-      </Pressable>
-      <Text style={styles.spokenHint}>{spoken ? t.lesson.spoken : t.lesson.speakButton}</Text>
+
+      {supported ? (
+        <>
+          <Pressable
+            onPress={listen}
+            disabled={micDisabled}
+            style={[
+              styles.micButton,
+              state === 'listening' && styles.micButtonListening,
+              isDone && styles.micButtonDone,
+              state === 'close' && styles.micButtonRetry,
+              state === 'error' && styles.micButtonRetry,
+            ]}
+          >
+            <Text style={styles.micIcon}>{isDone ? '✓' : '🎤'}</Text>
+          </Pressable>
+
+          {state === 'idle' && <Text style={styles.spokenHint}>{t.lesson.speakTap}</Text>}
+          {state === 'listening' && (
+            <Text style={styles.spokenHint}>{t.lesson.speakListening}</Text>
+          )}
+          {state === 'correct' && (
+            <Text style={[styles.spokenHint, { color: theme.colors.success }]}>
+              {t.lesson.speakGood}
+            </Text>
+          )}
+          {state === 'close' && (
+            <View style={styles.center}>
+              <Text style={[styles.spokenHint, { color: theme.colors.error }]}>
+                {t.lesson.speakClose} “{heard}”
+              </Text>
+              <Text style={styles.retryHint}>{t.lesson.speakRetry}</Text>
+            </View>
+          )}
+          {state === 'error' && (
+            <Text style={[styles.spokenHint, { color: theme.colors.error }]}>
+              {t.lesson.speakError}
+            </Text>
+          )}
+        </>
+      ) : (
+        <Text style={styles.spokenHint}>{t.lesson.speakUnsupported}</Text>
+      )}
     </View>
   );
 }
@@ -365,12 +429,21 @@ const styles = StyleSheet.create({
     ...theme.shadow.soft,
   },
   micButtonDone: { backgroundColor: theme.colors.successBg, borderColor: theme.colors.success },
+  micButtonListening: { backgroundColor: theme.colors.surfaceAlt, borderColor: theme.colors.accent },
+  micButtonRetry: { borderColor: theme.colors.error },
   micIcon: { fontSize: 32 },
   spokenHint: {
     color: theme.colors.textMuted,
     fontSize: theme.font.small,
     marginTop: theme.spacing(1.5),
     fontWeight: '600',
+    textAlign: 'center',
+  },
+  retryHint: {
+    color: theme.colors.textMuted,
+    fontSize: theme.font.small,
+    marginTop: 2,
+    textDecorationLine: 'underline',
   },
 
   // Tip
