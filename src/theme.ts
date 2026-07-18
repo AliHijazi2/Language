@@ -1,31 +1,32 @@
 /**
- * Zentrales Design-Token-Set. Dunkles, „TikTok-artiges" Vollbild-Feed-Gefühl,
- * aufgewertet mit sanften Farbverläufen, mehr Tiefe (Schatten) und Akzentfarben,
- * die zum Paly-Logo passen (Blau/Türkis/Orange).
+ * Zentrales Design-Token-Set – heller „Hellblau"-Stil passend zum Paly-Logo:
+ * sanfter Himmelblau-Verlauf, weiße Karten, dunkelblaue Schrift, Akzente in
+ * Logo-Blau/Türkis/Orange.
  */
 export const theme = {
   colors: {
-    background: '#0C0F17',
-    surface: '#1A2130',
-    surfaceAlt: '#232C3E',
-    primary: '#5B8DEF',
-    primaryDark: '#3E6FD1',
-    accent: '#33C9BD', // Türkis aus dem Logo
-    accentWarm: '#F6A14A', // Orange aus dem Logo
-    success: '#37D399',
-    successBg: '#102E24',
-    error: '#F26D63',
-    errorBg: '#331A19',
-    text: '#F2F5FA',
-    textMuted: '#94A1B6',
-    border: '#2C3547',
+    background: '#CFE7FA', // Basis-Hellblau (Fallback)
+    surface: '#FFFFFF',
+    surfaceAlt: '#E8F2FB',
+    primary: '#3B9BD8', // Logo-Blau
+    primaryDark: '#2F82BC',
+    accent: '#20B2A6', // Türkis aus dem Logo
+    accentWarm: '#F39A3D', // Orange aus dem Logo
+    success: '#2FAE7A',
+    successBg: '#DCF2E8',
+    error: '#E5564B',
+    errorBg: '#FBE1DF',
+    text: '#25374D', // Dunkles Marineblau (wie der Schriftzug)
+    textMuted: '#5F748C',
+    border: '#CBDDEE',
+    onColor: '#FFFFFF', // Schrift auf farbigen Flächen (Buttons/Badges)
   },
   // Farbverläufe (Arrays für expo-linear-gradient).
   gradients: {
-    background: ['#182338', '#0C0F17'] as const,
-    primary: ['#6BA0FF', '#4E74E8'] as const,
-    accent: ['#3ED6C7', '#2E9FE0'] as const,
-    badge: ['#4E74E8', '#33C9BD'] as const,
+    background: ['#EAF5FD', '#B9DCF3'] as const, // weicher Himmelblau-Verlauf
+    primary: ['#57B0E6', '#3B93D4'] as const,
+    accent: ['#31C2B4', '#2AA3D8'] as const,
+    badge: ['#3B9BD8', '#20B2A6'] as const,
   },
   radius: {
     sm: 12,
@@ -42,28 +43,28 @@ export const theme = {
     body: 17,
     small: 14,
   },
-  // Schatten für mehr Tiefe (funktioniert auf iOS/Android/Web).
+  // Weiche, bläuliche Schatten für den hellen Look.
   shadow: {
     card: {
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 10 },
-      shadowOpacity: 0.35,
-      shadowRadius: 20,
-      elevation: 10,
+      shadowColor: '#20456B',
+      shadowOffset: { width: 0, height: 8 },
+      shadowOpacity: 0.14,
+      shadowRadius: 18,
+      elevation: 6,
     },
     soft: {
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 4 },
-      shadowOpacity: 0.25,
-      shadowRadius: 10,
-      elevation: 5,
+      shadowColor: '#20456B',
+      shadowOffset: { width: 0, height: 3 },
+      shadowOpacity: 0.1,
+      shadowRadius: 8,
+      elevation: 3,
     },
     glow: {
-      shadowColor: '#4E74E8',
+      shadowColor: '#3B9BD8',
       shadowOffset: { width: 0, height: 6 },
-      shadowOpacity: 0.5,
-      shadowRadius: 16,
-      elevation: 8,
+      shadowOpacity: 0.35,
+      shadowRadius: 14,
+      elevation: 6,
     },
   },
 } as const;

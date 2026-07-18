@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   feedbackIconText: {
-    color: '#0C0F17',
+    color: theme.colors.onColor,
     fontSize: 14,
     fontWeight: '900',
   },

@@ -4,13 +4,13 @@
     "slug": "lingoscroll",
     "version": "0.1.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "scheme": "paly",
     "icon": "./assets/icon.png",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/icon.png",
-      "backgroundColor": "#0E1116",
+      "backgroundColor": "#CFE7FA",
       "resizeMode": "contain"
     },
     "ios": {
@@ -19,7 +19,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
-        "backgroundColor": "#0E1116"
+        "backgroundColor": "#CFE7FA"
       }
     },
     "web": {

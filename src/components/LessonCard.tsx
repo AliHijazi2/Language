@@ -35,7 +35,9 @@ export function LessonCard({ lesson, progress, height, onResult, onContinue }: P
         <View style={styles.header}>
           {isReview ? (
             <View style={[styles.badge, styles.badgeReview]}>
-              <Text style={styles.badgeText}>{t.feed.reviewBadge}</Text>
+              <Text style={[styles.badgeText, styles.badgeTextReview]}>
+                {t.feed.reviewBadge}
+              </Text>
             </View>
           ) : (
             <LinearGradient
@@ -106,11 +108,14 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.border,
   },
   badgeText: {
-    color: theme.colors.text,
+    color: theme.colors.onColor,
     fontSize: theme.font.small - 2,
     fontWeight: '800',
     textTransform: 'uppercase',
     letterSpacing: 1,
+  },
+  badgeTextReview: {
+    color: theme.colors.textMuted,
   },
   topic: {
     color: theme.colors.accent,

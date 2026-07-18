@@ -51,7 +51,7 @@ export function PrimaryButton({
           style={styles.base}
         >
           {loading ? (
-            <ActivityIndicator color={theme.colors.text} />
+            <ActivityIndicator color={theme.colors.onColor} />
           ) : (
             <Text style={styles.label}>{label}</Text>
           )}
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     transform: [{ scale: 0.98 }],
   },
   label: {
-    color: theme.colors.text,
+    color: theme.colors.onColor,
     fontSize: theme.font.body,
     fontWeight: '800',
     letterSpacing: 0.3,

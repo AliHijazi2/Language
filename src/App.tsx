@@ -30,7 +30,7 @@ function Root() {
 export default function App() {
   return (
     <SafeAreaProvider>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={styles.app}>
         <AppStateProvider>
           <Root />

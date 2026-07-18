@@ -39,18 +39,18 @@ js = js.replaceAll('</script', '<\\/script');
 // interpretieren und den Code zerstören.
 html = html.replace(scriptTag, () => `<script>${js}</script>`);
 
-// Dunkler Sofort-Hintergrund direkt am <body> (unabhängig von geladenem CSS),
-// damit nie ein weißer Blitz entsteht.
-html = html.replace('<body>', '<body style="background-color:#0E1116;margin:0">');
+// Heller Sofort-Hintergrund direkt am <body> (unabhängig von geladenem CSS),
+// passend zum hellblauen Look.
+html = html.replace('<body>', '<body style="background-color:#CFE7FA;margin:0">');
 
 // Ladeanzeige INNERHALB von #root: bleibt sichtbar, bis die App gemountet ist
 // (React ersetzt den Inhalt von #root beim Start). Bleibt sie stehen, wissen
 // wir, dass das HTML lädt, aber das JavaScript nicht startet.
 const fallback =
   '<div id="ls-loading" style="position:fixed;inset:0;display:flex;align-items:center;' +
-  'justify-content:center;background-color:#0E1116;">' +
+  'justify-content:center;background-color:#CFE7FA;">' +
   `<img src="${iconDataUri}" alt="${APP_NAME}" ` +
-  'style="width:128px;height:128px;border-radius:28px;box-shadow:0 8px 40px rgba(0,0,0,0.4);" />' +
+  'style="width:128px;height:128px;border-radius:28px;box-shadow:0 10px 30px rgba(32,69,107,0.25);" />' +
   '</div>';
 html = html.replace('<div id="root"></div>', () => `<div id="root">${fallback}</div>`);
 
@@ -62,8 +62,8 @@ const manifest = {
   start_url: '.',
   scope: '.',
   display: 'standalone',
-  background_color: '#0E1116',
-  theme_color: '#0E1116',
+  background_color: '#CFE7FA',
+  theme_color: '#CFE7FA',
   orientation: 'portrait',
   icons: [
     { src: iconDataUri, sizes: '256x256', type: 'image/png', purpose: 'any' },
@@ -76,9 +76,9 @@ html = html.replace(/<link[^>]*rel="(shortcut icon|icon|apple-touch-icon)"[^>]*>
 const webAppTags = [
   '<meta name="apple-mobile-web-app-capable" content="yes">',
   '<meta name="mobile-web-app-capable" content="yes">',
-  '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">',
+  '<meta name="apple-mobile-web-app-status-bar-style" content="default">',
   `<meta name="apple-mobile-web-app-title" content="${APP_NAME}">`,
-  '<meta name="theme-color" content="#0E1116">',
+  '<meta name="theme-color" content="#CFE7FA">',
   `<link rel="apple-touch-icon" href="${iconDataUri}">`,
   `<link rel="icon" type="image/png" href="${iconDataUri}">`,
   `<link rel="manifest" href='data:application/manifest+json,${encodeURIComponent(

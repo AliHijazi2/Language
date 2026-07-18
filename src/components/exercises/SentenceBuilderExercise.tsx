@@ -73,7 +73,7 @@ export function SentenceBuilderExercise({ lesson, onResult, onContinue }: Props)
                   onPress={() => moveToBank(token)}
                   style={[styles.chip, styles.chipBuilt]}
                 >
-                  <Text style={styles.chipText}>{token.word}</Text>
+                  <Text style={[styles.chipText, styles.chipTextBuilt]}>{token.word}</Text>
                 </Pressable>
               ))
             )}
@@ -143,6 +143,9 @@ const styles = StyleSheet.create({
     color: theme.colors.text,
     fontSize: theme.font.body,
     fontWeight: '600',
+  },
+  chipTextBuilt: {
+    color: theme.colors.onColor,
   },
   reset: {
     marginTop: theme.spacing(2),

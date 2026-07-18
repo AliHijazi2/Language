@@ -237,6 +237,6 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   topicTextSelected: {
-    color: theme.colors.text,
+    color: theme.colors.onColor,
   },
 });
