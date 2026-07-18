@@ -142,10 +142,21 @@ function levenshtein(a: string, b: string): number {
   return row[n];
 }
 
+/** Ähnlichkeit zweier Wörter (1 = identisch), tolerant gegenüber Kleinigkeiten. */
+function wordSimilarity(a: string, b: string): number {
+  if (a === b) return 1;
+  const dist = levenshtein(a, b);
+  return 1 - dist / Math.max(a.length, b.length, 1);
+}
+
 /**
  * Bewertet, wie gut das Gesagte zum Zielsatz passt (0 = gar nicht, 1 = perfekt).
- * Kombiniert Wort-Überdeckung und Zeichen-Ähnlichkeit und nimmt bei mehreren
- * erkannten Varianten die beste.
+ *
+ * Bewusst nachsichtig: Für jedes Zielwort wird das ähnlichste gesagte Wort
+ * gesucht (unscharfer Abgleich, damit z. B. "how's" ~ "hows" oder kleine
+ * Erkennungsfehler nicht sofort als falsch gelten). Zusätzlich fließt die
+ * Zeichen-Ähnlichkeit der ganzen Phrase ein; bei mehreren erkannten Varianten
+ * zählt die beste.
  */
 export function scorePronunciation(target: string, saidVariants: string[]): number {
   const t = normalize(target);
@@ -156,21 +167,23 @@ export function scorePronunciation(target: string, saidVariants: string[]): numb
     const s = normalize(raw);
     if (!s) continue;
 
-    const pool = s.split(' ').filter(Boolean);
-    let matched = 0;
-    for (const w of tWords) {
-      const idx = pool.indexOf(w);
-      if (idx !== -1) {
-        matched++;
-        pool.splice(idx, 1);
-      }
-    }
-    const wordRatio = tWords.length ? matched / tWords.length : 0;
+    const saidWords = s.split(' ').filter(Boolean);
 
+    // Unscharfe Wort-Überdeckung: pro Zielwort das beste passende gesagte Wort.
+    let coverage = 0;
+    for (const w of tWords) {
+      let bestWord = 0;
+      for (const p of saidWords) bestWord = Math.max(bestWord, wordSimilarity(w, p));
+      // Wörter, die "nah genug" sind, zählen voll; sonst anteilig.
+      coverage += bestWord >= 0.7 ? 1 : bestWord;
+    }
+    const fuzzyRatio = tWords.length ? coverage / tWords.length : 0;
+
+    // Zeichen-Ähnlichkeit über die ganze Phrase (fängt andere Wortreihenfolge ab).
     const dist = levenshtein(t, s);
     const charSim = 1 - dist / Math.max(t.length, s.length, 1);
 
-    best = Math.max(best, Math.max(wordRatio, charSim));
+    best = Math.max(best, fuzzyRatio, charSim);
   }
   return best;
 }

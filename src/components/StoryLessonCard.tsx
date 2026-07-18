@@ -272,9 +272,12 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
             </View>
           )}
           {state === 'correct' && (
-            <Text style={[styles.spokenHint, { color: theme.colors.success }]}>
-              {t.lesson.speakGood}
-            </Text>
+            <View style={styles.center}>
+              <Text style={[styles.spokenHint, { color: theme.colors.success }]}>
+                {t.lesson.speakGood}
+              </Text>
+              {heard ? <Text style={styles.heardText}>„{heard}“</Text> : null}
+            </View>
           )}
           {state === 'close' && (
             <View style={styles.center}>
@@ -478,6 +481,13 @@ const styles = StyleSheet.create({
     fontSize: theme.font.body,
     fontWeight: '700',
     marginTop: theme.spacing(1),
+    textAlign: 'center',
+  },
+  heardText: {
+    color: theme.colors.textMuted,
+    fontSize: theme.font.small,
+    marginTop: 4,
+    fontStyle: 'italic',
     textAlign: 'center',
   },
 
