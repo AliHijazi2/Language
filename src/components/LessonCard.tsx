@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { t } from '../i18n/de';
 import { Lesson, LessonProgress } from '../types';
@@ -32,16 +33,20 @@ export function LessonCard({ lesson, progress, height, onResult, onContinue }: P
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <View
-            style={[
-              styles.badge,
-              { backgroundColor: isReview ? theme.colors.surfaceAlt : theme.colors.primaryDark },
-            ]}
-          >
-            <Text style={styles.badgeText}>
-              {isReview ? t.feed.reviewBadge : t.feed.newBadge}
-            </Text>
-          </View>
+          {isReview ? (
+            <View style={[styles.badge, styles.badgeReview]}>
+              <Text style={styles.badgeText}>{t.feed.reviewBadge}</Text>
+            </View>
+          ) : (
+            <LinearGradient
+              colors={theme.gradients.badge}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+              style={styles.badge}
+            >
+              <Text style={styles.badgeText}>{t.feed.newBadge}</Text>
+            </LinearGradient>
+          )}
           <Text style={styles.topic}>{lesson.topic}</Text>
         </View>
 
@@ -76,7 +81,7 @@ export function LessonCard({ lesson, progress, height, onResult, onContinue }: P
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    backgroundColor: theme.colors.background,
+    backgroundColor: 'transparent',
   },
   content: {
     padding: theme.spacing(3),
@@ -95,6 +100,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: theme.spacing(1.5),
     paddingVertical: theme.spacing(0.5),
   },
+  badgeReview: {
+    backgroundColor: theme.colors.surfaceAlt,
+    borderWidth: 1,
+    borderColor: theme.colors.border,
+  },
   badgeText: {
     color: theme.colors.text,
     fontSize: theme.font.small - 2,
@@ -103,15 +113,19 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   topic: {
-    color: theme.colors.textMuted,
+    color: theme.colors.accent,
     fontSize: theme.font.small,
-    fontWeight: '600',
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 1,
   },
   title: {
     color: theme.colors.text,
     fontSize: theme.font.title,
-    fontWeight: '800',
+    fontWeight: '900',
+    letterSpacing: -0.5,
     marginBottom: theme.spacing(3),
+    lineHeight: theme.font.title + 6,
   },
   exercise: {
     flexShrink: 0,

@@ -61,15 +61,16 @@ export function MultipleChoiceExercise({ lesson, onResult, onContinue }: Props) 
 
 const styles = StyleSheet.create({
   optionBase: {
-    borderRadius: theme.radius.md,
+    borderRadius: theme.radius.lg,
     paddingVertical: theme.spacing(2),
     paddingHorizontal: theme.spacing(2),
     marginBottom: theme.spacing(1.5),
     borderWidth: 2,
+    ...theme.shadow.soft,
   },
   option: {
     backgroundColor: theme.colors.surface,
-    borderColor: 'transparent',
+    borderColor: theme.colors.border,
   },
   optionSelected: {
     backgroundColor: theme.colors.surfaceAlt,

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ActivityIndicator, Pressable, StyleSheet, Text, ViewStyle } from 'react-native';
+import { ActivityIndicator, Pressable, StyleSheet, Text, View, ViewStyle } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 
 import { theme } from '../../theme';
 
@@ -12,7 +13,7 @@ interface Props {
   style?: ViewStyle;
 }
 
-/** Einheitlicher Aktions-Button, damit Buttons überall gleich aussehen. */
+/** Einheitlicher Aktions-Button. Primär mit Farbverlauf und dezentem Leuchten. */
 export function PrimaryButton({
   label,
   onPress,
@@ -22,39 +23,54 @@ export function PrimaryButton({
   style,
 }: Props) {
   const isGhost = variant === 'ghost';
+  const dim = disabled || loading;
+
   return (
     <Pressable
       onPress={onPress}
-      disabled={disabled || loading}
+      disabled={dim}
       style={({ pressed }) => [
-        styles.base,
-        isGhost ? styles.ghost : styles.primary,
-        (disabled || loading) && styles.disabled,
-        pressed && !disabled && styles.pressed,
+        styles.wrap,
+        !isGhost && !dim && theme.shadow.glow,
+        dim && styles.disabled,
+        pressed && !dim && styles.pressed,
         style,
       ]}
       accessibilityRole="button"
       accessibilityLabel={label}
     >
-      {loading ? (
-        <ActivityIndicator color={theme.colors.text} />
+      {isGhost ? (
+        <View style={[styles.base, styles.ghost]}>
+          <Text style={[styles.label, styles.ghostLabel]}>{label}</Text>
+        </View>
       ) : (
-        <Text style={[styles.label, isGhost && styles.ghostLabel]}>{label}</Text>
+        <LinearGradient
+          colors={theme.gradients.primary}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
+          style={styles.base}
+        >
+          {loading ? (
+            <ActivityIndicator color={theme.colors.text} />
+          ) : (
+            <Text style={styles.label}>{label}</Text>
+          )}
+        </LinearGradient>
       )}
     </Pressable>
   );
 }
 
 const styles = StyleSheet.create({
+  wrap: {
+    borderRadius: theme.radius.pill,
+  },
   base: {
-    minHeight: 54,
+    minHeight: 56,
     borderRadius: theme.radius.pill,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: theme.spacing(3),
-  },
-  primary: {
-    backgroundColor: theme.colors.primary,
   },
   ghost: {
     backgroundColor: 'transparent',
@@ -62,17 +78,20 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.border,
   },
   disabled: {
-    opacity: 0.45,
+    opacity: 0.4,
   },
   pressed: {
-    opacity: 0.85,
+    opacity: 0.9,
+    transform: [{ scale: 0.98 }],
   },
   label: {
     color: theme.colors.text,
     fontSize: theme.font.body,
-    fontWeight: '700',
+    fontWeight: '800',
+    letterSpacing: 0.3,
   },
   ghostLabel: {
     color: theme.colors.textMuted,
+    fontWeight: '700',
   },
 });

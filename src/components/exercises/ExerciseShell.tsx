@@ -61,17 +61,30 @@ export function ExerciseShell({
         <View
           style={[
             styles.feedback,
-            { backgroundColor: correct ? theme.colors.successBg : theme.colors.errorBg },
+            {
+              backgroundColor: correct ? theme.colors.successBg : theme.colors.errorBg,
+              borderColor: correct ? theme.colors.success : theme.colors.error,
+            },
           ]}
         >
-          <Text
-            style={[
-              styles.feedbackTitle,
-              { color: correct ? theme.colors.success : theme.colors.error },
-            ]}
-          >
-            {correct ? t.feed.correct : t.feed.wrong}
-          </Text>
+          <View style={styles.feedbackHead}>
+            <View
+              style={[
+                styles.feedbackIcon,
+                { backgroundColor: correct ? theme.colors.success : theme.colors.error },
+              ]}
+            >
+              <Text style={styles.feedbackIconText}>{correct ? '✓' : '✕'}</Text>
+            </View>
+            <Text
+              style={[
+                styles.feedbackTitle,
+                { color: correct ? theme.colors.success : theme.colors.error },
+              ]}
+            >
+              {correct ? t.feed.correct : t.feed.wrong}
+            </Text>
+          </View>
           {!correct && solutionText ? (
             <Text style={styles.solution}>
               {t.feed.solutionWas} {solutionText}
@@ -116,16 +129,33 @@ const styles = StyleSheet.create({
     borderRadius: theme.radius.md,
     padding: theme.spacing(2),
     marginBottom: theme.spacing(2),
+    borderWidth: 1,
+  },
+  feedbackHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: theme.spacing(1),
+  },
+  feedbackIcon: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  feedbackIconText: {
+    color: '#0C0F17',
+    fontSize: 14,
+    fontWeight: '900',
   },
   feedbackTitle: {
     fontSize: theme.font.body,
     fontWeight: '800',
-    marginBottom: 2,
   },
   solution: {
     color: theme.colors.text,
     fontSize: theme.font.body,
-    marginTop: 2,
+    marginTop: theme.spacing(1),
   },
   explanation: {
     color: theme.colors.textMuted,

@@ -12,6 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { LessonCard } from '../components/LessonCard';
 import { SettingsModal } from '../components/SettingsModal';
+import { GradientBackground } from '../components/ui/GradientBackground';
 import { getCourse } from '../data/courses';
 import { LESSONS } from '../data/lessons';
 import { t } from '../i18n/de';
@@ -132,6 +133,7 @@ export function FeedScreen() {
 
   return (
     <View style={styles.container} onLayout={onLayout}>
+      <GradientBackground style={StyleSheet.absoluteFill} />
       {height > 0 && items.length > 0 ? (
         <FlatList
           ref={flatListRef}
@@ -216,12 +218,15 @@ const styles = StyleSheet.create({
   settingsButton: {
     position: 'absolute',
     right: theme.spacing(2),
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: 'rgba(23,27,34,0.8)',
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: 'rgba(26,33,48,0.85)',
+    borderWidth: 1,
+    borderColor: theme.colors.border,
     alignItems: 'center',
     justifyContent: 'center',
+    ...theme.shadow.soft,
   },
   settingsIcon: {
     color: theme.colors.text,

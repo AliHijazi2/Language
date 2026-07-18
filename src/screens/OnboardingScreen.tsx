@@ -7,6 +7,7 @@ import { t } from '../i18n/de';
 import { Level } from '../types';
 import { theme } from '../theme';
 import { PrimaryButton } from '../components/ui/PrimaryButton';
+import { GradientBackground } from '../components/ui/GradientBackground';
 
 interface Props {
   onFinish: (courseId: string, level: Level) => void;
@@ -22,7 +23,8 @@ export function OnboardingScreen({ onFinish }: Props) {
   const [level, setLevel] = useState<Level | null>(null);
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <GradientBackground>
+      <SafeAreaView style={styles.safe}>
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.brand}>{t.appName}</Text>
 
@@ -46,7 +48,9 @@ export function OnboardingScreen({ onFinish }: Props) {
                     ]}
                     accessibilityRole="button"
                   >
-                    <Text style={styles.flag}>{course.flag}</Text>
+                    <View style={styles.flagBox}>
+                      <Text style={styles.flag}>{course.flag}</Text>
+                    </View>
                     <View style={styles.cardTextWrap}>
                       <Text style={styles.cardTitle}>{course.targetLanguage}</Text>
                       <Text style={styles.cardHint}>
@@ -87,7 +91,9 @@ export function OnboardingScreen({ onFinish }: Props) {
                     style={[styles.card, selected && styles.cardSelected]}
                     accessibilityRole="button"
                   >
-                    <Text style={styles.flag}>{opt.emoji}</Text>
+                    <View style={styles.flagBox}>
+                      <Text style={styles.flag}>{opt.emoji}</Text>
+                    </View>
                     <View style={styles.cardTextWrap}>
                       <Text style={styles.cardTitle}>{opt.label}</Text>
                       <Text style={styles.cardHint}>{opt.hint}</Text>
@@ -112,14 +118,15 @@ export function OnboardingScreen({ onFinish }: Props) {
           </>
         )}
       </ScrollView>
-    </SafeAreaView>
+      </SafeAreaView>
+    </GradientBackground>
   );
 }
 
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    backgroundColor: theme.colors.background,
+    backgroundColor: 'transparent',
   },
   container: {
     padding: theme.spacing(3),
@@ -128,17 +135,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   brand: {
-    color: theme.colors.primary,
+    color: theme.colors.accent,
     fontSize: theme.font.small,
-    fontWeight: '800',
-    letterSpacing: 2,
+    fontWeight: '900',
+    letterSpacing: 4,
     textTransform: 'uppercase',
     marginBottom: theme.spacing(2),
   },
   title: {
     color: theme.colors.text,
-    fontSize: theme.font.title,
-    fontWeight: '800',
+    fontSize: theme.font.hero,
+    fontWeight: '900',
+    letterSpacing: -0.5,
     marginBottom: theme.spacing(1),
   },
   subtitle: {
@@ -154,21 +162,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: theme.colors.surface,
-    borderRadius: theme.radius.md,
+    borderRadius: theme.radius.lg,
     padding: theme.spacing(2),
     borderWidth: 2,
-    borderColor: 'transparent',
+    borderColor: theme.colors.border,
+    ...theme.shadow.soft,
   },
   cardSelected: {
     borderColor: theme.colors.primary,
     backgroundColor: theme.colors.surfaceAlt,
   },
   cardDisabled: {
-    opacity: 0.4,
+    opacity: 0.45,
+  },
+  flagBox: {
+    width: 56,
+    height: 56,
+    borderRadius: theme.radius.md,
+    backgroundColor: theme.colors.surfaceAlt,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: theme.spacing(2),
   },
   flag: {
     fontSize: 30,
-    marginRight: theme.spacing(2),
   },
   cardTextWrap: {
     flex: 1,
