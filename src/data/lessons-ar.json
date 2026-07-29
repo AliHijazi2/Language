@@ -2748,5 +2748,1655 @@
         "text": "Antwort oft: „w ana kamān“ = ich dich auch."
       }
     ]
+  },
+  {
+    "id": 51,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Greetings",
+    "topic": "Was gibt's Neues",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Was läuft?",
+        "emoji": "😃",
+        "target": "شو في ما في؟",
+        "latin": "shu fī mā fī?",
+        "native": "Was gibt's Neues? / Was läuft?"
+      },
+      {
+        "type": "explanation",
+        "word": "شو في ما في",
+        "latin": "shu fī mā fī",
+        "meaning": "Was gibt's Neues?",
+        "description": "Wörtlich „was gibt es, gibt es nicht“ – lockere Frage unter Freunden."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „shu fī mā fī?“",
+        "answers": [
+          {
+            "text": "Was gibt's Neues?",
+            "correct": true
+          },
+          {
+            "text": "Wo bist du?",
+            "correct": false
+          },
+          {
+            "text": "Wie viel kostet es?",
+            "correct": false
+          }
+        ],
+        "explanation": "„shu fī mā fī?“ = Was läuft / was gibt's Neues?"
+      },
+      {
+        "type": "speaking",
+        "text": "شو في ما في؟",
+        "latin": "shu fī mā fī?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Antwort oft: „wala shī“ = nichts Besonderes."
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Entschuldigung",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Tut mir leid",
+        "emoji": "🙏",
+        "target": "آسف",
+        "latin": "āsif",
+        "native": "Entschuldigung / Tut mir leid (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "آسف",
+        "latin": "āsif",
+        "meaning": "es tut mir leid (m)",
+        "description": "Zu einer Frau: „āsfe“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „āsif“?",
+        "answers": [
+          {
+            "text": "Tut mir leid",
+            "correct": true
+          },
+          {
+            "text": "Danke",
+            "correct": false
+          },
+          {
+            "text": "Bitte",
+            "correct": false
+          }
+        ],
+        "explanation": "„āsif“ = es tut mir leid."
+      },
+      {
+        "type": "speaking",
+        "text": "آسف",
+        "latin": "āsif"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„maʿlēsh“ = macht nichts / schon gut."
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Friends",
+    "topic": "Glückwunsch",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Glückwunsch!",
+        "emoji": "🎊",
+        "target": "مبروك",
+        "latin": "mabrūk",
+        "native": "Herzlichen Glückwunsch"
+      },
+      {
+        "type": "explanation",
+        "word": "مبروك",
+        "latin": "mabrūk",
+        "meaning": "Glückwunsch",
+        "description": "Zu Erfolgen, Neuem, Feiern."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mabrūk“?",
+        "answers": [
+          {
+            "text": "Glückwunsch",
+            "correct": true
+          },
+          {
+            "text": "Tschüss",
+            "correct": false
+          },
+          {
+            "text": "Danke",
+            "correct": false
+          }
+        ],
+        "explanation": "„mabrūk“ = Glückwunsch."
+      },
+      {
+        "type": "speaking",
+        "text": "مبروك",
+        "latin": "mabrūk"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Antwort: „allah ybārek fīk“ = Gott segne dich (danke)."
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Family",
+    "topic": "Oma und Opa",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Großeltern",
+        "emoji": "👵",
+        "target": "تيتا وجدو",
+        "latin": "tēta w jiddo",
+        "native": "Oma und Opa"
+      },
+      {
+        "type": "explanation",
+        "word": "تيتا",
+        "latin": "tēta",
+        "meaning": "Oma",
+        "description": "„jiddo“ = Opa."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „tēta“?",
+        "answers": [
+          {
+            "text": "Oma",
+            "correct": true
+          },
+          {
+            "text": "Opa",
+            "correct": false
+          },
+          {
+            "text": "Tante",
+            "correct": false
+          }
+        ],
+        "explanation": "„tēta“ = Oma."
+      },
+      {
+        "type": "speaking",
+        "text": "تيتا وجدو",
+        "latin": "tēta w jiddo"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿammo“ = Onkel (väterlich), „khālo“ = Onkel (mütterlich)."
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Family",
+    "topic": "Sohn und Tochter",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kinder",
+        "emoji": "🧒",
+        "target": "ابني وبنتي",
+        "latin": "ibni w binti",
+        "native": "mein Sohn und meine Tochter"
+      },
+      {
+        "type": "explanation",
+        "word": "ابني",
+        "latin": "ibni",
+        "meaning": "mein Sohn",
+        "description": "„binti“ = meine Tochter."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „binti“?",
+        "answers": [
+          {
+            "text": "meine Tochter",
+            "correct": true
+          },
+          {
+            "text": "mein Sohn",
+            "correct": false
+          },
+          {
+            "text": "meine Mutter",
+            "correct": false
+          }
+        ],
+        "explanation": "„binti“ = meine Tochter."
+      },
+      {
+        "type": "speaking",
+        "text": "ابني وبنتي",
+        "latin": "ibni w binti"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„walad“ = Junge, „bint“ = Mädchen."
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Family",
+    "topic": "Mann und Frau",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ehepartner",
+        "emoji": "💍",
+        "target": "جوزي / مرتي",
+        "latin": "jōzi / marti",
+        "native": "mein Mann / meine Frau"
+      },
+      {
+        "type": "explanation",
+        "word": "جوزي",
+        "latin": "jōzi",
+        "meaning": "mein (Ehe-)Mann",
+        "description": "„marti“ = meine (Ehe-)Frau."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „marti“?",
+        "answers": [
+          {
+            "text": "meine Frau",
+            "correct": true
+          },
+          {
+            "text": "mein Mann",
+            "correct": false
+          },
+          {
+            "text": "meine Schwester",
+            "correct": false
+          }
+        ],
+        "explanation": "„marti“ = meine Ehefrau."
+      },
+      {
+        "type": "speaking",
+        "text": "جوزي / مرتي",
+        "latin": "jōzi / marti"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„khaṭīb / khaṭībe“ = Verlobter / Verlobte."
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Food",
+    "topic": "Das Essen ist lecker",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Lecker!",
+        "emoji": "😋",
+        "target": "الأكل طيب",
+        "latin": "el-akl ṭayyeb",
+        "native": "Das Essen ist lecker"
+      },
+      {
+        "type": "explanation",
+        "word": "أكل",
+        "latin": "akl",
+        "meaning": "Essen",
+        "description": "„el-akl ṭayyeb“ = das Essen ist lecker."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „akl“?",
+        "answers": [
+          {
+            "text": "Essen",
+            "correct": true
+          },
+          {
+            "text": "Wasser",
+            "correct": false
+          },
+          {
+            "text": "Teller",
+            "correct": false
+          }
+        ],
+        "explanation": "„akl“ = Essen."
+      },
+      {
+        "type": "speaking",
+        "text": "الأكل كتير طيب",
+        "latin": "el-akl ktīr ṭayyeb"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ṣaḥtēn“ passt danach als „Guten Appetit / wohl bekomm's“."
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Food",
+    "topic": "Tabbouleh bestellen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Tabbouleh",
+        "emoji": "🥗",
+        "target": "بدي تبولة",
+        "latin": "biddi tabbūle",
+        "native": "Ich möchte Tabbouleh"
+      },
+      {
+        "type": "explanation",
+        "word": "تبولة",
+        "latin": "tabbūle",
+        "meaning": "Tabbouleh (Petersiliensalat)",
+        "description": "Ein libanesischer Klassiker."
+      },
+      {
+        "type": "quiz",
+        "question": "Was ist „tabbūle“?",
+        "answers": [
+          {
+            "text": "Ein Salat",
+            "correct": true
+          },
+          {
+            "text": "Ein Getränk",
+            "correct": false
+          },
+          {
+            "text": "Eine Suppe",
+            "correct": false
+          }
+        ],
+        "explanation": "„tabbūle“ ist der bekannte Petersiliensalat."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي تبولة",
+        "latin": "biddi tabbūle"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ḥummuṣ“ = Hummus, „falāfil“ = Falafel."
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Food",
+    "topic": "Ohne …",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ohne Zwiebeln",
+        "emoji": "🧅",
+        "target": "بلا بصل",
+        "latin": "bala baṣal",
+        "native": "ohne Zwiebeln"
+      },
+      {
+        "type": "explanation",
+        "word": "بلا",
+        "latin": "bala",
+        "meaning": "ohne",
+        "description": "„bala baṣal“ = ohne Zwiebeln. „baṣal“ = Zwiebeln."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „bala“?",
+        "answers": [
+          {
+            "text": "ohne",
+            "correct": true
+          },
+          {
+            "text": "mit",
+            "correct": false
+          },
+          {
+            "text": "viel",
+            "correct": false
+          }
+        ],
+        "explanation": "„bala“ = ohne."
+      },
+      {
+        "type": "speaking",
+        "text": "بلا بصل لو سمحت",
+        "latin": "bala baṣal law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„maʿ“ = mit, „bala“ = ohne. „maʿ toom“ = mit Knoblauch."
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Drinks",
+    "topic": "Saft",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Saft",
+        "emoji": "🧃",
+        "target": "بدي عصير",
+        "latin": "biddi ʿaṣīr",
+        "native": "Ich möchte Saft"
+      },
+      {
+        "type": "explanation",
+        "word": "عصير",
+        "latin": "ʿaṣīr",
+        "meaning": "Saft",
+        "description": "„ʿaṣīr laymūn“ = Zitronensaft/Limonade."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʿaṣīr“?",
+        "answers": [
+          {
+            "text": "Saft",
+            "correct": true
+          },
+          {
+            "text": "Milch",
+            "correct": false
+          },
+          {
+            "text": "Tee",
+            "correct": false
+          }
+        ],
+        "explanation": "„ʿaṣīr“ = Saft."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي عصير",
+        "latin": "biddi ʿaṣīr"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ḥalīb“ = Milch."
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Shopping",
+    "topic": "Kein Geld",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kein Geld",
+        "emoji": "💰",
+        "target": "ما معي مصاري",
+        "latin": "mā maʿi maṣāri",
+        "native": "Ich habe kein Geld dabei"
+      },
+      {
+        "type": "explanation",
+        "word": "مصاري",
+        "latin": "maṣāri",
+        "meaning": "Geld",
+        "description": "„maʿi“ = bei mir. „mā maʿi maṣāri“ = ich habe kein Geld dabei."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „maṣāri“?",
+        "answers": [
+          {
+            "text": "Geld",
+            "correct": true
+          },
+          {
+            "text": "Zeit",
+            "correct": false
+          },
+          {
+            "text": "Hunger",
+            "correct": false
+          }
+        ],
+        "explanation": "„maṣāri“ = Geld."
+      },
+      {
+        "type": "speaking",
+        "text": "ما معي مصاري",
+        "latin": "mā maʿi maṣāri"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„kart“ = Karte, „kash“ = Bargeld."
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Shopping",
+    "topic": "Billig",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Billig",
+        "emoji": "🏷️",
+        "target": "رخيص",
+        "latin": "rakhīṣ",
+        "native": "billig / günstig"
+      },
+      {
+        "type": "explanation",
+        "word": "رخيص",
+        "latin": "rakhīṣ",
+        "meaning": "billig",
+        "description": "Gegenteil von „ghāli“ (teuer)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „rakhīṣ“?",
+        "answers": [
+          {
+            "text": "billig",
+            "correct": true
+          },
+          {
+            "text": "teuer",
+            "correct": false
+          },
+          {
+            "text": "schön",
+            "correct": false
+          }
+        ],
+        "explanation": "„rakhīṣ“ = billig."
+      },
+      {
+        "type": "speaking",
+        "text": "هيدا رخيص",
+        "latin": "hayda rakhīṣ"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„fī khaṣim?“ = Gibt es Rabatt?"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Ein bisschen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ein bisschen",
+        "emoji": "🤏",
+        "target": "شوي",
+        "latin": "shwayy",
+        "native": "ein bisschen / etwas"
+      },
+      {
+        "type": "explanation",
+        "word": "شوي",
+        "latin": "shwayy",
+        "meaning": "ein bisschen",
+        "description": "Gegenteil: „ktīr“ (viel). „shwayy shwayy“ = ganz langsam / nach und nach."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „shwayy“?",
+        "answers": [
+          {
+            "text": "ein bisschen",
+            "correct": true
+          },
+          {
+            "text": "viel",
+            "correct": false
+          },
+          {
+            "text": "genug",
+            "correct": false
+          }
+        ],
+        "explanation": "„shwayy“ = ein bisschen."
+      },
+      {
+        "type": "speaking",
+        "text": "شوي شوي",
+        "latin": "shwayy shwayy"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„shwayy shwayy“ hört man oft: „immer mit der Ruhe“."
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Taxi",
+    "topic": "Halt hier an",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Halt hier",
+        "emoji": "🛑",
+        "target": "وقّف هون",
+        "latin": "waʾʾif hōn",
+        "native": "Halt hier an"
+      },
+      {
+        "type": "explanation",
+        "word": "وقّف",
+        "latin": "waʾʾif",
+        "meaning": "halt an / stopp",
+        "description": "„hōn“ = hier. „waʾʾif hōn“ = halt hier."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „waʾʾif hōn“?",
+        "answers": [
+          {
+            "text": "Halt hier an",
+            "correct": true
+          },
+          {
+            "text": "Fahr schneller",
+            "correct": false
+          },
+          {
+            "text": "Wo sind wir",
+            "correct": false
+          }
+        ],
+        "explanation": "„waʾʾif hōn“ = halt hier an."
+      },
+      {
+        "type": "speaking",
+        "text": "وقّف هون لو سمحت",
+        "latin": "waʾʾif hōn law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿal-yamīn“ = an der rechten Seite."
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Taxi",
+    "topic": "Ich hab's eilig",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Eilig",
+        "emoji": "⏩",
+        "target": "أنا مستعجل",
+        "latin": "ana mistaʿjil",
+        "native": "Ich habe es eilig (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "مستعجل",
+        "latin": "mistaʿjil",
+        "meaning": "in Eile (m)",
+        "description": "Zu einer Frau: „mistaʿjle“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mistaʿjil“?",
+        "answers": [
+          {
+            "text": "in Eile",
+            "correct": true
+          },
+          {
+            "text": "müde",
+            "correct": false
+          },
+          {
+            "text": "verloren",
+            "correct": false
+          }
+        ],
+        "explanation": "„mistaʿjil“ = in Eile."
+      },
+      {
+        "type": "speaking",
+        "text": "أنا مستعجل شوي",
+        "latin": "ana mistaʿjil shwayy"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿa mahlak“ = immer mit der Ruhe / langsam."
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Directions",
+    "topic": "Nah und weit",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Nah / weit",
+        "emoji": "📏",
+        "target": "قريب / بعيد",
+        "latin": "ʾarīb / bʿīd",
+        "native": "nah / weit"
+      },
+      {
+        "type": "explanation",
+        "word": "قريب",
+        "latin": "ʾarīb",
+        "meaning": "nah",
+        "description": "„bʿīd“ = weit."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „bʿīd“?",
+        "answers": [
+          {
+            "text": "weit",
+            "correct": true
+          },
+          {
+            "text": "nah",
+            "correct": false
+          },
+          {
+            "text": "geradeaus",
+            "correct": false
+          }
+        ],
+        "explanation": "„bʿīd“ = weit weg."
+      },
+      {
+        "type": "speaking",
+        "text": "هيدا قريب",
+        "latin": "hayda ʾarīb"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʾarīb min hōn?“ = ist es nah von hier?"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Directions",
+    "topic": "Hier und dort",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Hier / dort",
+        "emoji": "📍",
+        "target": "هون / هنيك",
+        "latin": "hōn / hunīk",
+        "native": "hier / dort"
+      },
+      {
+        "type": "explanation",
+        "word": "هون",
+        "latin": "hōn",
+        "meaning": "hier",
+        "description": "„hunīk“ = dort/da drüben."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „hunīk“?",
+        "answers": [
+          {
+            "text": "dort",
+            "correct": true
+          },
+          {
+            "text": "hier",
+            "correct": false
+          },
+          {
+            "text": "oben",
+            "correct": false
+          }
+        ],
+        "explanation": "„hunīk“ = dort."
+      },
+      {
+        "type": "speaking",
+        "text": "تعا لهون",
+        "latin": "taʿa la-hōn"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„taʿa la-hōn“ = komm hierher."
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Time",
+    "topic": "Wochentage",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Montag / Freitag",
+        "emoji": "🗓️",
+        "target": "التنين / الجمعة",
+        "latin": "et-tanēn / el-jumʿa",
+        "native": "Montag / Freitag"
+      },
+      {
+        "type": "explanation",
+        "word": "الجمعة",
+        "latin": "el-jumʿa",
+        "meaning": "Freitag",
+        "description": "Wochentage: (yōm) et-tanēn, et-talēta, el-arbʿa, el-khamīs, el-jumʿa, es-sabt, el-aḥad."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „el-jumʿa“?",
+        "answers": [
+          {
+            "text": "Freitag",
+            "correct": true
+          },
+          {
+            "text": "Montag",
+            "correct": false
+          },
+          {
+            "text": "Sonntag",
+            "correct": false
+          }
+        ],
+        "explanation": "„el-jumʿa“ = Freitag."
+      },
+      {
+        "type": "speaking",
+        "text": "منشوفك يوم الجمعة",
+        "latin": "mnshūfak yōm el-jumʿa"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„es-sabt“ = Samstag, „el-aḥad“ = Sonntag."
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Time",
+    "topic": "Morgens und abends",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Morgens / abends",
+        "emoji": "🌇",
+        "target": "الصبح / المسا",
+        "latin": "eṣ-ṣubḥ / el-masa",
+        "native": "morgens / abends"
+      },
+      {
+        "type": "explanation",
+        "word": "الصبح",
+        "latin": "eṣ-ṣubḥ",
+        "meaning": "der Morgen / morgens",
+        "description": "„el-masa“ = der Abend / abends."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „el-masa“?",
+        "answers": [
+          {
+            "text": "der Abend",
+            "correct": true
+          },
+          {
+            "text": "der Morgen",
+            "correct": false
+          },
+          {
+            "text": "die Nacht",
+            "correct": false
+          }
+        ],
+        "explanation": "„el-masa“ = der Abend."
+      },
+      {
+        "type": "speaking",
+        "text": "منشوفك المسا",
+        "latin": "mnshūfak el-masa"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„el-leil“ = die Nacht."
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Weather",
+    "topic": "Es ist kalt",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kalt",
+        "emoji": "❄️",
+        "target": "الجو بارد",
+        "latin": "el-jaww bāred",
+        "native": "Das Wetter ist kalt"
+      },
+      {
+        "type": "explanation",
+        "word": "بارد",
+        "latin": "bāred",
+        "meaning": "kalt",
+        "description": "Gegenteil: „ḥarr“ (heiß)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „bāred“?",
+        "answers": [
+          {
+            "text": "kalt",
+            "correct": true
+          },
+          {
+            "text": "heiß",
+            "correct": false
+          },
+          {
+            "text": "schön",
+            "correct": false
+          }
+        ],
+        "explanation": "„bāred“ = kalt."
+      },
+      {
+        "type": "speaking",
+        "text": "الجو بارد اليوم",
+        "latin": "el-jaww bāred el-yōm"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„bardān“ = mir ist kalt (m), „bardāne“ (w)."
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Weather",
+    "topic": "Schönes Wetter",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Schön",
+        "emoji": "🌤️",
+        "target": "الجو حلو",
+        "latin": "el-jaww ḥelu",
+        "native": "Das Wetter ist schön"
+      },
+      {
+        "type": "explanation",
+        "word": "حلو",
+        "latin": "ḥelu",
+        "meaning": "schön / süß",
+        "description": "„ḥelu“ nutzt man für schön, nett, lecker, süß."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ḥelu“?",
+        "answers": [
+          {
+            "text": "schön / süß",
+            "correct": true
+          },
+          {
+            "text": "kalt",
+            "correct": false
+          },
+          {
+            "text": "teuer",
+            "correct": false
+          }
+        ],
+        "explanation": "„ḥelu“ = schön / süß."
+      },
+      {
+        "type": "speaking",
+        "text": "الجو حلو اليوم",
+        "latin": "el-jaww ḥelu el-yōm"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ḥelu ktīr!“ = sehr schön! – ein häufiges Lob."
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Ich bin glücklich",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Glücklich",
+        "emoji": "😊",
+        "target": "أنا مبسوط",
+        "latin": "ana mabsūṭ",
+        "native": "Ich bin glücklich / zufrieden (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "مبسوط",
+        "latin": "mabsūṭ",
+        "meaning": "glücklich / zufrieden (m)",
+        "description": "Zu einer Frau: „mabsūṭa“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mabsūṭ“?",
+        "answers": [
+          {
+            "text": "glücklich",
+            "correct": true
+          },
+          {
+            "text": "müde",
+            "correct": false
+          },
+          {
+            "text": "hungrig",
+            "correct": false
+          }
+        ],
+        "explanation": "„mabsūṭ“ = glücklich / zufrieden."
+      },
+      {
+        "type": "speaking",
+        "text": "أنا مبسوط",
+        "latin": "ana mabsūṭ"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„zaʿlān“ = traurig/verärgert (m)."
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Friends",
+    "topic": "Ich liebe dich",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ich liebe dich",
+        "emoji": "❤️",
+        "target": "بحبك",
+        "latin": "bḥibbak",
+        "native": "Ich liebe dich (zu m)"
+      },
+      {
+        "type": "explanation",
+        "word": "بحبك",
+        "latin": "bḥibbak",
+        "meaning": "ich liebe dich (zu m)",
+        "description": "Zu einer Frau: „bḥibbik“. Auch freundschaftlich gebräuchlich."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „bḥibbak“?",
+        "answers": [
+          {
+            "text": "Ich liebe dich",
+            "correct": true
+          },
+          {
+            "text": "Ich vermisse dich",
+            "correct": false
+          },
+          {
+            "text": "Ich sehe dich",
+            "correct": false
+          }
+        ],
+        "explanation": "„bḥibbak“ = ich liebe dich (zu einem Mann)."
+      },
+      {
+        "type": "speaking",
+        "text": "بحبك",
+        "latin": "bḥibbak"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„w ana kamān“ = ich dich auch."
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Ich weiß nicht",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Weiß nicht",
+        "emoji": "🤷",
+        "target": "ما بعرف",
+        "latin": "mā baʿref",
+        "native": "Ich weiß nicht"
+      },
+      {
+        "type": "explanation",
+        "word": "بعرف",
+        "latin": "baʿref",
+        "meaning": "(ich) weiß",
+        "description": "„mā baʿref“ = ich weiß nicht."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mā baʿref“?",
+        "answers": [
+          {
+            "text": "Ich weiß nicht",
+            "correct": true
+          },
+          {
+            "text": "Ich weiß",
+            "correct": false
+          },
+          {
+            "text": "Ich frage",
+            "correct": false
+          }
+        ],
+        "explanation": "„mā baʿref“ = ich weiß nicht."
+      },
+      {
+        "type": "speaking",
+        "text": "ما بعرف",
+        "latin": "mā baʿref"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„baʿref“ = ich weiß (ohne „mā“)."
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Warte",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Warte",
+        "emoji": "✋",
+        "target": "استنى",
+        "latin": "stanna",
+        "native": "Warte"
+      },
+      {
+        "type": "explanation",
+        "word": "استنى",
+        "latin": "stanna",
+        "meaning": "warte",
+        "description": "„stanna daʾīʾa“ = warte eine Minute."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „stanna“?",
+        "answers": [
+          {
+            "text": "Warte",
+            "correct": true
+          },
+          {
+            "text": "Geh",
+            "correct": false
+          },
+          {
+            "text": "Komm",
+            "correct": false
+          }
+        ],
+        "explanation": "„stanna“ = warte."
+      },
+      {
+        "type": "speaking",
+        "text": "استنى دقيقة",
+        "latin": "stanna daʾīʾa"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„yalla stanna!“ = na warte mal (scherzhaft/ungeduldig)."
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Alles klar",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Perfekt!",
+        "emoji": "👌",
+        "target": "تمام",
+        "latin": "tamām",
+        "native": "Alles klar / perfekt"
+      },
+      {
+        "type": "explanation",
+        "word": "تمام",
+        "latin": "tamām",
+        "meaning": "perfekt / in Ordnung",
+        "description": "Zustimmung: „tamām!“ = passt / alles gut."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „tamām“?",
+        "answers": [
+          {
+            "text": "Alles klar / perfekt",
+            "correct": true
+          },
+          {
+            "text": "Nein danke",
+            "correct": false
+          },
+          {
+            "text": "Wie viel",
+            "correct": false
+          }
+        ],
+        "explanation": "„tamām“ = alles klar / perfekt."
+      },
+      {
+        "type": "speaking",
+        "text": "تمام",
+        "latin": "tamām"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„mnīḥ“, „ṭayyeb“, „tamām“ – alle drücken Zustimmung aus."
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Work",
+    "topic": "Was arbeitest du",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Beruf",
+        "emoji": "💼",
+        "target": "شو بتشتغل؟",
+        "latin": "shu btishtighil?",
+        "native": "Was arbeitest du? (zu m)"
+      },
+      {
+        "type": "explanation",
+        "word": "بتشتغل",
+        "latin": "btishtighil",
+        "meaning": "(du) arbeitest",
+        "description": "Zu einer Frau: „shu btishtighli?“. Antwort: „ana bishtighil …“."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie fragst du einen Mann nach seinem Beruf?",
+        "answers": [
+          {
+            "text": "shu btishtighil",
+            "correct": true
+          },
+          {
+            "text": "shu btishtighli",
+            "correct": false
+          },
+          {
+            "text": "wēn btishtighil",
+            "correct": false
+          }
+        ],
+        "explanation": "„shu btishtighil?“ = was arbeitest du?"
+      },
+      {
+        "type": "speaking",
+        "text": "شو بتشتغل؟",
+        "latin": "shu btishtighil?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ana ṭālib/ṭālbe“ = ich bin Student/Studentin."
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Los nach Hause",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Nach Hause",
+        "emoji": "🏠",
+        "target": "يلا عالبيت",
+        "latin": "yalla ʿal-beit",
+        "native": "Los, nach Hause"
+      },
+      {
+        "type": "explanation",
+        "word": "البيت",
+        "latin": "el-beit",
+        "meaning": "das Zuhause / Haus",
+        "description": "„ʿal-beit“ = nach Hause. „yalla“ = los."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „el-beit“?",
+        "answers": [
+          {
+            "text": "Zuhause / Haus",
+            "correct": true
+          },
+          {
+            "text": "Straße",
+            "correct": false
+          },
+          {
+            "text": "Arbeit",
+            "correct": false
+          }
+        ],
+        "explanation": "„el-beit“ = Zuhause / Haus."
+      },
+      {
+        "type": "speaking",
+        "text": "يلا عالبيت",
+        "latin": "yalla ʿal-beit"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ana bi-l-beit“ = ich bin zu Hause."
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Gute Nacht",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Gute Nacht",
+        "emoji": "🌙",
+        "target": "تصبح على خير",
+        "latin": "tṣbaḥ ʿala khēr",
+        "native": "Gute Nacht (zu m)"
+      },
+      {
+        "type": "explanation",
+        "word": "تصبح على خير",
+        "latin": "tṣbaḥ ʿala khēr",
+        "meaning": "Gute Nacht (zu m)",
+        "description": "Zu einer Frau: „tiṣbaḥi ʿala khēr“."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie wünschst du „Gute Nacht“?",
+        "answers": [
+          {
+            "text": "tṣbaḥ ʿala khēr",
+            "correct": true
+          },
+          {
+            "text": "ṣabāḥ el-khēr",
+            "correct": false
+          },
+          {
+            "text": "maʿ es-salāme",
+            "correct": false
+          }
+        ],
+        "explanation": "„tṣbaḥ ʿala khēr“ = Gute Nacht."
+      },
+      {
+        "type": "speaking",
+        "text": "تصبح على خير",
+        "latin": "tṣbaḥ ʿala khēr"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Antwort: „w inta/inti min ahlo“ = ebenso."
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Numbers",
+    "topic": "Zwanzig und hundert",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "20 und 100",
+        "emoji": "💯",
+        "target": "عشرين / مية",
+        "latin": "ʿishrīn / miyye",
+        "native": "zwanzig / hundert"
+      },
+      {
+        "type": "explanation",
+        "word": "مية",
+        "latin": "miyye",
+        "meaning": "hundert",
+        "description": "„ʿishrīn“ = zwanzig, „miyye“ = hundert."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „miyye“?",
+        "answers": [
+          {
+            "text": "hundert",
+            "correct": true
+          },
+          {
+            "text": "zwanzig",
+            "correct": false
+          },
+          {
+            "text": "zehn",
+            "correct": false
+          }
+        ],
+        "explanation": "„miyye“ = hundert."
+      },
+      {
+        "type": "speaking",
+        "text": "عشرين / مية",
+        "latin": "ʿishrīn / miyye"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„talātīn“ = dreißig, „khamsīn“ = fünfzig."
+      }
+    ]
   }
 ]
