@@ -10,6 +10,7 @@ import React, {
 
 import { AppState, Level } from '../types';
 import { applyAnswer, createProgress } from '../logic/spacedRepetition';
+import { getCourse } from '../data/courses';
 import { emptyState, loadState, saveState } from '../storage/store';
 
 interface AppStateContextValue {
@@ -34,10 +35,15 @@ export function AppStateProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     let active = true;
     loadState().then((loaded) => {
-      if (active) {
-        setState(loaded);
-        setReady(true);
+      if (!active) return;
+      // Wurde mit einem inzwischen deaktivierten Kurs (z. B. Englisch) gestartet,
+      // zurück ins Onboarding schicken – dort gibt es nur noch aktive Sprachen.
+      const course = getCourse(loaded.courseId);
+      if (loaded.onboarded && (!course || !course.available)) {
+        loaded = { ...loaded, onboarded: false, courseId: null, topics: [] };
       }
+      setState(loaded);
+      setReady(true);
     });
     return () => {
       active = false;

@@ -1,12 +1,13 @@
-import englishRaw from './lessons.json';
 import arabicRaw from './lessons-ar.json';
 import { Cefr, FeedItem, Level, StoryLesson } from '../types';
 
 /**
  * Geprüfte Lektionspools im Story-Format. Pro Lernsprache eine JSON-Datei –
  * genau das Format, das später auch eine KI befüllen kann.
+ *
+ * Aktuell nur Arabisch aktiv. Die englischen Lektionen (lessons.json) bleiben
+ * im Repo, werden aber vorerst nicht geladen.
  */
-const ENGLISH = englishRaw as unknown as StoryLesson[];
 const ARABIC = arabicRaw as unknown as StoryLesson[];
 
 /** CEFR-Stufe auf Anfänger/Fortgeschritten abbilden. */
@@ -30,11 +31,8 @@ function toFeedItems(lessons: StoryLesson[], courseId: string): FeedItem[] {
   }));
 }
 
-/** Alle Lektionen aller Kurse, für die Feed-Logik normalisiert. */
-export const FEED_ITEMS: FeedItem[] = [
-  ...toFeedItems(ENGLISH, 'de-en'),
-  ...toFeedItems(ARABIC, 'de-ar'),
-];
+/** Alle Lektionen aller aktiven Kurse, für die Feed-Logik normalisiert. */
+export const FEED_ITEMS: FeedItem[] = [...toFeedItems(ARABIC, 'de-ar')];
 
 /** Lektionen eines bestimmten Kurses. */
 export function feedItemsForCourse(courseId: string | null): FeedItem[] {
