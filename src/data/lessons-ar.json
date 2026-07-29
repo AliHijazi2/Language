@@ -1098,5 +1098,1655 @@
         "text": "„yalla bīna“ = „los, lass uns gehen“ – hört man ständig im Libanon."
       }
     ]
+  },
+  {
+    "id": 21,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Family",
+    "topic": "Mama und Papa",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Meine Familie",
+        "emoji": "👨‍👩‍👧",
+        "target": "إمي وبيّي",
+        "latin": "immi w bayyi",
+        "native": "meine Mutter und mein Vater"
+      },
+      {
+        "type": "explanation",
+        "word": "إمي",
+        "latin": "immi",
+        "meaning": "meine Mutter",
+        "description": "„bayyi“ = mein Vater. Auch „mama“ und „baba“ sind üblich."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „immi“?",
+        "answers": [
+          {
+            "text": "meine Mutter",
+            "correct": true
+          },
+          {
+            "text": "mein Vater",
+            "correct": false
+          },
+          {
+            "text": "mein Bruder",
+            "correct": false
+          }
+        ],
+        "explanation": "„immi“ = meine Mutter."
+      },
+      {
+        "type": "speaking",
+        "text": "إمي وبيّي",
+        "latin": "immi w bayyi"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„w“ (و) heißt „und“ und wird ans nächste Wort angehängt."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Family",
+    "topic": "Bruder und Schwester",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Geschwister",
+        "emoji": "👧",
+        "target": "خيّي وأختي",
+        "latin": "khayyi w ikhti",
+        "native": "mein Bruder und meine Schwester"
+      },
+      {
+        "type": "explanation",
+        "word": "خيّي",
+        "latin": "khayyi",
+        "meaning": "mein Bruder",
+        "description": "„ikhti“ = meine Schwester."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ikhti“?",
+        "answers": [
+          {
+            "text": "meine Schwester",
+            "correct": true
+          },
+          {
+            "text": "mein Bruder",
+            "correct": false
+          },
+          {
+            "text": "meine Mutter",
+            "correct": false
+          }
+        ],
+        "explanation": "„ikhti“ = meine Schwester."
+      },
+      {
+        "type": "speaking",
+        "text": "خيّي وأختي",
+        "latin": "khayyi w ikhti"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„khayy“ = Bruder, „ikht“ = Schwester (allgemein)."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Friends",
+    "topic": "Kosewort habibi",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Mein Lieber",
+        "emoji": "❤️",
+        "target": "حبيبي",
+        "latin": "ḥabībi",
+        "native": "mein Lieber / Schatz"
+      },
+      {
+        "type": "explanation",
+        "word": "حبيبي",
+        "latin": "ḥabībi",
+        "meaning": "mein Lieber (m)",
+        "description": "Sehr häufig unter Freunden und Familie. Zu einer Frau: „ḥabībti“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ḥabībi“?",
+        "answers": [
+          {
+            "text": "mein Lieber / Schatz",
+            "correct": true
+          },
+          {
+            "text": "mein Feind",
+            "correct": false
+          },
+          {
+            "text": "mein Chef",
+            "correct": false
+          }
+        ],
+        "explanation": "„ḥabībi“ ist ein herzliches Kosewort."
+      },
+      {
+        "type": "speaking",
+        "text": "حبيبي",
+        "latin": "ḥabībi"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "„ḥabībi“ hört man ständig – auch einfach freundlich zu Bekannten."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Friends",
+    "topic": "Woher kommst du",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Woher?",
+        "emoji": "🌍",
+        "target": "من وين انت؟",
+        "latin": "min wēn inta?",
+        "native": "Woher kommst du? (zu m)"
+      },
+      {
+        "type": "explanation",
+        "word": "من وين",
+        "latin": "min wēn",
+        "meaning": "woher",
+        "description": "Zu einer Frau: „min wēn inti?“. Antwort: „ana min …“ (ich bin aus …)."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie fragst du einen Mann „Woher kommst du?“",
+        "answers": [
+          {
+            "text": "min wēn inta",
+            "correct": true
+          },
+          {
+            "text": "min wēn inti",
+            "correct": false
+          },
+          {
+            "text": "wēn el-ḥammēm",
+            "correct": false
+          }
+        ],
+        "explanation": "Zu einem Mann: „min wēn inta?“"
+      },
+      {
+        "type": "speaking",
+        "text": "من وين انت؟",
+        "latin": "min wēn inta?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„inta“ = du (m), „inti“ = du (w)."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Willkommen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Willkommen!",
+        "emoji": "🎉",
+        "target": "أهلا وسهلا",
+        "latin": "ahla w sahla",
+        "native": "Herzlich willkommen"
+      },
+      {
+        "type": "explanation",
+        "word": "أهلا وسهلا",
+        "latin": "ahla w sahla",
+        "meaning": "Herzlich willkommen",
+        "description": "Begrüßt Gäste. Kurz auch nur „ahla!“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ahla w sahla“?",
+        "answers": [
+          {
+            "text": "Herzlich willkommen",
+            "correct": true
+          },
+          {
+            "text": "Auf Wiedersehen",
+            "correct": false
+          },
+          {
+            "text": "Wie viel",
+            "correct": false
+          }
+        ],
+        "explanation": "„ahla w sahla“ = herzlich willkommen."
+      },
+      {
+        "type": "speaking",
+        "text": "أهلا وسهلا",
+        "latin": "ahla w sahla"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Als Antwort sagt man oft „ahla fīk“ / „ahla fīki“."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Food",
+    "topic": "Brot",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Brot",
+        "emoji": "🍞",
+        "target": "بدي خبز",
+        "latin": "biddi khibz",
+        "native": "Ich möchte Brot"
+      },
+      {
+        "type": "explanation",
+        "word": "خبز",
+        "latin": "khibz",
+        "meaning": "Brot",
+        "description": "Fladenbrot gehört zu fast jeder Mahlzeit."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „khibz“?",
+        "answers": [
+          {
+            "text": "Brot",
+            "correct": true
+          },
+          {
+            "text": "Wasser",
+            "correct": false
+          },
+          {
+            "text": "Käse",
+            "correct": false
+          }
+        ],
+        "explanation": "„khibz“ = Brot."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي خبز",
+        "latin": "biddi khibz"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„jibne“ = Käse, „zaytūn“ = Oliven."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Food",
+    "topic": "Ich habe Hunger",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Hunger",
+        "emoji": "😋",
+        "target": "أنا جوعان",
+        "latin": "ana jūʿān",
+        "native": "Ich habe Hunger (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "جوعان",
+        "latin": "jūʿān",
+        "meaning": "hungrig (m)",
+        "description": "Zu einer Frau: „jūʿāne“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ana jūʿān“?",
+        "answers": [
+          {
+            "text": "Ich habe Hunger",
+            "correct": true
+          },
+          {
+            "text": "Ich bin satt",
+            "correct": false
+          },
+          {
+            "text": "Ich bin müde",
+            "correct": false
+          }
+        ],
+        "explanation": "„jūʿān“ = hungrig."
+      },
+      {
+        "type": "speaking",
+        "text": "أنا جوعان",
+        "latin": "ana jūʿān"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„shabʿān“ = satt (m), „shabʿāne“ = satt (w)."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Drinks",
+    "topic": "Tee",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Tee",
+        "emoji": "🍵",
+        "target": "بدي شاي",
+        "latin": "biddi shāy",
+        "native": "Ich möchte Tee"
+      },
+      {
+        "type": "explanation",
+        "word": "شاي",
+        "latin": "shāy",
+        "meaning": "Tee",
+        "description": "Oft mit Minze oder Zucker."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „shāy“?",
+        "answers": [
+          {
+            "text": "Tee",
+            "correct": true
+          },
+          {
+            "text": "Kaffee",
+            "correct": false
+          },
+          {
+            "text": "Saft",
+            "correct": false
+          }
+        ],
+        "explanation": "„shāy“ = Tee."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي شاي",
+        "latin": "biddi shāy"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„bi-sukkar“ = mit Zucker, „bala sukkar“ = ohne Zucker."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Restaurant",
+    "topic": "Die Speisekarte",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Die Karte",
+        "emoji": "📋",
+        "target": "المنيو لو سمحت",
+        "latin": "el-menu law samaḥt",
+        "native": "Die Speisekarte, bitte"
+      },
+      {
+        "type": "explanation",
+        "word": "المنيو",
+        "latin": "el-menu",
+        "meaning": "die Speisekarte",
+        "description": "Im Libanesischen sagt man einfach „menu“."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie fragst du nach der Karte?",
+        "answers": [
+          {
+            "text": "el-menu law samaḥt",
+            "correct": true
+          },
+          {
+            "text": "el-ḥsāb law samaḥt",
+            "correct": false
+          },
+          {
+            "text": "biddi mayy",
+            "correct": false
+          }
+        ],
+        "explanation": "„el-menu law samaḥt“ = die Karte, bitte."
+      },
+      {
+        "type": "speaking",
+        "text": "المنيو لو سمحت",
+        "latin": "el-menu law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„shu bti'tiriḥ?“ = Was empfiehlst du?"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Café",
+    "topic": "Noch einen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Noch einen",
+        "emoji": "➕",
+        "target": "كمان واحد",
+        "latin": "kamān wāḥad",
+        "native": "Noch einen"
+      },
+      {
+        "type": "explanation",
+        "word": "كمان",
+        "latin": "kamān",
+        "meaning": "noch / auch",
+        "description": "„kamān wāḥad“ = noch einen (davon)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „kamān“?",
+        "answers": [
+          {
+            "text": "noch / auch",
+            "correct": true
+          },
+          {
+            "text": "genug",
+            "correct": false
+          },
+          {
+            "text": "nein",
+            "correct": false
+          }
+        ],
+        "explanation": "„kamān“ heißt „noch / auch“."
+      },
+      {
+        "type": "speaking",
+        "text": "كمان واحد لو سمحت",
+        "latin": "kamān wāḥad law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„khalaṣ“ = genug / fertig."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Food",
+    "topic": "Guten Appetit",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Guten Appetit",
+        "emoji": "🍽️",
+        "target": "صحتين",
+        "latin": "ṣaḥtēn",
+        "native": "Guten Appetit"
+      },
+      {
+        "type": "explanation",
+        "word": "صحتين",
+        "latin": "ṣaḥtēn",
+        "meaning": "Guten Appetit (wörtl. zwei Gesundheiten)",
+        "description": "Sagt man vor oder während des Essens."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ṣaḥtēn“?",
+        "answers": [
+          {
+            "text": "Guten Appetit",
+            "correct": true
+          },
+          {
+            "text": "Zum Wohl beim Trinken",
+            "correct": false
+          },
+          {
+            "text": "Gute Nacht",
+            "correct": false
+          }
+        ],
+        "explanation": "„ṣaḥtēn“ ist das „Guten Appetit“."
+      },
+      {
+        "type": "speaking",
+        "text": "صحتين",
+        "latin": "ṣaḥtēn"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Antwort: „ʿa ʾalbak“ (auf dein Herz) – nett zurück."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Shopping",
+    "topic": "Ich möchte kaufen",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kaufen",
+        "emoji": "🛒",
+        "target": "بدي اشتري",
+        "latin": "biddi ishtiri",
+        "native": "Ich möchte kaufen"
+      },
+      {
+        "type": "explanation",
+        "word": "اشتري",
+        "latin": "ishtiri",
+        "meaning": "(ich) kaufe",
+        "description": "„biddi ishtiri hayda“ = ich möchte das kaufen."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „biddi ishtiri“?",
+        "answers": [
+          {
+            "text": "Ich möchte kaufen",
+            "correct": true
+          },
+          {
+            "text": "Ich möchte verkaufen",
+            "correct": false
+          },
+          {
+            "text": "Ich möchte schauen",
+            "correct": false
+          }
+        ],
+        "explanation": "„ishtiri“ = kaufen."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي اشتري هيدا",
+        "latin": "biddi ishtiri hayda"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„bass ʿam etfarraj“ = ich schaue nur."
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Shopping",
+    "topic": "Das gefällt mir",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Gefällt mir",
+        "emoji": "👍",
+        "target": "عجبني",
+        "latin": "ʿajabni",
+        "native": "Es gefällt mir"
+      },
+      {
+        "type": "explanation",
+        "word": "عجبني",
+        "latin": "ʿajabni",
+        "meaning": "es hat mir gefallen",
+        "description": "Wörtlich „es gefiel mir“ – man nutzt es für „gefällt mir“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʿajabni“?",
+        "answers": [
+          {
+            "text": "Es gefällt mir",
+            "correct": true
+          },
+          {
+            "text": "Es ist teuer",
+            "correct": false
+          },
+          {
+            "text": "Ich bin müde",
+            "correct": false
+          }
+        ],
+        "explanation": "„ʿajabni“ = es gefällt mir."
+      },
+      {
+        "type": "speaking",
+        "text": "هيدا عجبني",
+        "latin": "hayda ʿajabni"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ma ʿajabni“ = es gefällt mir nicht."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Numbers",
+    "topic": "Zahlen 4–6",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Vier, fünf, sechs",
+        "emoji": "🔢",
+        "target": "أربعة، خمسة، ستة",
+        "latin": "arbʿa, khamse, sitte",
+        "native": "vier, fünf, sechs"
+      },
+      {
+        "type": "explanation",
+        "word": "خمسة",
+        "latin": "khamse",
+        "meaning": "fünf",
+        "description": "arbʿa (4), khamse (5), sitte (6)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „sitte“?",
+        "answers": [
+          {
+            "text": "sechs",
+            "correct": true
+          },
+          {
+            "text": "fünf",
+            "correct": false
+          },
+          {
+            "text": "vier",
+            "correct": false
+          }
+        ],
+        "explanation": "„sitte“ = sechs."
+      },
+      {
+        "type": "speaking",
+        "text": "أربعة، خمسة، ستة",
+        "latin": "arbʿa, khamse, sitte"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Erinnerung: wāḥad (1), tnēn (2), tlēte (3)."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Numbers",
+    "topic": "Zahlen 7–10",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Sieben bis zehn",
+        "emoji": "🔟",
+        "target": "سبعة، تمنة، تسعة، عشرة",
+        "latin": "sabʿa, tmēne, tisʿa, ʿashra",
+        "native": "sieben, acht, neun, zehn"
+      },
+      {
+        "type": "explanation",
+        "word": "عشرة",
+        "latin": "ʿashra",
+        "meaning": "zehn",
+        "description": "sabʿa (7), tmēne (8), tisʿa (9), ʿashra (10)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „tisʿa“?",
+        "answers": [
+          {
+            "text": "neun",
+            "correct": true
+          },
+          {
+            "text": "acht",
+            "correct": false
+          },
+          {
+            "text": "zehn",
+            "correct": false
+          }
+        ],
+        "explanation": "„tisʿa“ = neun."
+      },
+      {
+        "type": "speaking",
+        "text": "سبعة، تمنة، تسعة، عشرة",
+        "latin": "sabʿa, tmēne, tisʿa, ʿashra"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿashra“ (zehn) klingt fast wie „ʿashara“ im Hocharabischen."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Time",
+    "topic": "Heute und morgen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Heute / morgen",
+        "emoji": "📅",
+        "target": "اليوم / بكرا",
+        "latin": "el-yōm / bukra",
+        "native": "heute / morgen"
+      },
+      {
+        "type": "explanation",
+        "word": "بكرا",
+        "latin": "bukra",
+        "meaning": "morgen",
+        "description": "„el-yōm“ = heute, „mbēriḥ“ = gestern."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „bukra“?",
+        "answers": [
+          {
+            "text": "morgen",
+            "correct": true
+          },
+          {
+            "text": "heute",
+            "correct": false
+          },
+          {
+            "text": "gestern",
+            "correct": false
+          }
+        ],
+        "explanation": "„bukra“ = morgen."
+      },
+      {
+        "type": "speaking",
+        "text": "منشوفك بكرا",
+        "latin": "mnshūfak bukra"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„mnshūfak bukra“ = wir sehen uns morgen."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Time",
+    "topic": "Jetzt und später",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Jetzt / später",
+        "emoji": "⏱️",
+        "target": "هلق / بعدين",
+        "latin": "hallaʾ / baʿdēn",
+        "native": "jetzt / später"
+      },
+      {
+        "type": "explanation",
+        "word": "هلق",
+        "latin": "hallaʾ",
+        "meaning": "jetzt",
+        "description": "„baʿdēn“ = später."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „hallaʾ“?",
+        "answers": [
+          {
+            "text": "jetzt",
+            "correct": true
+          },
+          {
+            "text": "später",
+            "correct": false
+          },
+          {
+            "text": "gestern",
+            "correct": false
+          }
+        ],
+        "explanation": "„hallaʾ“ = jetzt."
+      },
+      {
+        "type": "speaking",
+        "text": "بعدين",
+        "latin": "baʿdēn"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„daʾīʾa“ = eine Minute / einen Moment."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Weather",
+    "topic": "Es ist heiß",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Heiß",
+        "emoji": "☀️",
+        "target": "الجو حر",
+        "latin": "el-jaww ḥarr",
+        "native": "Das Wetter ist heiß"
+      },
+      {
+        "type": "explanation",
+        "word": "حر",
+        "latin": "ḥarr",
+        "meaning": "heiß / Hitze",
+        "description": "„el-jaww“ = das Wetter. Gegenteil: „bard“ (kalt)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ḥarr“?",
+        "answers": [
+          {
+            "text": "heiß",
+            "correct": true
+          },
+          {
+            "text": "kalt",
+            "correct": false
+          },
+          {
+            "text": "schön",
+            "correct": false
+          }
+        ],
+        "explanation": "„ḥarr“ = heiß."
+      },
+      {
+        "type": "speaking",
+        "text": "الجو حر اليوم",
+        "latin": "el-jaww ḥarr el-yōm"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„el-jaww bard“ = das Wetter ist kalt."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Weather",
+    "topic": "Es regnet",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Es regnet",
+        "emoji": "🌧️",
+        "target": "عم تشتي",
+        "latin": "ʿam tshatti",
+        "native": "Es regnet"
+      },
+      {
+        "type": "explanation",
+        "word": "عم",
+        "latin": "ʿam",
+        "meaning": "gerade (Verlaufsform)",
+        "description": "„ʿam + Verb“ = etwas passiert gerade. „tshatti“ = es regnet."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʿam tshatti“?",
+        "answers": [
+          {
+            "text": "Es regnet (gerade)",
+            "correct": true
+          },
+          {
+            "text": "Es ist sonnig",
+            "correct": false
+          },
+          {
+            "text": "Es schneit",
+            "correct": false
+          }
+        ],
+        "explanation": "„ʿam tshatti“ = es regnet gerade."
+      },
+      {
+        "type": "speaking",
+        "text": "عم تشتي",
+        "latin": "ʿam tshatti"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿam ākol“ = ich esse gerade – „ʿam“ macht die Verlaufsform."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Ich bin müde",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Müde",
+        "emoji": "😴",
+        "target": "أنا تعبان",
+        "latin": "ana taʿbān",
+        "native": "Ich bin müde (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "تعبان",
+        "latin": "taʿbān",
+        "meaning": "müde / erschöpft (m)",
+        "description": "Zu einer Frau: „taʿbāne“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „taʿbān“?",
+        "answers": [
+          {
+            "text": "müde",
+            "correct": true
+          },
+          {
+            "text": "hungrig",
+            "correct": false
+          },
+          {
+            "text": "glücklich",
+            "correct": false
+          }
+        ],
+        "explanation": "„taʿbān“ = müde."
+      },
+      {
+        "type": "speaking",
+        "text": "أنا تعبان",
+        "latin": "ana taʿbān"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„mabsūṭ“ = zufrieden/glücklich (m), „mabsūṭa“ (w)."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Kein Problem",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kein Problem",
+        "emoji": "👌",
+        "target": "ما في مشكل",
+        "latin": "mā fī mishkil",
+        "native": "Kein Problem"
+      },
+      {
+        "type": "explanation",
+        "word": "مشكل",
+        "latin": "mishkil",
+        "meaning": "Problem",
+        "description": "„mā fī“ = es gibt kein. „mā fī mishkil“ = kein Problem."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mā fī mishkil“?",
+        "answers": [
+          {
+            "text": "Kein Problem",
+            "correct": true
+          },
+          {
+            "text": "Großes Problem",
+            "correct": false
+          },
+          {
+            "text": "Ich weiß nicht",
+            "correct": false
+          }
+        ],
+        "explanation": "„mā fī mishkil“ = kein Problem."
+      },
+      {
+        "type": "speaking",
+        "text": "ما في مشكل",
+        "latin": "mā fī mishkil"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„mā fī“ = es gibt nicht, „fī“ = es gibt."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Doctor",
+    "topic": "Mir geht es nicht gut",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Nicht gut",
+        "emoji": "🤒",
+        "target": "أنا مش منيح",
+        "latin": "ana mish mnīḥ",
+        "native": "Mir geht es nicht gut (m)"
+      },
+      {
+        "type": "explanation",
+        "word": "مش",
+        "latin": "mish",
+        "meaning": "nicht",
+        "description": "„mish mnīḥ“ = nicht gut. Zu einer Frau: „mish mnīḥa“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mish“?",
+        "answers": [
+          {
+            "text": "nicht",
+            "correct": true
+          },
+          {
+            "text": "sehr",
+            "correct": false
+          },
+          {
+            "text": "auch",
+            "correct": false
+          }
+        ],
+        "explanation": "„mish“ verneint: „mish mnīḥ“ = nicht gut."
+      },
+      {
+        "type": "speaking",
+        "text": "أنا مش منيح",
+        "latin": "ana mish mnīḥ"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„taʿbān“ kann auch „krank/schlapp“ bedeuten."
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Doctor",
+    "topic": "Kopfschmerzen",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Kopfweh",
+        "emoji": "🤕",
+        "target": "عندي وجع راس",
+        "latin": "ʿandi wajaʿ rās",
+        "native": "Ich habe Kopfschmerzen"
+      },
+      {
+        "type": "explanation",
+        "word": "وجع",
+        "latin": "wajaʿ",
+        "meaning": "Schmerz",
+        "description": "„ʿandi“ = ich habe. „rās“ = Kopf."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʿandi wajaʿ rās“?",
+        "answers": [
+          {
+            "text": "Ich habe Kopfschmerzen",
+            "correct": true
+          },
+          {
+            "text": "Ich habe Hunger",
+            "correct": false
+          },
+          {
+            "text": "Ich bin gesund",
+            "correct": false
+          }
+        ],
+        "explanation": "„wajaʿ rās“ = Kopfschmerzen."
+      },
+      {
+        "type": "speaking",
+        "text": "عندي وجع راس",
+        "latin": "ʿandi wajaʿ rās"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„wajaʿ baṭn“ = Bauchschmerzen."
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Emergency",
+    "topic": "Hilf mir",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Hilfe!",
+        "emoji": "🆘",
+        "target": "ساعدني لو سمحت",
+        "latin": "sāʿidni law samaḥt",
+        "native": "Hilf mir, bitte"
+      },
+      {
+        "type": "explanation",
+        "word": "ساعدني",
+        "latin": "sāʿidni",
+        "meaning": "hilf mir",
+        "description": "Dringlich auch nur „sāʿidni!“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „sāʿidni“?",
+        "answers": [
+          {
+            "text": "Hilf mir",
+            "correct": true
+          },
+          {
+            "text": "Lass mich",
+            "correct": false
+          },
+          {
+            "text": "Warte",
+            "correct": false
+          }
+        ],
+        "explanation": "„sāʿidni“ = hilf mir."
+      },
+      {
+        "type": "speaking",
+        "text": "ساعدني لو سمحت",
+        "latin": "sāʿidni law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„el-ḥaʾūni!“ = kommt mir zu Hilfe! (sehr dringend)"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Emergency",
+    "topic": "Ruf einen Krankenwagen",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Notfall",
+        "emoji": "🚑",
+        "target": "اتصل بالإسعاف",
+        "latin": "ittiṣil bil-isʿāf",
+        "native": "Ruf den Krankenwagen"
+      },
+      {
+        "type": "explanation",
+        "word": "إسعاف",
+        "latin": "isʿāf",
+        "meaning": "Krankenwagen / Rettung",
+        "description": "„ittiṣil“ = ruf an. „bi-l-isʿāf“ = beim Rettungsdienst."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „isʿāf“?",
+        "answers": [
+          {
+            "text": "Krankenwagen",
+            "correct": true
+          },
+          {
+            "text": "Polizei",
+            "correct": false
+          },
+          {
+            "text": "Feuerwehr",
+            "correct": false
+          }
+        ],
+        "explanation": "„isʿāf“ = Krankenwagen / Rettung."
+      },
+      {
+        "type": "speaking",
+        "text": "اتصل بالإسعاف",
+        "latin": "ittiṣil bil-isʿāf"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„shurṭa“ = Polizei, „ḥarīʾa“ = Feuer/Brand."
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Hotel",
+    "topic": "Ich habe eine Reservierung",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Reservierung",
+        "emoji": "🏨",
+        "target": "عندي حجز",
+        "latin": "ʿandi ḥajz",
+        "native": "Ich habe eine Reservierung"
+      },
+      {
+        "type": "explanation",
+        "word": "حجز",
+        "latin": "ḥajz",
+        "meaning": "Reservierung / Buchung",
+        "description": "„ʿandi ḥajz“ nennt man an der Rezeption."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʿandi ḥajz“?",
+        "answers": [
+          {
+            "text": "Ich habe eine Reservierung",
+            "correct": true
+          },
+          {
+            "text": "Ich möchte zahlen",
+            "correct": false
+          },
+          {
+            "text": "Wo ist der Ausgang",
+            "correct": false
+          }
+        ],
+        "explanation": "„ḥajz“ = Reservierung."
+      },
+      {
+        "type": "speaking",
+        "text": "عندي حجز",
+        "latin": "ʿandi ḥajz"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ʿandi“ = ich habe, „ma ʿandi“ = ich habe nicht."
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Hotel",
+    "topic": "Wo ist mein Zimmer",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Mein Zimmer",
+        "emoji": "🛏️",
+        "target": "وين أوضتي؟",
+        "latin": "wēn ōḍti?",
+        "native": "Wo ist mein Zimmer?"
+      },
+      {
+        "type": "explanation",
+        "word": "أوضة",
+        "latin": "ōḍa",
+        "meaning": "Zimmer",
+        "description": "„ōḍti“ = mein Zimmer. „wēn …?“ = wo ist …?"
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ōḍa“?",
+        "answers": [
+          {
+            "text": "Zimmer",
+            "correct": true
+          },
+          {
+            "text": "Schlüssel",
+            "correct": false
+          },
+          {
+            "text": "Aufzug",
+            "correct": false
+          }
+        ],
+        "explanation": "„ōḍa“ = Zimmer."
+      },
+      {
+        "type": "speaking",
+        "text": "وين أوضتي؟",
+        "latin": "wēn ōḍti?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„miftēḥ“ = Schlüssel, „aṣanṣēr“ = Aufzug."
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Directions",
+    "topic": "Rechts und links",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Rechts / links",
+        "emoji": "↔️",
+        "target": "يمين وشمال",
+        "latin": "yamīn w shmēl",
+        "native": "rechts und links"
+      },
+      {
+        "type": "explanation",
+        "word": "يمين",
+        "latin": "yamīn",
+        "meaning": "rechts",
+        "description": "„shmēl“ = links."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „shmēl“?",
+        "answers": [
+          {
+            "text": "links",
+            "correct": true
+          },
+          {
+            "text": "rechts",
+            "correct": false
+          },
+          {
+            "text": "geradeaus",
+            "correct": false
+          }
+        ],
+        "explanation": "„shmēl“ = links."
+      },
+      {
+        "type": "speaking",
+        "text": "لف يمين",
+        "latin": "liff yamīn"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„liff yamīn“ = biege rechts ab."
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Directions",
+    "topic": "Geradeaus",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Geradeaus",
+        "emoji": "⬆️",
+        "target": "دغري",
+        "latin": "dughri",
+        "native": "geradeaus"
+      },
+      {
+        "type": "explanation",
+        "word": "دغري",
+        "latin": "dughri",
+        "meaning": "geradeaus / direkt",
+        "description": "„rūḥ dughri“ = geh geradeaus."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „dughri“?",
+        "answers": [
+          {
+            "text": "geradeaus",
+            "correct": true
+          },
+          {
+            "text": "zurück",
+            "correct": false
+          },
+          {
+            "text": "rechts",
+            "correct": false
+          }
+        ],
+        "explanation": "„dughri“ = geradeaus."
+      },
+      {
+        "type": "speaking",
+        "text": "روح دغري",
+        "latin": "rūḥ dughri"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„rjaʿ“ = zurück, „waʾʾif“ = halt an."
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Friends",
+    "topic": "Ich hab dich vermisst",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Vermisst",
+        "emoji": "🥹",
+        "target": "اشتقتلك",
+        "latin": "ishtaʾtillak",
+        "native": "Ich habe dich vermisst (zu m)"
+      },
+      {
+        "type": "explanation",
+        "word": "اشتقتلك",
+        "latin": "ishtaʾtillak",
+        "meaning": "ich habe dich vermisst (zu m)",
+        "description": "Zu einer Frau: „ishtaʾtillik“. Sehr herzlich."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ishtaʾtillak“?",
+        "answers": [
+          {
+            "text": "Ich habe dich vermisst",
+            "correct": true
+          },
+          {
+            "text": "Ich sehe dich",
+            "correct": false
+          },
+          {
+            "text": "Ich rufe dich an",
+            "correct": false
+          }
+        ],
+        "explanation": "„ishtaʾtillak“ = ich habe dich vermisst."
+      },
+      {
+        "type": "speaking",
+        "text": "اشتقتلك",
+        "latin": "ishtaʾtillak"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Antwort oft: „w ana kamān“ = ich dich auch."
+      }
+    ]
   }
 ]
