@@ -24,14 +24,20 @@ export interface IntroCard {
   type: 'lesson';
   title: string;
   emoji: string;
-  english: string;
-  german: string;
-  audio: string;
+  /** Satz in der Lernsprache. */
+  target: string;
+  /** Optionale Umschrift (z. B. für Arabisch). */
+  latin?: string;
+  /** Übersetzung in der Menüsprache (Deutsch). */
+  native: string;
+  audio?: string;
 }
 
 export interface ExplanationCard {
   type: 'explanation';
   word: string;
+  /** Optionale Umschrift des Wortes. */
+  latin?: string;
   meaning: string;
   description: string;
 }
@@ -51,6 +57,8 @@ export interface QuizCard {
 export interface SpeakingCard {
   type: 'speaking';
   text: string;
+  /** Optionale Umschrift des zu sprechenden Satzes. */
+  latin?: string;
 }
 
 export interface TipCard {
@@ -76,6 +84,7 @@ export interface StoryLesson {
 /** Für die adaptive Feed-Logik normalisierte Lektion. */
 export interface FeedItem {
   id: string;
+  courseId: string;
   level: Level;
   topic: string;
   lesson: StoryLesson;

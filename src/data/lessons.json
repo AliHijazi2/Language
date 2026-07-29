@@ -8,11 +8,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Hey there!", "emoji": "👋", "english": "Hey, how's it going?", "german": "Hey, wie läuft's?", "audio": "Hey, how's it going?" },
-      { "type": "explanation", "word": "How's it going?", "meaning": "Wie läuft's?", "description": "Eine lockere Art, jemanden zu begrüßen – unter Freunden sehr üblich." },
-      { "type": "quiz", "question": "What does \"How's it going?\" mean?", "answers": [ { "text": "Wie läuft's?", "correct": true }, { "text": "Wohin gehst du?", "correct": false }, { "text": "Wie heißt du?", "correct": false } ], "explanation": "\"How's it going?\" fragt locker, wie es jemandem geht." },
-      { "type": "speaking", "text": "Hey, how's it going?" },
-      { "type": "tip", "title": "Fun Fact", "text": "Man antwortet oft einfach mit \"Good, you?\" – kurz und locker." }
+      {
+        "type": "lesson",
+        "title": "Hey there!",
+        "emoji": "👋",
+        "audio": "Hey, how's it going?",
+        "target": "Hey, how's it going?",
+        "native": "Hey, wie läuft's?"
+      },
+      {
+        "type": "explanation",
+        "word": "How's it going?",
+        "meaning": "Wie läuft's?",
+        "description": "Eine lockere Art, jemanden zu begrüßen – unter Freunden sehr üblich."
+      },
+      {
+        "type": "quiz",
+        "question": "What does \"How's it going?\" mean?",
+        "answers": [
+          {
+            "text": "Wie läuft's?",
+            "correct": true
+          },
+          {
+            "text": "Wohin gehst du?",
+            "correct": false
+          },
+          {
+            "text": "Wie heißt du?",
+            "correct": false
+          }
+        ],
+        "explanation": "\"How's it going?\" fragt locker, wie es jemandem geht."
+      },
+      {
+        "type": "speaking",
+        "text": "Hey, how's it going?"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Man antwortet oft einfach mit \"Good, you?\" – kurz und locker."
+      }
     ]
   },
   {
@@ -24,11 +61,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Checking in", "emoji": "🙂", "english": "How are you doing today?", "german": "Wie geht es dir heute?", "audio": "How are you doing today?" },
-      { "type": "explanation", "word": "How are you doing?", "meaning": "Wie geht es dir?", "description": "Etwas herzlicher als \"How are you?\" und im Alltag sehr verbreitet." },
-      { "type": "quiz", "question": "Which answer fits \"How are you doing?\"", "answers": [ { "text": "I'm doing great, thanks!", "correct": true }, { "text": "My name is Tom.", "correct": false }, { "text": "It's over there.", "correct": false } ], "explanation": "Auf \"How are you doing?\" antwortet man, wie es einem geht." },
-      { "type": "speaking", "text": "I'm doing great, thanks!" },
-      { "type": "tip", "title": "Tipp", "text": "\"Thanks\" am Ende macht die Antwort gleich freundlicher." }
+      {
+        "type": "lesson",
+        "title": "Checking in",
+        "emoji": "🙂",
+        "audio": "How are you doing today?",
+        "target": "How are you doing today?",
+        "native": "Wie geht es dir heute?"
+      },
+      {
+        "type": "explanation",
+        "word": "How are you doing?",
+        "meaning": "Wie geht es dir?",
+        "description": "Etwas herzlicher als \"How are you?\" und im Alltag sehr verbreitet."
+      },
+      {
+        "type": "quiz",
+        "question": "Which answer fits \"How are you doing?\"",
+        "answers": [
+          {
+            "text": "I'm doing great, thanks!",
+            "correct": true
+          },
+          {
+            "text": "My name is Tom.",
+            "correct": false
+          },
+          {
+            "text": "It's over there.",
+            "correct": false
+          }
+        ],
+        "explanation": "Auf \"How are you doing?\" antwortet man, wie es einem geht."
+      },
+      {
+        "type": "speaking",
+        "text": "I'm doing great, thanks!"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Thanks\" am Ende macht die Antwort gleich freundlicher."
+      }
     ]
   },
   {
@@ -40,11 +114,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Nice to meet you", "emoji": "🤝", "english": "Hi, I'm Lena. Nice to meet you.", "german": "Hi, ich bin Lena. Schön, dich kennenzulernen.", "audio": "Hi, I'm Lena. Nice to meet you." },
-      { "type": "explanation", "word": "Nice to meet you", "meaning": "Schön, dich kennenzulernen", "description": "Sagt man beim ersten Kennenlernen. Antwort oft: \"Nice to meet you too.\"" },
-      { "type": "quiz", "question": "How do you reply to \"Nice to meet you\"?", "answers": [ { "text": "Nice to meet you too.", "correct": true }, { "text": "You're welcome.", "correct": false }, { "text": "See you later.", "correct": false } ], "explanation": "Man spiegelt die Begrüßung mit \"...too\" zurück." },
-      { "type": "speaking", "text": "Hi, I'm Lena. Nice to meet you." },
-      { "type": "tip", "title": "Fun Fact", "text": "\"I'm\" ist die kurze Form von \"I am\" – klingt viel natürlicher." }
+      {
+        "type": "lesson",
+        "title": "Nice to meet you",
+        "emoji": "🤝",
+        "audio": "Hi, I'm Lena. Nice to meet you.",
+        "target": "Hi, I'm Lena. Nice to meet you.",
+        "native": "Hi, ich bin Lena. Schön, dich kennenzulernen."
+      },
+      {
+        "type": "explanation",
+        "word": "Nice to meet you",
+        "meaning": "Schön, dich kennenzulernen",
+        "description": "Sagt man beim ersten Kennenlernen. Antwort oft: \"Nice to meet you too.\""
+      },
+      {
+        "type": "quiz",
+        "question": "How do you reply to \"Nice to meet you\"?",
+        "answers": [
+          {
+            "text": "Nice to meet you too.",
+            "correct": true
+          },
+          {
+            "text": "You're welcome.",
+            "correct": false
+          },
+          {
+            "text": "See you later.",
+            "correct": false
+          }
+        ],
+        "explanation": "Man spiegelt die Begrüßung mit \"...too\" zurück."
+      },
+      {
+        "type": "speaking",
+        "text": "Hi, I'm Lena. Nice to meet you."
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "\"I'm\" ist die kurze Form von \"I am\" – klingt viel natürlicher."
+      }
     ]
   },
   {
@@ -56,11 +167,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "My family", "emoji": "👨‍👩‍👧", "english": "I live with my parents and my little sister.", "german": "Ich wohne bei meinen Eltern und meiner kleinen Schwester.", "audio": "I live with my parents and my little sister." },
-      { "type": "explanation", "word": "little sister", "meaning": "kleine Schwester", "description": "\"Little\" heißt hier \"jünger\", nicht unbedingt klein von der Größe." },
-      { "type": "quiz", "question": "What is a \"little sister\"?", "answers": [ { "text": "Eine jüngere Schwester", "correct": true }, { "text": "Eine große Schwester", "correct": false }, { "text": "Eine Tante", "correct": false } ], "explanation": "\"Little sister\" ist die jüngere Schwester." },
-      { "type": "speaking", "text": "I live with my parents and my little sister." },
-      { "type": "tip", "title": "Tipp", "text": "\"Older brother\" = älterer Bruder, \"younger brother\" = jüngerer Bruder." }
+      {
+        "type": "lesson",
+        "title": "My family",
+        "emoji": "👨‍👩‍👧",
+        "audio": "I live with my parents and my little sister.",
+        "target": "I live with my parents and my little sister.",
+        "native": "Ich wohne bei meinen Eltern und meiner kleinen Schwester."
+      },
+      {
+        "type": "explanation",
+        "word": "little sister",
+        "meaning": "kleine Schwester",
+        "description": "\"Little\" heißt hier \"jünger\", nicht unbedingt klein von der Größe."
+      },
+      {
+        "type": "quiz",
+        "question": "What is a \"little sister\"?",
+        "answers": [
+          {
+            "text": "Eine jüngere Schwester",
+            "correct": true
+          },
+          {
+            "text": "Eine große Schwester",
+            "correct": false
+          },
+          {
+            "text": "Eine Tante",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Little sister\" ist die jüngere Schwester."
+      },
+      {
+        "type": "speaking",
+        "text": "I live with my parents and my little sister."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Older brother\" = älterer Bruder, \"younger brother\" = jüngerer Bruder."
+      }
     ]
   },
   {
@@ -72,11 +220,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Any siblings?", "emoji": "👧", "english": "Do you have any brothers or sisters?", "german": "Hast du Geschwister?", "audio": "Do you have any brothers or sisters?" },
-      { "type": "explanation", "word": "any", "meaning": "irgendwelche", "description": "In Fragen nutzt man oft \"any\" statt einer Zahl: \"any brothers or sisters?\"" },
-      { "type": "quiz", "question": "Which is a natural answer?", "answers": [ { "text": "Yes, I have one brother.", "correct": true }, { "text": "Yes, I am a brother house.", "correct": false }, { "text": "No, I have a weather.", "correct": false } ], "explanation": "Man antwortet mit \"I have...\" und der Anzahl." },
-      { "type": "speaking", "text": "Do you have any brothers or sisters?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Only child\" heißt Einzelkind – praktisch für diese Frage." }
+      {
+        "type": "lesson",
+        "title": "Any siblings?",
+        "emoji": "👧",
+        "audio": "Do you have any brothers or sisters?",
+        "target": "Do you have any brothers or sisters?",
+        "native": "Hast du Geschwister?"
+      },
+      {
+        "type": "explanation",
+        "word": "any",
+        "meaning": "irgendwelche",
+        "description": "In Fragen nutzt man oft \"any\" statt einer Zahl: \"any brothers or sisters?\""
+      },
+      {
+        "type": "quiz",
+        "question": "Which is a natural answer?",
+        "answers": [
+          {
+            "text": "Yes, I have one brother.",
+            "correct": true
+          },
+          {
+            "text": "Yes, I am a brother house.",
+            "correct": false
+          },
+          {
+            "text": "No, I have a weather.",
+            "correct": false
+          }
+        ],
+        "explanation": "Man antwortet mit \"I have...\" und der Anzahl."
+      },
+      {
+        "type": "speaking",
+        "text": "Do you have any brothers or sisters?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Only child\" heißt Einzelkind – praktisch für diese Frage."
+      }
     ]
   },
   {
@@ -88,11 +273,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Let's hang out", "emoji": "🎉", "english": "Do you want to hang out this weekend?", "german": "Wollen wir am Wochenende abhängen?", "audio": "Do you want to hang out this weekend?" },
-      { "type": "explanation", "word": "hang out", "meaning": "abhängen / Zeit verbringen", "description": "Sehr lockeres \"gemeinsam etwas machen\", ohne festen Plan." },
-      { "type": "quiz", "question": "What does \"hang out\" mean?", "answers": [ { "text": "Zeit zusammen verbringen", "correct": true }, { "text": "Wäsche aufhängen", "correct": false }, { "text": "Auflegen (Telefon)", "correct": false } ], "explanation": "Unter Freunden heißt \"hang out\" einfach Zeit verbringen." },
-      { "type": "speaking", "text": "Do you want to hang out this weekend?" },
-      { "type": "tip", "title": "Fun Fact", "text": "\"Wanna\" ist die gesprochene Kurzform von \"want to\": \"Wanna hang out?\"" }
+      {
+        "type": "lesson",
+        "title": "Let's hang out",
+        "emoji": "🎉",
+        "audio": "Do you want to hang out this weekend?",
+        "target": "Do you want to hang out this weekend?",
+        "native": "Wollen wir am Wochenende abhängen?"
+      },
+      {
+        "type": "explanation",
+        "word": "hang out",
+        "meaning": "abhängen / Zeit verbringen",
+        "description": "Sehr lockeres \"gemeinsam etwas machen\", ohne festen Plan."
+      },
+      {
+        "type": "quiz",
+        "question": "What does \"hang out\" mean?",
+        "answers": [
+          {
+            "text": "Zeit zusammen verbringen",
+            "correct": true
+          },
+          {
+            "text": "Wäsche aufhängen",
+            "correct": false
+          },
+          {
+            "text": "Auflegen (Telefon)",
+            "correct": false
+          }
+        ],
+        "explanation": "Unter Freunden heißt \"hang out\" einfach Zeit verbringen."
+      },
+      {
+        "type": "speaking",
+        "text": "Do you want to hang out this weekend?"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "\"Wanna\" ist die gesprochene Kurzform von \"want to\": \"Wanna hang out?\""
+      }
     ]
   },
   {
@@ -104,11 +326,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Come over", "emoji": "🍿", "english": "We're watching a movie tonight. Wanna join?", "german": "Wir schauen heute Abend einen Film. Kommst du mit?", "audio": "We're watching a movie tonight. Wanna join?" },
-      { "type": "explanation", "word": "join", "meaning": "mitmachen / dazukommen", "description": "\"Wanna join?\" lädt jemanden locker ein, mitzumachen." },
-      { "type": "quiz", "question": "How can you accept the invitation?", "answers": [ { "text": "Sure, I'd love to!", "correct": true }, { "text": "No problem, goodbye.", "correct": false }, { "text": "It's raining money.", "correct": false } ], "explanation": "\"I'd love to!\" ist eine freundliche Zusage." },
-      { "type": "speaking", "text": "Sure, I'd love to!" },
-      { "type": "tip", "title": "Tipp", "text": "Absagen geht höflich mit \"I can't tonight, maybe next time.\"" }
+      {
+        "type": "lesson",
+        "title": "Come over",
+        "emoji": "🍿",
+        "audio": "We're watching a movie tonight. Wanna join?",
+        "target": "We're watching a movie tonight. Wanna join?",
+        "native": "Wir schauen heute Abend einen Film. Kommst du mit?"
+      },
+      {
+        "type": "explanation",
+        "word": "join",
+        "meaning": "mitmachen / dazukommen",
+        "description": "\"Wanna join?\" lädt jemanden locker ein, mitzumachen."
+      },
+      {
+        "type": "quiz",
+        "question": "How can you accept the invitation?",
+        "answers": [
+          {
+            "text": "Sure, I'd love to!",
+            "correct": true
+          },
+          {
+            "text": "No problem, goodbye.",
+            "correct": false
+          },
+          {
+            "text": "It's raining money.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"I'd love to!\" ist eine freundliche Zusage."
+      },
+      {
+        "type": "speaking",
+        "text": "Sure, I'd love to!"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Absagen geht höflich mit \"I can't tonight, maybe next time.\""
+      }
     ]
   },
   {
@@ -120,11 +379,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "How much?", "emoji": "🛍️", "english": "How much is this?", "german": "Wie viel kostet das?", "audio": "How much is this?" },
-      { "type": "explanation", "word": "How much", "meaning": "Wie viel", "description": "Für Preise fragt man \"How much is...?\" – bei einem Ding \"this\", bei mehreren \"these\"." },
-      { "type": "quiz", "question": "You want the price of one item. You say:", "answers": [ { "text": "How much is this?", "correct": true }, { "text": "How many is this?", "correct": false }, { "text": "How old is this?", "correct": false } ], "explanation": "Für Preise nutzt man \"how much\", nicht \"how many\"." },
-      { "type": "speaking", "text": "How much is this?" },
-      { "type": "tip", "title": "Tipp", "text": "\"How much are these?\" fragt nach dem Preis für mehrere Dinge." }
+      {
+        "type": "lesson",
+        "title": "How much?",
+        "emoji": "🛍️",
+        "audio": "How much is this?",
+        "target": "How much is this?",
+        "native": "Wie viel kostet das?"
+      },
+      {
+        "type": "explanation",
+        "word": "How much",
+        "meaning": "Wie viel",
+        "description": "Für Preise fragt man \"How much is...?\" – bei einem Ding \"this\", bei mehreren \"these\"."
+      },
+      {
+        "type": "quiz",
+        "question": "You want the price of one item. You say:",
+        "answers": [
+          {
+            "text": "How much is this?",
+            "correct": true
+          },
+          {
+            "text": "How many is this?",
+            "correct": false
+          },
+          {
+            "text": "How old is this?",
+            "correct": false
+          }
+        ],
+        "explanation": "Für Preise nutzt man \"how much\", nicht \"how many\"."
+      },
+      {
+        "type": "speaking",
+        "text": "How much is this?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"How much are these?\" fragt nach dem Preis für mehrere Dinge."
+      }
     ]
   },
   {
@@ -136,11 +432,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "The right size", "emoji": "👕", "english": "Do you have this in a medium?", "german": "Haben Sie das in Größe M?", "audio": "Do you have this in a medium?" },
-      { "type": "explanation", "word": "in a medium", "meaning": "in Größe M", "description": "Kleidergrößen: small (S), medium (M), large (L). \"in a medium\" = in M." },
-      { "type": "quiz", "question": "What are you asking for?", "answers": [ { "text": "Eine andere Größe", "correct": true }, { "text": "Einen Rabatt", "correct": false }, { "text": "Die Uhrzeit", "correct": false } ], "explanation": "Du fragst, ob es das Teil in Größe M gibt." },
-      { "type": "speaking", "text": "Do you have this in a medium?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Can I try it on?\" heißt \"Kann ich es anprobieren?\"" }
+      {
+        "type": "lesson",
+        "title": "The right size",
+        "emoji": "👕",
+        "audio": "Do you have this in a medium?",
+        "target": "Do you have this in a medium?",
+        "native": "Haben Sie das in Größe M?"
+      },
+      {
+        "type": "explanation",
+        "word": "in a medium",
+        "meaning": "in Größe M",
+        "description": "Kleidergrößen: small (S), medium (M), large (L). \"in a medium\" = in M."
+      },
+      {
+        "type": "quiz",
+        "question": "What are you asking for?",
+        "answers": [
+          {
+            "text": "Eine andere Größe",
+            "correct": true
+          },
+          {
+            "text": "Einen Rabatt",
+            "correct": false
+          },
+          {
+            "text": "Die Uhrzeit",
+            "correct": false
+          }
+        ],
+        "explanation": "Du fragst, ob es das Teil in Größe M gibt."
+      },
+      {
+        "type": "speaking",
+        "text": "Do you have this in a medium?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Can I try it on?\" heißt \"Kann ich es anprobieren?\""
+      }
     ]
   },
   {
@@ -152,11 +485,48 @@
     "duration": 22,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Card or cash?", "emoji": "💳", "english": "Can I pay by card?", "german": "Kann ich mit Karte zahlen?", "audio": "Can I pay by card?" },
-      { "type": "explanation", "word": "by card", "meaning": "mit Karte", "description": "\"Pay by card\" = mit Karte zahlen, \"pay in cash\" = bar zahlen." },
-      { "type": "quiz", "question": "How do you say \"bar zahlen\"?", "answers": [ { "text": "Pay in cash", "correct": true }, { "text": "Pay by card", "correct": false }, { "text": "Pay the weather", "correct": false } ], "explanation": "\"In cash\" bedeutet bar." },
-      { "type": "speaking", "text": "Can I pay by card?" },
-      { "type": "tip", "title": "Fun Fact", "text": "An der Kasse hörst du oft \"Would you like a receipt?\" – den Kassenbon." }
+      {
+        "type": "lesson",
+        "title": "Card or cash?",
+        "emoji": "💳",
+        "audio": "Can I pay by card?",
+        "target": "Can I pay by card?",
+        "native": "Kann ich mit Karte zahlen?"
+      },
+      {
+        "type": "explanation",
+        "word": "by card",
+        "meaning": "mit Karte",
+        "description": "\"Pay by card\" = mit Karte zahlen, \"pay in cash\" = bar zahlen."
+      },
+      {
+        "type": "quiz",
+        "question": "How do you say \"bar zahlen\"?",
+        "answers": [
+          {
+            "text": "Pay in cash",
+            "correct": true
+          },
+          {
+            "text": "Pay by card",
+            "correct": false
+          },
+          {
+            "text": "Pay the weather",
+            "correct": false
+          }
+        ],
+        "explanation": "\"In cash\" bedeutet bar."
+      },
+      {
+        "type": "speaking",
+        "text": "Can I pay by card?"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "An der Kasse hörst du oft \"Would you like a receipt?\" – den Kassenbon."
+      }
     ]
   },
   {
@@ -168,11 +538,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "I'll have...", "emoji": "🍝", "english": "I'll have the pasta, please.", "german": "Ich nehme die Pasta, bitte.", "audio": "I'll have the pasta, please." },
-      { "type": "explanation", "word": "I'll have", "meaning": "Ich nehme", "description": "\"I'll have...\" ist die typische Bestellformel im Restaurant." },
-      { "type": "quiz", "question": "Which sentence orders food politely?", "answers": [ { "text": "I'll have the soup, please.", "correct": true }, { "text": "I have your soup now.", "correct": false }, { "text": "Give soup fast.", "correct": false } ], "explanation": "\"I'll have..., please\" ist höflich und natürlich." },
-      { "type": "speaking", "text": "I'll have the pasta, please." },
-      { "type": "tip", "title": "Tipp", "text": "\"For starters, I'll have...\" leitet die Vorspeise ein." }
+      {
+        "type": "lesson",
+        "title": "I'll have...",
+        "emoji": "🍝",
+        "audio": "I'll have the pasta, please.",
+        "target": "I'll have the pasta, please.",
+        "native": "Ich nehme die Pasta, bitte."
+      },
+      {
+        "type": "explanation",
+        "word": "I'll have",
+        "meaning": "Ich nehme",
+        "description": "\"I'll have...\" ist die typische Bestellformel im Restaurant."
+      },
+      {
+        "type": "quiz",
+        "question": "Which sentence orders food politely?",
+        "answers": [
+          {
+            "text": "I'll have the soup, please.",
+            "correct": true
+          },
+          {
+            "text": "I have your soup now.",
+            "correct": false
+          },
+          {
+            "text": "Give soup fast.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"I'll have..., please\" ist höflich und natürlich."
+      },
+      {
+        "type": "speaking",
+        "text": "I'll have the pasta, please."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"For starters, I'll have...\" leitet die Vorspeise ein."
+      }
     ]
   },
   {
@@ -184,11 +591,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "The bill, please", "emoji": "🧾", "english": "Could we get the bill, please?", "german": "Könnten wir die Rechnung haben, bitte?", "audio": "Could we get the bill, please?" },
-      { "type": "explanation", "word": "the bill", "meaning": "die Rechnung", "description": "In Großbritannien \"bill\", in den USA meist \"check\"." },
-      { "type": "quiz", "question": "In the USA, the bill is often called:", "answers": [ { "text": "the check", "correct": true }, { "text": "the ticket", "correct": false }, { "text": "the menu", "correct": false } ], "explanation": "In den USA sagt man \"check\" statt \"bill\"." },
-      { "type": "speaking", "text": "Could we get the bill, please?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Could we...\" klingt höflicher als \"Can we...\"." }
+      {
+        "type": "lesson",
+        "title": "The bill, please",
+        "emoji": "🧾",
+        "audio": "Could we get the bill, please?",
+        "target": "Could we get the bill, please?",
+        "native": "Könnten wir die Rechnung haben, bitte?"
+      },
+      {
+        "type": "explanation",
+        "word": "the bill",
+        "meaning": "die Rechnung",
+        "description": "In Großbritannien \"bill\", in den USA meist \"check\"."
+      },
+      {
+        "type": "quiz",
+        "question": "In the USA, the bill is often called:",
+        "answers": [
+          {
+            "text": "the check",
+            "correct": true
+          },
+          {
+            "text": "the ticket",
+            "correct": false
+          },
+          {
+            "text": "the menu",
+            "correct": false
+          }
+        ],
+        "explanation": "In den USA sagt man \"check\" statt \"bill\"."
+      },
+      {
+        "type": "speaking",
+        "text": "Could we get the bill, please?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Could we...\" klingt höflicher als \"Can we...\"."
+      }
     ]
   },
   {
@@ -200,11 +644,48 @@
     "duration": 26,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "A table for two", "emoji": "🍽️", "english": "I'd like to book a table for two at eight.", "german": "Ich möchte einen Tisch für zwei um acht reservieren.", "audio": "I'd like to book a table for two at eight." },
-      { "type": "explanation", "word": "book a table", "meaning": "einen Tisch reservieren", "description": "\"Book\" = reservieren. \"for two\" = für zwei Personen." },
-      { "type": "quiz", "question": "\"Book a table\" means:", "answers": [ { "text": "einen Tisch reservieren", "correct": true }, { "text": "ein Buch lesen", "correct": false }, { "text": "einen Tisch kaufen", "correct": false } ], "explanation": "\"Book\" heißt hier reservieren." },
-      { "type": "speaking", "text": "I'd like to book a table for two at eight." },
-      { "type": "tip", "title": "Tipp", "text": "\"Under the name Miller\" nennt den Namen für die Reservierung." }
+      {
+        "type": "lesson",
+        "title": "A table for two",
+        "emoji": "🍽️",
+        "audio": "I'd like to book a table for two at eight.",
+        "target": "I'd like to book a table for two at eight.",
+        "native": "Ich möchte einen Tisch für zwei um acht reservieren."
+      },
+      {
+        "type": "explanation",
+        "word": "book a table",
+        "meaning": "einen Tisch reservieren",
+        "description": "\"Book\" = reservieren. \"for two\" = für zwei Personen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Book a table\" means:",
+        "answers": [
+          {
+            "text": "einen Tisch reservieren",
+            "correct": true
+          },
+          {
+            "text": "ein Buch lesen",
+            "correct": false
+          },
+          {
+            "text": "einen Tisch kaufen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Book\" heißt hier reservieren."
+      },
+      {
+        "type": "speaking",
+        "text": "I'd like to book a table for two at eight."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Under the name Miller\" nennt den Namen für die Reservierung."
+      }
     ]
   },
   {
@@ -216,11 +697,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "At the coffee shop", "emoji": "☕", "english": "Can I get a latte to go, please?", "german": "Kann ich einen Latte zum Mitnehmen haben, bitte?", "audio": "Can I get a latte to go, please?" },
-      { "type": "explanation", "word": "to go", "meaning": "zum Mitnehmen", "description": "\"To go\" = zum Mitnehmen. Für vor Ort sagt man \"for here\"." },
-      { "type": "quiz", "question": "You want to drink it at home. You say:", "answers": [ { "text": "to go", "correct": true }, { "text": "for here", "correct": false }, { "text": "to stay", "correct": false } ], "explanation": "Zum Mitnehmen heißt \"to go\"." },
-      { "type": "speaking", "text": "Can I get a latte to go, please?" },
-      { "type": "tip", "title": "Fun Fact", "text": "In den USA fragt der Barista oft nach deinem Namen für den Becher." }
+      {
+        "type": "lesson",
+        "title": "At the coffee shop",
+        "emoji": "☕",
+        "audio": "Can I get a latte to go, please?",
+        "target": "Can I get a latte to go, please?",
+        "native": "Kann ich einen Latte zum Mitnehmen haben, bitte?"
+      },
+      {
+        "type": "explanation",
+        "word": "to go",
+        "meaning": "zum Mitnehmen",
+        "description": "\"To go\" = zum Mitnehmen. Für vor Ort sagt man \"for here\"."
+      },
+      {
+        "type": "quiz",
+        "question": "You want to drink it at home. You say:",
+        "answers": [
+          {
+            "text": "to go",
+            "correct": true
+          },
+          {
+            "text": "for here",
+            "correct": false
+          },
+          {
+            "text": "to stay",
+            "correct": false
+          }
+        ],
+        "explanation": "Zum Mitnehmen heißt \"to go\"."
+      },
+      {
+        "type": "speaking",
+        "text": "Can I get a latte to go, please?"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "In den USA fragt der Barista oft nach deinem Namen für den Becher."
+      }
     ]
   },
   {
@@ -232,11 +750,48 @@
     "duration": 22,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "What's the wifi?", "emoji": "📶", "english": "What's the wifi password?", "german": "Wie lautet das WLAN-Passwort?", "audio": "What's the wifi password?" },
-      { "type": "explanation", "word": "wifi password", "meaning": "WLAN-Passwort", "description": "\"Wifi\" spricht man \"wai-fai\". \"Password\" = Passwort." },
-      { "type": "quiz", "question": "What are you asking for?", "answers": [ { "text": "Das WLAN-Passwort", "correct": true }, { "text": "Die Toilette", "correct": false }, { "text": "Die Rechnung", "correct": false } ], "explanation": "Du fragst nach dem WLAN-Passwort." },
-      { "type": "speaking", "text": "What's the wifi password?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Is the wifi free?\" fragt, ob das WLAN kostenlos ist." }
+      {
+        "type": "lesson",
+        "title": "What's the wifi?",
+        "emoji": "📶",
+        "audio": "What's the wifi password?",
+        "target": "What's the wifi password?",
+        "native": "Wie lautet das WLAN-Passwort?"
+      },
+      {
+        "type": "explanation",
+        "word": "wifi password",
+        "meaning": "WLAN-Passwort",
+        "description": "\"Wifi\" spricht man \"wai-fai\". \"Password\" = Passwort."
+      },
+      {
+        "type": "quiz",
+        "question": "What are you asking for?",
+        "answers": [
+          {
+            "text": "Das WLAN-Passwort",
+            "correct": true
+          },
+          {
+            "text": "Die Toilette",
+            "correct": false
+          },
+          {
+            "text": "Die Rechnung",
+            "correct": false
+          }
+        ],
+        "explanation": "Du fragst nach dem WLAN-Passwort."
+      },
+      {
+        "type": "speaking",
+        "text": "What's the wifi password?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Is the wifi free?\" fragt, ob das WLAN kostenlos ist."
+      }
     ]
   },
   {
@@ -248,11 +803,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Check-in", "emoji": "🧳", "english": "I'd like to check in for my flight.", "german": "Ich möchte für meinen Flug einchecken.", "audio": "I'd like to check in for my flight." },
-      { "type": "explanation", "word": "check in", "meaning": "einchecken", "description": "\"Check in\" am Flughafen: Ticket zeigen und Gepäck abgeben." },
-      { "type": "quiz", "question": "Where do you \"check in\"?", "answers": [ { "text": "Am Flughafen-Schalter", "correct": true }, { "text": "Im Restaurant", "correct": false }, { "text": "Beim Arzt", "correct": false } ], "explanation": "Einchecken macht man am Flughafen (und im Hotel)." },
-      { "type": "speaking", "text": "I'd like to check in for my flight." },
-      { "type": "tip", "title": "Tipp", "text": "\"Window or aisle?\" fragt nach Fenster- oder Gangplatz." }
+      {
+        "type": "lesson",
+        "title": "Check-in",
+        "emoji": "🧳",
+        "audio": "I'd like to check in for my flight.",
+        "target": "I'd like to check in for my flight.",
+        "native": "Ich möchte für meinen Flug einchecken."
+      },
+      {
+        "type": "explanation",
+        "word": "check in",
+        "meaning": "einchecken",
+        "description": "\"Check in\" am Flughafen: Ticket zeigen und Gepäck abgeben."
+      },
+      {
+        "type": "quiz",
+        "question": "Where do you \"check in\"?",
+        "answers": [
+          {
+            "text": "Am Flughafen-Schalter",
+            "correct": true
+          },
+          {
+            "text": "Im Restaurant",
+            "correct": false
+          },
+          {
+            "text": "Beim Arzt",
+            "correct": false
+          }
+        ],
+        "explanation": "Einchecken macht man am Flughafen (und im Hotel)."
+      },
+      {
+        "type": "speaking",
+        "text": "I'd like to check in for my flight."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Window or aisle?\" fragt nach Fenster- oder Gangplatz."
+      }
     ]
   },
   {
@@ -264,11 +856,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Boarding pass", "emoji": "🛂", "english": "Please have your boarding pass ready.", "german": "Bitte halten Sie Ihre Bordkarte bereit.", "audio": "Please have your boarding pass ready." },
-      { "type": "explanation", "word": "boarding pass", "meaning": "Bordkarte", "description": "Die Bordkarte brauchst du an der Sicherheitskontrolle und am Gate." },
-      { "type": "quiz", "question": "A \"boarding pass\" is:", "answers": [ { "text": "die Bordkarte", "correct": true }, { "text": "der Reisepass", "correct": false }, { "text": "das Gepäck", "correct": false } ], "explanation": "\"Boarding pass\" = Bordkarte (nicht der Reisepass = passport)." },
-      { "type": "speaking", "text": "Please have your boarding pass ready." },
-      { "type": "tip", "title": "Tipp", "text": "\"Gate\" ist das Flugsteig-Tor, \"passport\" der Reisepass." }
+      {
+        "type": "lesson",
+        "title": "Boarding pass",
+        "emoji": "🛂",
+        "audio": "Please have your boarding pass ready.",
+        "target": "Please have your boarding pass ready.",
+        "native": "Bitte halten Sie Ihre Bordkarte bereit."
+      },
+      {
+        "type": "explanation",
+        "word": "boarding pass",
+        "meaning": "Bordkarte",
+        "description": "Die Bordkarte brauchst du an der Sicherheitskontrolle und am Gate."
+      },
+      {
+        "type": "quiz",
+        "question": "A \"boarding pass\" is:",
+        "answers": [
+          {
+            "text": "die Bordkarte",
+            "correct": true
+          },
+          {
+            "text": "der Reisepass",
+            "correct": false
+          },
+          {
+            "text": "das Gepäck",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Boarding pass\" = Bordkarte (nicht der Reisepass = passport)."
+      },
+      {
+        "type": "speaking",
+        "text": "Please have your boarding pass ready."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Gate\" ist das Flugsteig-Tor, \"passport\" der Reisepass."
+      }
     ]
   },
   {
@@ -280,11 +909,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Bad news", "emoji": "⏳", "english": "My flight has been delayed. What are my options?", "german": "Mein Flug hat Verspätung. Welche Möglichkeiten habe ich?", "audio": "My flight has been delayed. What are my options?" },
-      { "type": "explanation", "word": "delayed", "meaning": "verspätet", "description": "\"Delayed\" = verspätet. \"Cancelled\" wäre komplett gestrichen." },
-      { "type": "quiz", "question": "\"My flight is delayed\" means:", "answers": [ { "text": "Der Flug hat Verspätung", "correct": true }, { "text": "Der Flug ist gestrichen", "correct": false }, { "text": "Der Flug ist voll", "correct": false } ], "explanation": "\"Delayed\" ist verspätet, nicht gestrichen (cancelled)." },
-      { "type": "speaking", "text": "My flight has been delayed. What are my options?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Can you rebook me on the next flight?\" bittet um Umbuchung." }
+      {
+        "type": "lesson",
+        "title": "Bad news",
+        "emoji": "⏳",
+        "audio": "My flight has been delayed. What are my options?",
+        "target": "My flight has been delayed. What are my options?",
+        "native": "Mein Flug hat Verspätung. Welche Möglichkeiten habe ich?"
+      },
+      {
+        "type": "explanation",
+        "word": "delayed",
+        "meaning": "verspätet",
+        "description": "\"Delayed\" = verspätet. \"Cancelled\" wäre komplett gestrichen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"My flight is delayed\" means:",
+        "answers": [
+          {
+            "text": "Der Flug hat Verspätung",
+            "correct": true
+          },
+          {
+            "text": "Der Flug ist gestrichen",
+            "correct": false
+          },
+          {
+            "text": "Der Flug ist voll",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Delayed\" ist verspätet, nicht gestrichen (cancelled)."
+      },
+      {
+        "type": "speaking",
+        "text": "My flight has been delayed. What are my options?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Can you rebook me on the next flight?\" bittet um Umbuchung."
+      }
     ]
   },
   {
@@ -296,11 +962,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "I have a reservation", "emoji": "🏨", "english": "Hi, I have a reservation under Weber.", "german": "Hallo, ich habe eine Reservierung auf Weber.", "audio": "Hi, I have a reservation under Weber." },
-      { "type": "explanation", "word": "under", "meaning": "auf (den Namen)", "description": "\"Under Weber\" = auf den Namen Weber reserviert." },
-      { "type": "quiz", "question": "\"A reservation under Weber\" means the booking is:", "answers": [ { "text": "auf den Namen Weber", "correct": true }, { "text": "unter dem Tisch", "correct": false }, { "text": "für eine Woche", "correct": false } ], "explanation": "\"Under\" nennt hier den Namen der Buchung." },
-      { "type": "speaking", "text": "Hi, I have a reservation under Weber." },
-      { "type": "tip", "title": "Tipp", "text": "\"What time is check-out?\" fragt, bis wann man auschecken muss." }
+      {
+        "type": "lesson",
+        "title": "I have a reservation",
+        "emoji": "🏨",
+        "audio": "Hi, I have a reservation under Weber.",
+        "target": "Hi, I have a reservation under Weber.",
+        "native": "Hallo, ich habe eine Reservierung auf Weber."
+      },
+      {
+        "type": "explanation",
+        "word": "under",
+        "meaning": "auf (den Namen)",
+        "description": "\"Under Weber\" = auf den Namen Weber reserviert."
+      },
+      {
+        "type": "quiz",
+        "question": "\"A reservation under Weber\" means the booking is:",
+        "answers": [
+          {
+            "text": "auf den Namen Weber",
+            "correct": true
+          },
+          {
+            "text": "unter dem Tisch",
+            "correct": false
+          },
+          {
+            "text": "für eine Woche",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Under\" nennt hier den Namen der Buchung."
+      },
+      {
+        "type": "speaking",
+        "text": "Hi, I have a reservation under Weber."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"What time is check-out?\" fragt, bis wann man auschecken muss."
+      }
     ]
   },
   {
@@ -312,11 +1015,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Breakfast time", "emoji": "🥐", "english": "What time is breakfast?", "german": "Um wie viel Uhr gibt es Frühstück?", "audio": "What time is breakfast?" },
-      { "type": "explanation", "word": "What time", "meaning": "Um wie viel Uhr", "description": "\"What time is...?\" fragt nach der Uhrzeit von etwas." },
-      { "type": "quiz", "question": "Which answer fits?", "answers": [ { "text": "From seven to ten.", "correct": true }, { "text": "It's very tasty.", "correct": false }, { "text": "In room 12.", "correct": false } ], "explanation": "Auf \"What time?\" antwortet man mit einer Zeit." },
-      { "type": "speaking", "text": "What time is breakfast?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Is breakfast included?\" heißt \"Ist Frühstück inklusive?\"" }
+      {
+        "type": "lesson",
+        "title": "Breakfast time",
+        "emoji": "🥐",
+        "audio": "What time is breakfast?",
+        "target": "What time is breakfast?",
+        "native": "Um wie viel Uhr gibt es Frühstück?"
+      },
+      {
+        "type": "explanation",
+        "word": "What time",
+        "meaning": "Um wie viel Uhr",
+        "description": "\"What time is...?\" fragt nach der Uhrzeit von etwas."
+      },
+      {
+        "type": "quiz",
+        "question": "Which answer fits?",
+        "answers": [
+          {
+            "text": "From seven to ten.",
+            "correct": true
+          },
+          {
+            "text": "It's very tasty.",
+            "correct": false
+          },
+          {
+            "text": "In room 12.",
+            "correct": false
+          }
+        ],
+        "explanation": "Auf \"What time?\" antwortet man mit einer Zeit."
+      },
+      {
+        "type": "speaking",
+        "text": "What time is breakfast?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Is breakfast included?\" heißt \"Ist Frühstück inklusive?\""
+      }
     ]
   },
   {
@@ -328,11 +1068,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Something's wrong", "emoji": "🔧", "english": "The air conditioning in my room isn't working.", "german": "Die Klimaanlage in meinem Zimmer funktioniert nicht.", "audio": "The air conditioning in my room isn't working." },
-      { "type": "explanation", "word": "isn't working", "meaning": "funktioniert nicht", "description": "\"Isn't working\" für Geräte, die kaputt sind oder nicht laufen." },
-      { "type": "quiz", "question": "How do you say \"funktioniert nicht\"?", "answers": [ { "text": "isn't working", "correct": true }, { "text": "isn't sleeping", "correct": false }, { "text": "isn't open", "correct": false } ], "explanation": "Für defekte Geräte: \"isn't working\"." },
-      { "type": "speaking", "text": "The air conditioning in my room isn't working." },
-      { "type": "tip", "title": "Tipp", "text": "\"Could you send someone to fix it?\" bittet um Reparatur." }
+      {
+        "type": "lesson",
+        "title": "Something's wrong",
+        "emoji": "🔧",
+        "audio": "The air conditioning in my room isn't working.",
+        "target": "The air conditioning in my room isn't working.",
+        "native": "Die Klimaanlage in meinem Zimmer funktioniert nicht."
+      },
+      {
+        "type": "explanation",
+        "word": "isn't working",
+        "meaning": "funktioniert nicht",
+        "description": "\"Isn't working\" für Geräte, die kaputt sind oder nicht laufen."
+      },
+      {
+        "type": "quiz",
+        "question": "How do you say \"funktioniert nicht\"?",
+        "answers": [
+          {
+            "text": "isn't working",
+            "correct": true
+          },
+          {
+            "text": "isn't sleeping",
+            "correct": false
+          },
+          {
+            "text": "isn't open",
+            "correct": false
+          }
+        ],
+        "explanation": "Für defekte Geräte: \"isn't working\"."
+      },
+      {
+        "type": "speaking",
+        "text": "The air conditioning in my room isn't working."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Could you send someone to fix it?\" bittet um Reparatur."
+      }
     ]
   },
   {
@@ -344,11 +1121,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Need a ride", "emoji": "🚕", "english": "Are you free? I need a taxi.", "german": "Sind Sie frei? Ich brauche ein Taxi.", "audio": "Are you free? I need a taxi." },
-      { "type": "explanation", "word": "Are you free?", "meaning": "Sind Sie frei?", "description": "Fragt, ob der Fahrer verfügbar ist. \"Free\" heißt hier verfügbar." },
-      { "type": "quiz", "question": "\"Are you free?\" to a taxi driver asks:", "answers": [ { "text": "Sind Sie verfügbar?", "correct": true }, { "text": "Ist es kostenlos?", "correct": false }, { "text": "Sind Sie müde?", "correct": false } ], "explanation": "\"Free\" bedeutet hier verfügbar, nicht kostenlos." },
-      { "type": "speaking", "text": "Are you free? I need a taxi." },
-      { "type": "tip", "title": "Tipp", "text": "\"Can you take me to...?\" heißt \"Können Sie mich nach ... bringen?\"" }
+      {
+        "type": "lesson",
+        "title": "Need a ride",
+        "emoji": "🚕",
+        "audio": "Are you free? I need a taxi.",
+        "target": "Are you free? I need a taxi.",
+        "native": "Sind Sie frei? Ich brauche ein Taxi."
+      },
+      {
+        "type": "explanation",
+        "word": "Are you free?",
+        "meaning": "Sind Sie frei?",
+        "description": "Fragt, ob der Fahrer verfügbar ist. \"Free\" heißt hier verfügbar."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Are you free?\" to a taxi driver asks:",
+        "answers": [
+          {
+            "text": "Sind Sie verfügbar?",
+            "correct": true
+          },
+          {
+            "text": "Ist es kostenlos?",
+            "correct": false
+          },
+          {
+            "text": "Sind Sie müde?",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Free\" bedeutet hier verfügbar, nicht kostenlos."
+      },
+      {
+        "type": "speaking",
+        "text": "Are you free? I need a taxi."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Can you take me to...?\" heißt \"Können Sie mich nach ... bringen?\""
+      }
     ]
   },
   {
@@ -360,11 +1174,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Where to?", "emoji": "📍", "english": "Take me to the train station, please.", "german": "Bringen Sie mich bitte zum Bahnhof.", "audio": "Take me to the train station, please." },
-      { "type": "explanation", "word": "Take me to", "meaning": "Bringen Sie mich zu", "description": "\"Take me to + Ort\" nennt dem Fahrer dein Ziel." },
-      { "type": "quiz", "question": "You want to go to the airport. You say:", "answers": [ { "text": "Take me to the airport, please.", "correct": true }, { "text": "The airport takes me.", "correct": false }, { "text": "I am an airport.", "correct": false } ], "explanation": "\"Take me to the airport\" nennt das Ziel." },
-      { "type": "speaking", "text": "Take me to the train station, please." },
-      { "type": "tip", "title": "Tipp", "text": "\"How long will it take?\" fragt, wie lange die Fahrt dauert." }
+      {
+        "type": "lesson",
+        "title": "Where to?",
+        "emoji": "📍",
+        "audio": "Take me to the train station, please.",
+        "target": "Take me to the train station, please.",
+        "native": "Bringen Sie mich bitte zum Bahnhof."
+      },
+      {
+        "type": "explanation",
+        "word": "Take me to",
+        "meaning": "Bringen Sie mich zu",
+        "description": "\"Take me to + Ort\" nennt dem Fahrer dein Ziel."
+      },
+      {
+        "type": "quiz",
+        "question": "You want to go to the airport. You say:",
+        "answers": [
+          {
+            "text": "Take me to the airport, please.",
+            "correct": true
+          },
+          {
+            "text": "The airport takes me.",
+            "correct": false
+          },
+          {
+            "text": "I am an airport.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Take me to the airport\" nennt das Ziel."
+      },
+      {
+        "type": "speaking",
+        "text": "Take me to the train station, please."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"How long will it take?\" fragt, wie lange die Fahrt dauert."
+      }
     ]
   },
   {
@@ -376,11 +1227,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "I feel sick", "emoji": "🤒", "english": "I have a headache and a sore throat.", "german": "Ich habe Kopfschmerzen und Halsschmerzen.", "audio": "I have a headache and a sore throat." },
-      { "type": "explanation", "word": "sore throat", "meaning": "Halsschmerzen", "description": "\"Sore\" = wund/schmerzend. \"Sore throat\" = Halsschmerzen." },
-      { "type": "quiz", "question": "\"I have a sore throat\" means:", "answers": [ { "text": "Ich habe Halsschmerzen", "correct": true }, { "text": "Ich habe Hunger", "correct": false }, { "text": "Ich bin müde", "correct": false } ], "explanation": "\"Sore throat\" sind Halsschmerzen." },
-      { "type": "speaking", "text": "I have a headache and a sore throat." },
-      { "type": "tip", "title": "Tipp", "text": "\"I feel dizzy\" heißt \"Mir ist schwindelig\"." }
+      {
+        "type": "lesson",
+        "title": "I feel sick",
+        "emoji": "🤒",
+        "audio": "I have a headache and a sore throat.",
+        "target": "I have a headache and a sore throat.",
+        "native": "Ich habe Kopfschmerzen und Halsschmerzen."
+      },
+      {
+        "type": "explanation",
+        "word": "sore throat",
+        "meaning": "Halsschmerzen",
+        "description": "\"Sore\" = wund/schmerzend. \"Sore throat\" = Halsschmerzen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"I have a sore throat\" means:",
+        "answers": [
+          {
+            "text": "Ich habe Halsschmerzen",
+            "correct": true
+          },
+          {
+            "text": "Ich habe Hunger",
+            "correct": false
+          },
+          {
+            "text": "Ich bin müde",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Sore throat\" sind Halsschmerzen."
+      },
+      {
+        "type": "speaking",
+        "text": "I have a headache and a sore throat."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"I feel dizzy\" heißt \"Mir ist schwindelig\"."
+      }
     ]
   },
   {
@@ -392,11 +1280,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Booking a visit", "emoji": "📅", "english": "I'd like to make an appointment with the doctor.", "german": "Ich möchte einen Termin beim Arzt machen.", "audio": "I'd like to make an appointment with the doctor." },
-      { "type": "explanation", "word": "appointment", "meaning": "Termin", "description": "\"Make an appointment\" = einen Termin ausmachen." },
-      { "type": "quiz", "question": "\"Appointment\" means:", "answers": [ { "text": "Termin", "correct": true }, { "text": "Rezept", "correct": false }, { "text": "Apotheke", "correct": false } ], "explanation": "\"Appointment\" ist ein Termin." },
-      { "type": "speaking", "text": "I'd like to make an appointment with the doctor." },
-      { "type": "tip", "title": "Tipp", "text": "\"Is there anything available today?\" fragt nach einem freien Termin heute." }
+      {
+        "type": "lesson",
+        "title": "Booking a visit",
+        "emoji": "📅",
+        "audio": "I'd like to make an appointment with the doctor.",
+        "target": "I'd like to make an appointment with the doctor.",
+        "native": "Ich möchte einen Termin beim Arzt machen."
+      },
+      {
+        "type": "explanation",
+        "word": "appointment",
+        "meaning": "Termin",
+        "description": "\"Make an appointment\" = einen Termin ausmachen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Appointment\" means:",
+        "answers": [
+          {
+            "text": "Termin",
+            "correct": true
+          },
+          {
+            "text": "Rezept",
+            "correct": false
+          },
+          {
+            "text": "Apotheke",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Appointment\" ist ein Termin."
+      },
+      {
+        "type": "speaking",
+        "text": "I'd like to make an appointment with the doctor."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Is there anything available today?\" fragt nach einem freien Termin heute."
+      }
     ]
   },
   {
@@ -408,11 +1333,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Something for a cold", "emoji": "💊", "english": "Do you have something for a cold?", "german": "Haben Sie etwas gegen eine Erkältung?", "audio": "Do you have something for a cold?" },
-      { "type": "explanation", "word": "for a cold", "meaning": "gegen eine Erkältung", "description": "\"Something for a cold\" = ein Mittel gegen Erkältung. \"A cold\" ist die Erkältung." },
-      { "type": "quiz", "question": "\"A cold\" here means:", "answers": [ { "text": "eine Erkältung", "correct": true }, { "text": "die Kälte", "correct": false }, { "text": "ein kaltes Getränk", "correct": false } ], "explanation": "\"A cold\" ist die Erkältung." },
-      { "type": "speaking", "text": "Do you have something for a cold?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Do I need a prescription?\" fragt, ob du ein Rezept brauchst." }
+      {
+        "type": "lesson",
+        "title": "Something for a cold",
+        "emoji": "💊",
+        "audio": "Do you have something for a cold?",
+        "target": "Do you have something for a cold?",
+        "native": "Haben Sie etwas gegen eine Erkältung?"
+      },
+      {
+        "type": "explanation",
+        "word": "for a cold",
+        "meaning": "gegen eine Erkältung",
+        "description": "\"Something for a cold\" = ein Mittel gegen Erkältung. \"A cold\" ist die Erkältung."
+      },
+      {
+        "type": "quiz",
+        "question": "\"A cold\" here means:",
+        "answers": [
+          {
+            "text": "eine Erkältung",
+            "correct": true
+          },
+          {
+            "text": "die Kälte",
+            "correct": false
+          },
+          {
+            "text": "ein kaltes Getränk",
+            "correct": false
+          }
+        ],
+        "explanation": "\"A cold\" ist die Erkältung."
+      },
+      {
+        "type": "speaking",
+        "text": "Do you have something for a cold?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Do I need a prescription?\" fragt, ob du ein Rezept brauchst."
+      }
     ]
   },
   {
@@ -424,11 +1386,48 @@
     "duration": 22,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "I have a question", "emoji": "✋", "english": "Sorry, could you repeat that?", "german": "Entschuldigung, könnten Sie das wiederholen?", "audio": "Sorry, could you repeat that?" },
-      { "type": "explanation", "word": "repeat", "meaning": "wiederholen", "description": "\"Could you repeat that?\" bittet höflich um Wiederholung." },
-      { "type": "quiz", "question": "You didn't understand. You say:", "answers": [ { "text": "Could you repeat that?", "correct": true }, { "text": "Could you repeat lunch?", "correct": false }, { "text": "Are you repeat?", "correct": false } ], "explanation": "\"Could you repeat that?\" ist die passende Bitte." },
-      { "type": "speaking", "text": "Sorry, could you repeat that?" },
-      { "type": "tip", "title": "Tipp", "text": "\"What does ... mean?\" fragt nach der Bedeutung eines Wortes." }
+      {
+        "type": "lesson",
+        "title": "I have a question",
+        "emoji": "✋",
+        "audio": "Sorry, could you repeat that?",
+        "target": "Sorry, could you repeat that?",
+        "native": "Entschuldigung, könnten Sie das wiederholen?"
+      },
+      {
+        "type": "explanation",
+        "word": "repeat",
+        "meaning": "wiederholen",
+        "description": "\"Could you repeat that?\" bittet höflich um Wiederholung."
+      },
+      {
+        "type": "quiz",
+        "question": "You didn't understand. You say:",
+        "answers": [
+          {
+            "text": "Could you repeat that?",
+            "correct": true
+          },
+          {
+            "text": "Could you repeat lunch?",
+            "correct": false
+          },
+          {
+            "text": "Are you repeat?",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Could you repeat that?\" ist die passende Bitte."
+      },
+      {
+        "type": "speaking",
+        "text": "Sorry, could you repeat that?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"What does ... mean?\" fragt nach der Bedeutung eines Wortes."
+      }
     ]
   },
   {
@@ -440,11 +1439,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "My favourite subject", "emoji": "📚", "english": "My favourite subject is math.", "german": "Mein Lieblingsfach ist Mathe.", "audio": "My favourite subject is math." },
-      { "type": "explanation", "word": "subject", "meaning": "(Schul-)Fach", "description": "\"Subject\" = Schulfach. \"Favourite\" = Lieblings-." },
-      { "type": "quiz", "question": "\"Subject\" in school means:", "answers": [ { "text": "Fach", "correct": true }, { "text": "Pause", "correct": false }, { "text": "Lehrer", "correct": false } ], "explanation": "\"Subject\" ist ein Schulfach." },
-      { "type": "speaking", "text": "My favourite subject is math." },
-      { "type": "tip", "title": "Fun Fact", "text": "Briten schreiben \"maths\", Amerikaner \"math\" – beides ist richtig." }
+      {
+        "type": "lesson",
+        "title": "My favourite subject",
+        "emoji": "📚",
+        "audio": "My favourite subject is math.",
+        "target": "My favourite subject is math.",
+        "native": "Mein Lieblingsfach ist Mathe."
+      },
+      {
+        "type": "explanation",
+        "word": "subject",
+        "meaning": "(Schul-)Fach",
+        "description": "\"Subject\" = Schulfach. \"Favourite\" = Lieblings-."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Subject\" in school means:",
+        "answers": [
+          {
+            "text": "Fach",
+            "correct": true
+          },
+          {
+            "text": "Pause",
+            "correct": false
+          },
+          {
+            "text": "Lehrer",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Subject\" ist ein Schulfach."
+      },
+      {
+        "type": "speaking",
+        "text": "My favourite subject is math."
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Briten schreiben \"maths\", Amerikaner \"math\" – beides ist richtig."
+      }
     ]
   },
   {
@@ -456,11 +1492,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Let's begin", "emoji": "💼", "english": "Thanks for joining. Let's get started.", "german": "Danke fürs Dabeisein. Lasst uns anfangen.", "audio": "Thanks for joining. Let's get started." },
-      { "type": "explanation", "word": "get started", "meaning": "anfangen / loslegen", "description": "\"Let's get started\" eröffnet ein Meeting oder eine Aufgabe." },
-      { "type": "quiz", "question": "\"Let's get started\" means:", "answers": [ { "text": "Lasst uns anfangen", "correct": true }, { "text": "Lasst uns aufhören", "correct": false }, { "text": "Lasst uns essen", "correct": false } ], "explanation": "\"Get started\" heißt anfangen." },
-      { "type": "speaking", "text": "Thanks for joining. Let's get started." },
-      { "type": "tip", "title": "Tipp", "text": "\"Let's wrap up\" heißt am Ende \"Lasst uns zum Schluss kommen\"." }
+      {
+        "type": "lesson",
+        "title": "Let's begin",
+        "emoji": "💼",
+        "audio": "Thanks for joining. Let's get started.",
+        "target": "Thanks for joining. Let's get started.",
+        "native": "Danke fürs Dabeisein. Lasst uns anfangen."
+      },
+      {
+        "type": "explanation",
+        "word": "get started",
+        "meaning": "anfangen / loslegen",
+        "description": "\"Let's get started\" eröffnet ein Meeting oder eine Aufgabe."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Let's get started\" means:",
+        "answers": [
+          {
+            "text": "Lasst uns anfangen",
+            "correct": true
+          },
+          {
+            "text": "Lasst uns aufhören",
+            "correct": false
+          },
+          {
+            "text": "Lasst uns essen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Get started\" heißt anfangen."
+      },
+      {
+        "type": "speaking",
+        "text": "Thanks for joining. Let's get started."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Let's wrap up\" heißt am Ende \"Lasst uns zum Schluss kommen\"."
+      }
     ]
   },
   {
@@ -472,11 +1545,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Quick question", "emoji": "🙋", "english": "Could you give me a hand with this?", "german": "Könntest du mir hiermit helfen?", "audio": "Could you give me a hand with this?" },
-      { "type": "explanation", "word": "give me a hand", "meaning": "mir helfen", "description": "\"Give someone a hand\" ist eine lockere Art, um Hilfe zu bitten." },
-      { "type": "quiz", "question": "\"Give me a hand\" means:", "answers": [ { "text": "Hilf mir", "correct": true }, { "text": "Gib mir deine Hand", "correct": false }, { "text": "Winke mir zu", "correct": false } ], "explanation": "Als Redewendung heißt es \"hilf mir\"." },
-      { "type": "speaking", "text": "Could you give me a hand with this?" },
-      { "type": "tip", "title": "Tipp", "text": "Danach passt \"Thanks, I really appreciate it.\"" }
+      {
+        "type": "lesson",
+        "title": "Quick question",
+        "emoji": "🙋",
+        "audio": "Could you give me a hand with this?",
+        "target": "Could you give me a hand with this?",
+        "native": "Könntest du mir hiermit helfen?"
+      },
+      {
+        "type": "explanation",
+        "word": "give me a hand",
+        "meaning": "mir helfen",
+        "description": "\"Give someone a hand\" ist eine lockere Art, um Hilfe zu bitten."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Give me a hand\" means:",
+        "answers": [
+          {
+            "text": "Hilf mir",
+            "correct": true
+          },
+          {
+            "text": "Gib mir deine Hand",
+            "correct": false
+          },
+          {
+            "text": "Winke mir zu",
+            "correct": false
+          }
+        ],
+        "explanation": "Als Redewendung heißt es \"hilf mir\"."
+      },
+      {
+        "type": "speaking",
+        "text": "Could you give me a hand with this?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Danach passt \"Thanks, I really appreciate it.\""
+      }
     ]
   },
   {
@@ -488,11 +1598,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Following up", "emoji": "📧", "english": "Just following up on my last email.", "german": "Ich hake nur zu meiner letzten E-Mail nach.", "audio": "Just following up on my last email." },
-      { "type": "explanation", "word": "following up", "meaning": "nachhaken / nachfassen", "description": "\"Follow up\" erinnert höflich an eine offene Sache." },
-      { "type": "quiz", "question": "\"Following up\" means:", "answers": [ { "text": "höflich nachhaken", "correct": true }, { "text": "aufstehen", "correct": false }, { "text": "löschen", "correct": false } ], "explanation": "\"Follow up\" = nachfassen." },
-      { "type": "speaking", "text": "Just following up on my last email." },
-      { "type": "tip", "title": "Tipp", "text": "\"Best regards\" ist ein passender formeller Gruß am Ende." }
+      {
+        "type": "lesson",
+        "title": "Following up",
+        "emoji": "📧",
+        "audio": "Just following up on my last email.",
+        "target": "Just following up on my last email.",
+        "native": "Ich hake nur zu meiner letzten E-Mail nach."
+      },
+      {
+        "type": "explanation",
+        "word": "following up",
+        "meaning": "nachhaken / nachfassen",
+        "description": "\"Follow up\" erinnert höflich an eine offene Sache."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Following up\" means:",
+        "answers": [
+          {
+            "text": "höflich nachhaken",
+            "correct": true
+          },
+          {
+            "text": "aufstehen",
+            "correct": false
+          },
+          {
+            "text": "löschen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Follow up\" = nachfassen."
+      },
+      {
+        "type": "speaking",
+        "text": "Just following up on my last email."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Best regards\" ist ein passender formeller Gruß am Ende."
+      }
     ]
   },
   {
@@ -504,11 +1651,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "One ticket", "emoji": "🎫", "english": "One ticket to London, please.", "german": "Ein Ticket nach London, bitte.", "audio": "One ticket to London, please." },
-      { "type": "explanation", "word": "to London", "meaning": "nach London", "description": "\"To + Ort\" nennt das Reiseziel." },
-      { "type": "quiz", "question": "How do you ask for a return ticket?", "answers": [ { "text": "A return ticket, please.", "correct": true }, { "text": "A return kitchen, please.", "correct": false }, { "text": "A ticket returns me.", "correct": false } ], "explanation": "\"Return ticket\" ist ein Hin- und Rückfahrticket." },
-      { "type": "speaking", "text": "One ticket to London, please." },
-      { "type": "tip", "title": "Tipp", "text": "\"Single\" = einfach, \"return\" = hin und zurück." }
+      {
+        "type": "lesson",
+        "title": "One ticket",
+        "emoji": "🎫",
+        "audio": "One ticket to London, please.",
+        "target": "One ticket to London, please.",
+        "native": "Ein Ticket nach London, bitte."
+      },
+      {
+        "type": "explanation",
+        "word": "to London",
+        "meaning": "nach London",
+        "description": "\"To + Ort\" nennt das Reiseziel."
+      },
+      {
+        "type": "quiz",
+        "question": "How do you ask for a return ticket?",
+        "answers": [
+          {
+            "text": "A return ticket, please.",
+            "correct": true
+          },
+          {
+            "text": "A return kitchen, please.",
+            "correct": false
+          },
+          {
+            "text": "A ticket returns me.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Return ticket\" ist ein Hin- und Rückfahrticket."
+      },
+      {
+        "type": "speaking",
+        "text": "One ticket to London, please."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Single\" = einfach, \"return\" = hin und zurück."
+      }
     ]
   },
   {
@@ -520,11 +1704,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Which platform?", "emoji": "🚆", "english": "Which platform does the train leave from?", "german": "Von welchem Gleis fährt der Zug ab?", "audio": "Which platform does the train leave from?" },
-      { "type": "explanation", "word": "platform", "meaning": "Gleis / Bahnsteig", "description": "\"Platform\" ist der Bahnsteig. \"Leave from\" = abfahren von." },
-      { "type": "quiz", "question": "\"Platform\" at a station means:", "answers": [ { "text": "Bahnsteig / Gleis", "correct": true }, { "text": "Fahrplan", "correct": false }, { "text": "Schaffner", "correct": false } ], "explanation": "\"Platform\" ist der Bahnsteig." },
-      { "type": "speaking", "text": "Which platform does the train leave from?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Is this the right platform for...?\" prüft, ob du richtig stehst." }
+      {
+        "type": "lesson",
+        "title": "Which platform?",
+        "emoji": "🚆",
+        "audio": "Which platform does the train leave from?",
+        "target": "Which platform does the train leave from?",
+        "native": "Von welchem Gleis fährt der Zug ab?"
+      },
+      {
+        "type": "explanation",
+        "word": "platform",
+        "meaning": "Gleis / Bahnsteig",
+        "description": "\"Platform\" ist der Bahnsteig. \"Leave from\" = abfahren von."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Platform\" at a station means:",
+        "answers": [
+          {
+            "text": "Bahnsteig / Gleis",
+            "correct": true
+          },
+          {
+            "text": "Fahrplan",
+            "correct": false
+          },
+          {
+            "text": "Schaffner",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Platform\" ist der Bahnsteig."
+      },
+      {
+        "type": "speaking",
+        "text": "Which platform does the train leave from?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Is this the right platform for...?\" prüft, ob du richtig stehst."
+      }
     ]
   },
   {
@@ -536,11 +1757,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Car rental", "emoji": "🚗", "english": "I'd like to rent a car for three days.", "german": "Ich möchte ein Auto für drei Tage mieten.", "audio": "I'd like to rent a car for three days." },
-      { "type": "explanation", "word": "rent", "meaning": "mieten", "description": "\"Rent a car\" = ein Auto mieten. \"For three days\" nennt die Dauer." },
-      { "type": "quiz", "question": "\"Rent a car\" means:", "answers": [ { "text": "ein Auto mieten", "correct": true }, { "text": "ein Auto kaufen", "correct": false }, { "text": "ein Auto waschen", "correct": false } ], "explanation": "\"Rent\" heißt mieten." },
-      { "type": "speaking", "text": "I'd like to rent a car for three days." },
-      { "type": "tip", "title": "Tipp", "text": "\"Is insurance included?\" fragt, ob die Versicherung dabei ist." }
+      {
+        "type": "lesson",
+        "title": "Car rental",
+        "emoji": "🚗",
+        "audio": "I'd like to rent a car for three days.",
+        "target": "I'd like to rent a car for three days.",
+        "native": "Ich möchte ein Auto für drei Tage mieten."
+      },
+      {
+        "type": "explanation",
+        "word": "rent",
+        "meaning": "mieten",
+        "description": "\"Rent a car\" = ein Auto mieten. \"For three days\" nennt die Dauer."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Rent a car\" means:",
+        "answers": [
+          {
+            "text": "ein Auto mieten",
+            "correct": true
+          },
+          {
+            "text": "ein Auto kaufen",
+            "correct": false
+          },
+          {
+            "text": "ein Auto waschen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Rent\" heißt mieten."
+      },
+      {
+        "type": "speaking",
+        "text": "I'd like to rent a car for three days."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Is insurance included?\" fragt, ob die Versicherung dabei ist."
+      }
     ]
   },
   {
@@ -552,11 +1810,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "I'm lost", "emoji": "🗺️", "english": "Excuse me, how do I get to the station?", "german": "Entschuldigung, wie komme ich zum Bahnhof?", "audio": "Excuse me, how do I get to the station?" },
-      { "type": "explanation", "word": "How do I get to", "meaning": "Wie komme ich zu", "description": "Die Standardfrage nach dem Weg zu einem Ort." },
-      { "type": "quiz", "question": "You want directions. You say:", "answers": [ { "text": "How do I get to the station?", "correct": true }, { "text": "How do I eat the station?", "correct": false }, { "text": "When is the station?", "correct": false } ], "explanation": "\"How do I get to...?\" fragt nach dem Weg." },
-      { "type": "speaking", "text": "Excuse me, how do I get to the station?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Excuse me\" öffnet höflich das Gespräch mit Fremden." }
+      {
+        "type": "lesson",
+        "title": "I'm lost",
+        "emoji": "🗺️",
+        "audio": "Excuse me, how do I get to the station?",
+        "target": "Excuse me, how do I get to the station?",
+        "native": "Entschuldigung, wie komme ich zum Bahnhof?"
+      },
+      {
+        "type": "explanation",
+        "word": "How do I get to",
+        "meaning": "Wie komme ich zu",
+        "description": "Die Standardfrage nach dem Weg zu einem Ort."
+      },
+      {
+        "type": "quiz",
+        "question": "You want directions. You say:",
+        "answers": [
+          {
+            "text": "How do I get to the station?",
+            "correct": true
+          },
+          {
+            "text": "How do I eat the station?",
+            "correct": false
+          },
+          {
+            "text": "When is the station?",
+            "correct": false
+          }
+        ],
+        "explanation": "\"How do I get to...?\" fragt nach dem Weg."
+      },
+      {
+        "type": "speaking",
+        "text": "Excuse me, how do I get to the station?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Excuse me\" öffnet höflich das Gespräch mit Fremden."
+      }
     ]
   },
   {
@@ -568,11 +1863,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Go straight", "emoji": "➡️", "english": "Go straight, then turn left at the lights.", "german": "Geh geradeaus, dann links an der Ampel.", "audio": "Go straight, then turn left at the lights." },
-      { "type": "explanation", "word": "the lights", "meaning": "die Ampel", "description": "\"The lights\" (traffic lights) sind die Ampel. \"Turn left\" = links abbiegen." },
-      { "type": "quiz", "question": "\"Turn left at the lights\" means turn left at:", "answers": [ { "text": "der Ampel", "correct": true }, { "text": "der Lampe zu Hause", "correct": false }, { "text": "dem Licht am Himmel", "correct": false } ], "explanation": "\"The lights\" meint hier die Ampel." },
-      { "type": "speaking", "text": "Go straight, then turn left at the lights." },
-      { "type": "tip", "title": "Tipp", "text": "\"It's on your right\" heißt \"Es ist auf deiner rechten Seite\"." }
+      {
+        "type": "lesson",
+        "title": "Go straight",
+        "emoji": "➡️",
+        "audio": "Go straight, then turn left at the lights.",
+        "target": "Go straight, then turn left at the lights.",
+        "native": "Geh geradeaus, dann links an der Ampel."
+      },
+      {
+        "type": "explanation",
+        "word": "the lights",
+        "meaning": "die Ampel",
+        "description": "\"The lights\" (traffic lights) sind die Ampel. \"Turn left\" = links abbiegen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Turn left at the lights\" means turn left at:",
+        "answers": [
+          {
+            "text": "der Ampel",
+            "correct": true
+          },
+          {
+            "text": "der Lampe zu Hause",
+            "correct": false
+          },
+          {
+            "text": "dem Licht am Himmel",
+            "correct": false
+          }
+        ],
+        "explanation": "\"The lights\" meint hier die Ampel."
+      },
+      {
+        "type": "speaking",
+        "text": "Go straight, then turn left at the lights."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"It's on your right\" heißt \"Es ist auf deiner rechten Seite\"."
+      }
     ]
   },
   {
@@ -584,11 +1916,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Nice day", "emoji": "☀️", "english": "It's a beautiful day today!", "german": "Heute ist ein schöner Tag!", "audio": "It's a beautiful day today!" },
-      { "type": "explanation", "word": "It's", "meaning": "Es ist", "description": "Fürs Wetter startet man Sätze mit \"It's...\": \"It's sunny / cold / rainy.\"" },
-      { "type": "quiz", "question": "How do you say \"Es regnet\"?", "answers": [ { "text": "It's raining.", "correct": true }, { "text": "It's a rain.", "correct": false }, { "text": "He rains today.", "correct": false } ], "explanation": "Fürs Wetter: \"It's raining.\"" },
-      { "type": "speaking", "text": "It's a beautiful day today!" },
-      { "type": "tip", "title": "Fun Fact", "text": "Über das Wetter zu reden ist in Großbritannien der Smalltalk Nummer eins." }
+      {
+        "type": "lesson",
+        "title": "Nice day",
+        "emoji": "☀️",
+        "audio": "It's a beautiful day today!",
+        "target": "It's a beautiful day today!",
+        "native": "Heute ist ein schöner Tag!"
+      },
+      {
+        "type": "explanation",
+        "word": "It's",
+        "meaning": "Es ist",
+        "description": "Fürs Wetter startet man Sätze mit \"It's...\": \"It's sunny / cold / rainy.\""
+      },
+      {
+        "type": "quiz",
+        "question": "How do you say \"Es regnet\"?",
+        "answers": [
+          {
+            "text": "It's raining.",
+            "correct": true
+          },
+          {
+            "text": "It's a rain.",
+            "correct": false
+          },
+          {
+            "text": "He rains today.",
+            "correct": false
+          }
+        ],
+        "explanation": "Fürs Wetter: \"It's raining.\""
+      },
+      {
+        "type": "speaking",
+        "text": "It's a beautiful day today!"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Über das Wetter zu reden ist in Großbritannien der Smalltalk Nummer eins."
+      }
     ]
   },
   {
@@ -600,11 +1969,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Take an umbrella", "emoji": "🌧️", "english": "It might rain later, so take an umbrella.", "german": "Es könnte später regnen, nimm also einen Schirm mit.", "audio": "It might rain later, so take an umbrella." },
-      { "type": "explanation", "word": "might", "meaning": "könnte (vielleicht)", "description": "\"Might\" drückt eine Möglichkeit aus – etwas passiert vielleicht." },
-      { "type": "quiz", "question": "\"It might rain\" means:", "answers": [ { "text": "Es könnte regnen", "correct": true }, { "text": "Es regnet sicher", "correct": false }, { "text": "Es hat geregnet", "correct": false } ], "explanation": "\"Might\" = vielleicht, nicht sicher." },
-      { "type": "speaking", "text": "It might rain later, so take an umbrella." },
-      { "type": "tip", "title": "Tipp", "text": "\"Umbrella\" wird \"am-BREL-la\" betont – auf der mittleren Silbe." }
+      {
+        "type": "lesson",
+        "title": "Take an umbrella",
+        "emoji": "🌧️",
+        "audio": "It might rain later, so take an umbrella.",
+        "target": "It might rain later, so take an umbrella.",
+        "native": "Es könnte später regnen, nimm also einen Schirm mit."
+      },
+      {
+        "type": "explanation",
+        "word": "might",
+        "meaning": "könnte (vielleicht)",
+        "description": "\"Might\" drückt eine Möglichkeit aus – etwas passiert vielleicht."
+      },
+      {
+        "type": "quiz",
+        "question": "\"It might rain\" means:",
+        "answers": [
+          {
+            "text": "Es könnte regnen",
+            "correct": true
+          },
+          {
+            "text": "Es regnet sicher",
+            "correct": false
+          },
+          {
+            "text": "Es hat geregnet",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Might\" = vielleicht, nicht sicher."
+      },
+      {
+        "type": "speaking",
+        "text": "It might rain later, so take an umbrella."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Umbrella\" wird \"am-BREL-la\" betont – auf der mittleren Silbe."
+      }
     ]
   },
   {
@@ -616,11 +2022,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "My number", "emoji": "📱", "english": "My number is oh-seven-double-two.", "german": "Meine Nummer ist null-sieben-zwei-zwei.", "audio": "My number is oh seven double two." },
-      { "type": "explanation", "word": "double", "meaning": "doppelt", "description": "Zwei gleiche Ziffern sagt man oft mit \"double\": \"22\" = \"double two\". \"0\" = \"oh\"." },
-      { "type": "quiz", "question": "How do you often say \"77\"?", "answers": [ { "text": "double seven", "correct": true }, { "text": "two seven", "correct": false }, { "text": "seven and", "correct": false } ], "explanation": "\"77\" = \"double seven\"." },
-      { "type": "speaking", "text": "My number is oh seven double two." },
-      { "type": "tip", "title": "Fun Fact", "text": "Briten sagen für die Null oft \"oh\", nicht \"zero\"." }
+      {
+        "type": "lesson",
+        "title": "My number",
+        "emoji": "📱",
+        "audio": "My number is oh seven double two.",
+        "target": "My number is oh-seven-double-two.",
+        "native": "Meine Nummer ist null-sieben-zwei-zwei."
+      },
+      {
+        "type": "explanation",
+        "word": "double",
+        "meaning": "doppelt",
+        "description": "Zwei gleiche Ziffern sagt man oft mit \"double\": \"22\" = \"double two\". \"0\" = \"oh\"."
+      },
+      {
+        "type": "quiz",
+        "question": "How do you often say \"77\"?",
+        "answers": [
+          {
+            "text": "double seven",
+            "correct": true
+          },
+          {
+            "text": "two seven",
+            "correct": false
+          },
+          {
+            "text": "seven and",
+            "correct": false
+          }
+        ],
+        "explanation": "\"77\" = \"double seven\"."
+      },
+      {
+        "type": "speaking",
+        "text": "My number is oh seven double two."
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Briten sagen für die Null oft \"oh\", nicht \"zero\"."
+      }
     ]
   },
   {
@@ -632,11 +2075,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "That's...", "emoji": "💷", "english": "That's twelve fifty, please.", "german": "Das macht zwölf Euro fünfzig, bitte.", "audio": "That's twelve fifty, please." },
-      { "type": "explanation", "word": "twelve fifty", "meaning": "12,50", "description": "Preise sagt man oft ohne Währung: \"twelve fifty\" = 12,50." },
-      { "type": "quiz", "question": "\"Twelve fifty\" means:", "answers": [ { "text": "12,50", "correct": true }, { "text": "1250", "correct": false }, { "text": "12 und 15", "correct": false } ], "explanation": "\"Twelve fifty\" ist der Preis 12,50." },
-      { "type": "speaking", "text": "That's twelve fifty, please." },
-      { "type": "tip", "title": "Tipp", "text": "\"Keep the change\" heißt \"Stimmt so\" beim Trinkgeld." }
+      {
+        "type": "lesson",
+        "title": "That's...",
+        "emoji": "💷",
+        "audio": "That's twelve fifty, please.",
+        "target": "That's twelve fifty, please.",
+        "native": "Das macht zwölf Euro fünfzig, bitte."
+      },
+      {
+        "type": "explanation",
+        "word": "twelve fifty",
+        "meaning": "12,50",
+        "description": "Preise sagt man oft ohne Währung: \"twelve fifty\" = 12,50."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Twelve fifty\" means:",
+        "answers": [
+          {
+            "text": "12,50",
+            "correct": true
+          },
+          {
+            "text": "1250",
+            "correct": false
+          },
+          {
+            "text": "12 und 15",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Twelve fifty\" ist der Preis 12,50."
+      },
+      {
+        "type": "speaking",
+        "text": "That's twelve fifty, please."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Keep the change\" heißt \"Stimmt so\" beim Trinkgeld."
+      }
     ]
   },
   {
@@ -648,11 +2128,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Got the time?", "emoji": "⏰", "english": "Excuse me, what time is it?", "german": "Entschuldigung, wie spät ist es?", "audio": "Excuse me, what time is it?" },
-      { "type": "explanation", "word": "what time is it", "meaning": "wie spät ist es", "description": "Die Standardfrage nach der Uhrzeit." },
-      { "type": "quiz", "question": "Which answer fits \"What time is it?\"", "answers": [ { "text": "It's half past three.", "correct": true }, { "text": "It's Monday.", "correct": false }, { "text": "It's sunny.", "correct": false } ], "explanation": "Auf die Frage antwortet man mit einer Uhrzeit." },
-      { "type": "speaking", "text": "Excuse me, what time is it?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Half past three\" heißt halb vier (3:30) – Achtung, anders als im Deutschen!" }
+      {
+        "type": "lesson",
+        "title": "Got the time?",
+        "emoji": "⏰",
+        "audio": "Excuse me, what time is it?",
+        "target": "Excuse me, what time is it?",
+        "native": "Entschuldigung, wie spät ist es?"
+      },
+      {
+        "type": "explanation",
+        "word": "what time is it",
+        "meaning": "wie spät ist es",
+        "description": "Die Standardfrage nach der Uhrzeit."
+      },
+      {
+        "type": "quiz",
+        "question": "Which answer fits \"What time is it?\"",
+        "answers": [
+          {
+            "text": "It's half past three.",
+            "correct": true
+          },
+          {
+            "text": "It's Monday.",
+            "correct": false
+          },
+          {
+            "text": "It's sunny.",
+            "correct": false
+          }
+        ],
+        "explanation": "Auf die Frage antwortet man mit einer Uhrzeit."
+      },
+      {
+        "type": "speaking",
+        "text": "Excuse me, what time is it?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Half past three\" heißt halb vier (3:30) – Achtung, anders als im Deutschen!"
+      }
     ]
   },
   {
@@ -664,11 +2181,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "See you at...", "emoji": "🕗", "english": "Let's meet at quarter to eight.", "german": "Treffen wir uns um Viertel vor acht.", "audio": "Let's meet at quarter to eight." },
-      { "type": "explanation", "word": "quarter to eight", "meaning": "Viertel vor acht", "description": "\"Quarter to\" = Viertel vor, \"quarter past\" = Viertel nach." },
-      { "type": "quiz", "question": "\"Quarter past nine\" is:", "answers": [ { "text": "9:15", "correct": true }, { "text": "8:45", "correct": false }, { "text": "9:45", "correct": false } ], "explanation": "\"Quarter past\" heißt Viertel nach – also 9:15." },
-      { "type": "speaking", "text": "Let's meet at quarter to eight." },
-      { "type": "tip", "title": "Tipp", "text": "\"Does that work for you?\" fragt, ob die Zeit passt." }
+      {
+        "type": "lesson",
+        "title": "See you at...",
+        "emoji": "🕗",
+        "audio": "Let's meet at quarter to eight.",
+        "target": "Let's meet at quarter to eight.",
+        "native": "Treffen wir uns um Viertel vor acht."
+      },
+      {
+        "type": "explanation",
+        "word": "quarter to eight",
+        "meaning": "Viertel vor acht",
+        "description": "\"Quarter to\" = Viertel vor, \"quarter past\" = Viertel nach."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Quarter past nine\" is:",
+        "answers": [
+          {
+            "text": "9:15",
+            "correct": true
+          },
+          {
+            "text": "8:45",
+            "correct": false
+          },
+          {
+            "text": "9:45",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Quarter past\" heißt Viertel nach – also 9:15."
+      },
+      {
+        "type": "speaking",
+        "text": "Let's meet at quarter to eight."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Does that work for you?\" fragt, ob die Zeit passt."
+      }
     ]
   },
   {
@@ -680,11 +2234,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Yum!", "emoji": "🍕", "english": "I really like pizza, but I don't like olives.", "german": "Ich mag Pizza sehr, aber Oliven mag ich nicht.", "audio": "I really like pizza, but I don't like olives." },
-      { "type": "explanation", "word": "don't like", "meaning": "mag nicht", "description": "\"I don't like...\" für etwas, das du nicht magst. \"really like\" verstärkt das Mögen." },
-      { "type": "quiz", "question": "How do you say \"Ich mag keinen Fisch\"?", "answers": [ { "text": "I don't like fish.", "correct": true }, { "text": "I don't fish like.", "correct": false }, { "text": "I like no fish am.", "correct": false } ], "explanation": "\"I don't like fish.\" ist korrekt." },
-      { "type": "speaking", "text": "I really like pizza, but I don't like olives." },
-      { "type": "tip", "title": "Tipp", "text": "\"I love...\" ist stärker als \"I like...\"." }
+      {
+        "type": "lesson",
+        "title": "Yum!",
+        "emoji": "🍕",
+        "audio": "I really like pizza, but I don't like olives.",
+        "target": "I really like pizza, but I don't like olives.",
+        "native": "Ich mag Pizza sehr, aber Oliven mag ich nicht."
+      },
+      {
+        "type": "explanation",
+        "word": "don't like",
+        "meaning": "mag nicht",
+        "description": "\"I don't like...\" für etwas, das du nicht magst. \"really like\" verstärkt das Mögen."
+      },
+      {
+        "type": "quiz",
+        "question": "How do you say \"Ich mag keinen Fisch\"?",
+        "answers": [
+          {
+            "text": "I don't like fish.",
+            "correct": true
+          },
+          {
+            "text": "I don't fish like.",
+            "correct": false
+          },
+          {
+            "text": "I like no fish am.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"I don't like fish.\" ist korrekt."
+      },
+      {
+        "type": "speaking",
+        "text": "I really like pizza, but I don't like olives."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"I love...\" ist stärker als \"I like...\"."
+      }
     ]
   },
   {
@@ -696,11 +2287,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Heads up", "emoji": "🥜", "english": "I'm allergic to nuts. Does this contain any?", "german": "Ich bin allergisch gegen Nüsse. Ist da welche drin?", "audio": "I'm allergic to nuts. Does this contain any?" },
-      { "type": "explanation", "word": "allergic to", "meaning": "allergisch gegen", "description": "\"Allergic to + Sache\". \"Contain\" = enthalten." },
-      { "type": "quiz", "question": "\"I'm allergic to nuts\" means:", "answers": [ { "text": "Ich vertrage keine Nüsse", "correct": true }, { "text": "Ich liebe Nüsse", "correct": false }, { "text": "Ich koche Nüsse", "correct": false } ], "explanation": "\"Allergic to\" heißt allergisch gegen." },
-      { "type": "speaking", "text": "I'm allergic to nuts. Does this contain any?" },
-      { "type": "tip", "title": "Tipp", "text": "\"I'm vegetarian\" oder \"I'm vegan\" nennt deine Ernährung." }
+      {
+        "type": "lesson",
+        "title": "Heads up",
+        "emoji": "🥜",
+        "audio": "I'm allergic to nuts. Does this contain any?",
+        "target": "I'm allergic to nuts. Does this contain any?",
+        "native": "Ich bin allergisch gegen Nüsse. Ist da welche drin?"
+      },
+      {
+        "type": "explanation",
+        "word": "allergic to",
+        "meaning": "allergisch gegen",
+        "description": "\"Allergic to + Sache\". \"Contain\" = enthalten."
+      },
+      {
+        "type": "quiz",
+        "question": "\"I'm allergic to nuts\" means:",
+        "answers": [
+          {
+            "text": "Ich vertrage keine Nüsse",
+            "correct": true
+          },
+          {
+            "text": "Ich liebe Nüsse",
+            "correct": false
+          },
+          {
+            "text": "Ich koche Nüsse",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Allergic to\" heißt allergisch gegen."
+      },
+      {
+        "type": "speaking",
+        "text": "I'm allergic to nuts. Does this contain any?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"I'm vegetarian\" oder \"I'm vegan\" nennt deine Ernährung."
+      }
     ]
   },
   {
@@ -712,11 +2340,48 @@
     "duration": 22,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "At the bar", "emoji": "🍺", "english": "Can I get a beer, please?", "german": "Kann ich ein Bier haben, bitte?", "audio": "Can I get a beer, please?" },
-      { "type": "explanation", "word": "Can I get", "meaning": "Kann ich haben", "description": "\"Can I get...?\" ist eine lockere Bestellformel für Getränke." },
-      { "type": "quiz", "question": "Which is a natural drink order?", "answers": [ { "text": "Can I get a water, please?", "correct": true }, { "text": "I am a water, please.", "correct": false }, { "text": "Give water to me now go.", "correct": false } ], "explanation": "\"Can I get a..., please?\" klingt natürlich und höflich." },
-      { "type": "speaking", "text": "Can I get a beer, please?" },
-      { "type": "tip", "title": "Tipp", "text": "\"Make it two\" heißt \"Mach zwei draus\", wenn ihr beide das Gleiche wollt." }
+      {
+        "type": "lesson",
+        "title": "At the bar",
+        "emoji": "🍺",
+        "audio": "Can I get a beer, please?",
+        "target": "Can I get a beer, please?",
+        "native": "Kann ich ein Bier haben, bitte?"
+      },
+      {
+        "type": "explanation",
+        "word": "Can I get",
+        "meaning": "Kann ich haben",
+        "description": "\"Can I get...?\" ist eine lockere Bestellformel für Getränke."
+      },
+      {
+        "type": "quiz",
+        "question": "Which is a natural drink order?",
+        "answers": [
+          {
+            "text": "Can I get a water, please?",
+            "correct": true
+          },
+          {
+            "text": "I am a water, please.",
+            "correct": false
+          },
+          {
+            "text": "Give water to me now go.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Can I get a..., please?\" klingt natürlich und höflich."
+      },
+      {
+        "type": "speaking",
+        "text": "Can I get a beer, please?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Make it two\" heißt \"Mach zwei draus\", wenn ihr beide das Gleiche wollt."
+      }
     ]
   },
   {
@@ -728,11 +2393,48 @@
     "duration": 20,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Thirsty?", "emoji": "🥤", "english": "Would you like something to drink?", "german": "Möchtest du etwas trinken?", "audio": "Would you like something to drink?" },
-      { "type": "explanation", "word": "Would you like", "meaning": "Möchtest du", "description": "\"Would you like...?\" ist die höfliche Art, etwas anzubieten." },
-      { "type": "quiz", "question": "How can you accept the offer?", "answers": [ { "text": "Yes, please. A water would be great.", "correct": true }, { "text": "No thanks am water.", "correct": false }, { "text": "I drink you.", "correct": false } ], "explanation": "\"Yes, please\" plus dein Wunsch passt gut." },
-      { "type": "speaking", "text": "Would you like something to drink?" },
-      { "type": "tip", "title": "Tipp", "text": "Ablehnen höflich: \"No, thanks. I'm fine.\"" }
+      {
+        "type": "lesson",
+        "title": "Thirsty?",
+        "emoji": "🥤",
+        "audio": "Would you like something to drink?",
+        "target": "Would you like something to drink?",
+        "native": "Möchtest du etwas trinken?"
+      },
+      {
+        "type": "explanation",
+        "word": "Would you like",
+        "meaning": "Möchtest du",
+        "description": "\"Would you like...?\" ist die höfliche Art, etwas anzubieten."
+      },
+      {
+        "type": "quiz",
+        "question": "How can you accept the offer?",
+        "answers": [
+          {
+            "text": "Yes, please. A water would be great.",
+            "correct": true
+          },
+          {
+            "text": "No thanks am water.",
+            "correct": false
+          },
+          {
+            "text": "I drink you.",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Yes, please\" plus dein Wunsch passt gut."
+      },
+      {
+        "type": "speaking",
+        "text": "Would you like something to drink?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Ablehnen höflich: \"No, thanks. I'm fine.\""
+      }
     ]
   },
   {
@@ -744,11 +2446,48 @@
     "duration": 22,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Help!", "emoji": "🚨", "english": "Help! Please call an ambulance!", "german": "Hilfe! Bitte rufen Sie einen Krankenwagen!", "audio": "Help! Please call an ambulance!" },
-      { "type": "explanation", "word": "ambulance", "meaning": "Krankenwagen", "description": "\"Ambulance\" = Krankenwagen. \"Call\" = (an)rufen / holen." },
-      { "type": "quiz", "question": "\"Call an ambulance\" means:", "answers": [ { "text": "einen Krankenwagen rufen", "correct": true }, { "text": "die Polizei rufen", "correct": false }, { "text": "ein Taxi rufen", "correct": false } ], "explanation": "\"Ambulance\" ist der Krankenwagen." },
-      { "type": "speaking", "text": "Help! Please call an ambulance!" },
-      { "type": "tip", "title": "Tipp", "text": "Der Notruf ist 112 in Europa, 911 in den USA, 999 in Großbritannien." }
+      {
+        "type": "lesson",
+        "title": "Help!",
+        "emoji": "🚨",
+        "audio": "Help! Please call an ambulance!",
+        "target": "Help! Please call an ambulance!",
+        "native": "Hilfe! Bitte rufen Sie einen Krankenwagen!"
+      },
+      {
+        "type": "explanation",
+        "word": "ambulance",
+        "meaning": "Krankenwagen",
+        "description": "\"Ambulance\" = Krankenwagen. \"Call\" = (an)rufen / holen."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Call an ambulance\" means:",
+        "answers": [
+          {
+            "text": "einen Krankenwagen rufen",
+            "correct": true
+          },
+          {
+            "text": "die Polizei rufen",
+            "correct": false
+          },
+          {
+            "text": "ein Taxi rufen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Ambulance\" ist der Krankenwagen."
+      },
+      {
+        "type": "speaking",
+        "text": "Help! Please call an ambulance!"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Der Notruf ist 112 in Europa, 911 in den USA, 999 in Großbritannien."
+      }
     ]
   },
   {
@@ -760,11 +2499,48 @@
     "duration": 26,
     "xp": 14,
     "cards": [
-      { "type": "lesson", "title": "Stay calm", "emoji": "📞", "english": "There's been an accident on Main Street.", "german": "Es gab einen Unfall in der Main Street.", "audio": "There's been an accident on Main Street." },
-      { "type": "explanation", "word": "There's been", "meaning": "Es gab / Es ist passiert", "description": "\"There's been an accident\" meldet, dass etwas passiert ist." },
-      { "type": "quiz", "question": "\"There's been an accident\" means:", "answers": [ { "text": "Es ist ein Unfall passiert", "correct": true }, { "text": "Es wird ein Unfall geben", "correct": false }, { "text": "Es gibt keinen Unfall", "correct": false } ], "explanation": "Die Form beschreibt etwas, das gerade passiert ist." },
-      { "type": "speaking", "text": "There's been an accident on Main Street." },
-      { "type": "tip", "title": "Tipp", "text": "Der Disponent fragt oft \"What's your location?\" – wo du bist." }
+      {
+        "type": "lesson",
+        "title": "Stay calm",
+        "emoji": "📞",
+        "audio": "There's been an accident on Main Street.",
+        "target": "There's been an accident on Main Street.",
+        "native": "Es gab einen Unfall in der Main Street."
+      },
+      {
+        "type": "explanation",
+        "word": "There's been",
+        "meaning": "Es gab / Es ist passiert",
+        "description": "\"There's been an accident\" meldet, dass etwas passiert ist."
+      },
+      {
+        "type": "quiz",
+        "question": "\"There's been an accident\" means:",
+        "answers": [
+          {
+            "text": "Es ist ein Unfall passiert",
+            "correct": true
+          },
+          {
+            "text": "Es wird ein Unfall geben",
+            "correct": false
+          },
+          {
+            "text": "Es gibt keinen Unfall",
+            "correct": false
+          }
+        ],
+        "explanation": "Die Form beschreibt etwas, das gerade passiert ist."
+      },
+      {
+        "type": "speaking",
+        "text": "There's been an accident on Main Street."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Der Disponent fragt oft \"What's your location?\" – wo du bist."
+      }
     ]
   },
   {
@@ -776,11 +2552,48 @@
     "duration": 22,
     "xp": 10,
     "cards": [
-      { "type": "lesson", "title": "Every morning", "emoji": "🌅", "english": "I usually get up at seven and make coffee.", "german": "Normalerweise stehe ich um sieben auf und mache Kaffee.", "audio": "I usually get up at seven and make coffee." },
-      { "type": "explanation", "word": "get up", "meaning": "aufstehen", "description": "\"Get up\" = aus dem Bett aufstehen. \"Usually\" = normalerweise." },
-      { "type": "quiz", "question": "\"Get up\" means:", "answers": [ { "text": "aufstehen", "correct": true }, { "text": "hinsetzen", "correct": false }, { "text": "einschlafen", "correct": false } ], "explanation": "\"Get up\" heißt aufstehen." },
-      { "type": "speaking", "text": "I usually get up at seven and make coffee." },
-      { "type": "tip", "title": "Tipp", "text": "\"Wake up\" = aufwachen, \"get up\" = tatsächlich aufstehen." }
+      {
+        "type": "lesson",
+        "title": "Every morning",
+        "emoji": "🌅",
+        "audio": "I usually get up at seven and make coffee.",
+        "target": "I usually get up at seven and make coffee.",
+        "native": "Normalerweise stehe ich um sieben auf und mache Kaffee."
+      },
+      {
+        "type": "explanation",
+        "word": "get up",
+        "meaning": "aufstehen",
+        "description": "\"Get up\" = aus dem Bett aufstehen. \"Usually\" = normalerweise."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Get up\" means:",
+        "answers": [
+          {
+            "text": "aufstehen",
+            "correct": true
+          },
+          {
+            "text": "hinsetzen",
+            "correct": false
+          },
+          {
+            "text": "einschlafen",
+            "correct": false
+          }
+        ],
+        "explanation": "\"Get up\" heißt aufstehen."
+      },
+      {
+        "type": "speaking",
+        "text": "I usually get up at seven and make coffee."
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "\"Wake up\" = aufwachen, \"get up\" = tatsächlich aufstehen."
+      }
     ]
   },
   {
@@ -792,11 +2605,48 @@
     "duration": 24,
     "xp": 12,
     "cards": [
-      { "type": "lesson", "title": "Hi neighbour", "emoji": "🏡", "english": "Morning! Busy day ahead?", "german": "Morgen! Viel zu tun heute?", "audio": "Morning! Busy day ahead?" },
-      { "type": "explanation", "word": "day ahead", "meaning": "der Tag, der vor einem liegt", "description": "\"A busy day ahead\" = ein voller Tag steht bevor. Lockerer Smalltalk." },
-      { "type": "quiz", "question": "\"Busy day ahead?\" asks if:", "answers": [ { "text": "der Tag voll wird", "correct": true }, { "text": "der Tag vorbei ist", "correct": false }, { "text": "es dir schlecht geht", "correct": false } ], "explanation": "Es fragt, ob ein voller Tag bevorsteht." },
-      { "type": "speaking", "text": "Morning! Busy day ahead?" },
-      { "type": "tip", "title": "Fun Fact", "text": "\"Morning!\" ist die verkürzte, lockere Form von \"Good morning!\"." }
+      {
+        "type": "lesson",
+        "title": "Hi neighbour",
+        "emoji": "🏡",
+        "audio": "Morning! Busy day ahead?",
+        "target": "Morning! Busy day ahead?",
+        "native": "Morgen! Viel zu tun heute?"
+      },
+      {
+        "type": "explanation",
+        "word": "day ahead",
+        "meaning": "der Tag, der vor einem liegt",
+        "description": "\"A busy day ahead\" = ein voller Tag steht bevor. Lockerer Smalltalk."
+      },
+      {
+        "type": "quiz",
+        "question": "\"Busy day ahead?\" asks if:",
+        "answers": [
+          {
+            "text": "der Tag voll wird",
+            "correct": true
+          },
+          {
+            "text": "der Tag vorbei ist",
+            "correct": false
+          },
+          {
+            "text": "es dir schlecht geht",
+            "correct": false
+          }
+        ],
+        "explanation": "Es fragt, ob ein voller Tag bevorsteht."
+      },
+      {
+        "type": "speaking",
+        "text": "Morning! Busy day ahead?"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "\"Morning!\" ist die verkürzte, lockere Form von \"Good morning!\"."
+      }
     ]
   }
 ]

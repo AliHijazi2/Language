@@ -101,7 +101,13 @@ export function StoryLessonCard({ lesson, isReview, height, onComplete, onNext }
           {card.type === 'quiz' && (
             <QuizView key={step} card={card} onResult={handleQuizResult} />
           )}
-          {card.type === 'speaking' && <SpeakingView key={step} card={card} />}
+          {card.type === 'speaking' && (
+            <SpeakingView
+              key={step}
+              card={card}
+              lang={lesson.language === 'Arabic' ? 'arabic' : 'english'}
+            />
+          )}
           {card.type === 'tip' && <TipView card={card} />}
         </View>
 
@@ -126,8 +132,9 @@ function IntroView({ card, topic }: { card: IntroCard; topic: string }) {
     <View style={styles.center}>
       <Text style={styles.emoji}>{card.emoji}</Text>
       <Text style={styles.introTopic}>{topic}</Text>
-      <Text style={styles.english}>{card.english}</Text>
-      <Text style={styles.german}>{card.german}</Text>
+      <Text style={styles.english}>{card.target}</Text>
+      {card.latin ? <Text style={styles.latin}>{card.latin}</Text> : null}
+      <Text style={styles.german}>{card.native}</Text>
     </View>
   );
 }
@@ -136,6 +143,7 @@ function ExplanationView({ card }: { card: ExplanationCard }) {
   return (
     <View>
       <Text style={styles.explWord}>{card.word}</Text>
+      {card.latin ? <Text style={styles.explLatin}>{card.latin}</Text> : null}
       <View style={styles.meaningRow}>
         <Text style={styles.meaningLabel}>{t.lesson.meaning}:</Text>
         <Text style={styles.meaningText}>{card.meaning}</Text>
@@ -206,7 +214,7 @@ function QuizView({ card, onResult }: { card: QuizCard; onResult: (c: boolean) =
 
 type SpeakState = 'idle' | 'recording' | 'processing' | 'correct' | 'close' | 'error' | 'denied';
 
-function SpeakingView({ card }: { card: SpeakingCard }) {
+function SpeakingView({ card, lang }: { card: SpeakingCard; lang: string }) {
   const capable = useMemo(() => isWhisperCapable(), []);
   const [state, setState] = useState<SpeakState>('idle');
   const [heard, setHeard] = useState('');
@@ -227,7 +235,7 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
       setState('processing');
       try {
         const audio = await rec.stop();
-        const text = await transcribe(audio, 'english', setProgress);
+        const text = await transcribe(audio, lang, setProgress);
         setHeard(text);
         const score = scorePronunciation(card.text, [text]);
         setState(score >= PRONUNCIATION_THRESHOLD ? 'correct' : 'close');
@@ -254,6 +262,7 @@ function SpeakingView({ card }: { card: SpeakingCard }) {
     <View style={styles.center}>
       <Text style={styles.speakPrompt}>{t.lesson.speakPrompt}</Text>
       <Text style={styles.speakText}>{card.text}</Text>
+      {card.latin ? <Text style={styles.speakLatin}>{card.latin}</Text> : null}
 
       {capable ? (
         <>
@@ -402,6 +411,13 @@ const styles = StyleSheet.create({
     letterSpacing: -0.5,
     marginBottom: theme.spacing(1.5),
   },
+  latin: {
+    color: theme.colors.accent,
+    fontSize: theme.font.body,
+    fontWeight: '700',
+    textAlign: 'center',
+    marginBottom: theme.spacing(1),
+  },
   german: {
     color: theme.colors.textMuted,
     fontSize: theme.font.body,
@@ -414,6 +430,12 @@ const styles = StyleSheet.create({
     fontSize: theme.font.hero,
     fontWeight: '900',
     letterSpacing: -0.5,
+    marginBottom: theme.spacing(0.5),
+  },
+  explLatin: {
+    color: theme.colors.accent,
+    fontSize: theme.font.body,
+    fontWeight: '700',
     marginBottom: theme.spacing(1.5),
   },
   meaningRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginBottom: theme.spacing(2) },
@@ -463,6 +485,13 @@ const styles = StyleSheet.create({
     fontWeight: '900',
     textAlign: 'center',
     letterSpacing: -0.5,
+    marginBottom: theme.spacing(0.5),
+  },
+  speakLatin: {
+    color: theme.colors.accent,
+    fontSize: theme.font.body,
+    fontWeight: '700',
+    textAlign: 'center',
     marginBottom: theme.spacing(3),
   },
   micButton: {

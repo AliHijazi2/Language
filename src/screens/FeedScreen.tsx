@@ -14,7 +14,7 @@ import { StoryLessonCard } from '../components/StoryLessonCard';
 import { SettingsModal } from '../components/SettingsModal';
 import { GradientBackground } from '../components/ui/GradientBackground';
 import { getCourse } from '../data/courses';
-import { ALL_TOPICS, FEED_ITEMS } from '../data/lessons';
+import { feedItemsForCourse, topicsForCourse } from '../data/lessons';
 import { t } from '../i18n/de';
 import { buildFeed } from '../logic/feed';
 import { useAppState } from '../state/AppStateContext';
@@ -40,11 +40,15 @@ export function FeedScreen() {
   const level = state.level ?? 'beginner';
   const course = getCourse(state.courseId);
 
+  // Lektionen + Themen des gewählten Kurses.
+  const courseItems = useMemo(() => feedItemsForCourse(state.courseId), [state.courseId]);
+  const allTopics = useMemo(() => topicsForCourse(state.courseId), [state.courseId]);
+
   // Auf die ausgewählten Themen eingegrenzte Lektionen (leer = alle).
   const activeItems = useMemo(() => {
-    if (state.topics.length === 0) return FEED_ITEMS;
-    return FEED_ITEMS.filter((i) => state.topics.includes(i.topic));
-  }, [state.topics]);
+    if (state.topics.length === 0) return courseItems;
+    return courseItems.filter((i) => state.topics.includes(i.topic));
+  }, [courseItems, state.topics]);
 
   const [height, setHeight] = useState(0);
   const [items, setItems] = useState<FeedEntry[]>([]);
@@ -183,7 +187,7 @@ export function FeedScreen() {
         level={level}
         progress={state.progress}
         xp={state.xp}
-        allTopics={ALL_TOPICS}
+        allTopics={allTopics}
         selectedTopics={state.topics}
         onChangeLevel={handleChangeLevel}
         onToggleTopic={toggleTopic}

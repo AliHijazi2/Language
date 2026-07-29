@@ -30,9 +30,9 @@ export const COURSES: Course[] = [
   {
     id: 'de-ar',
     fromLanguage: 'Deutsch',
-    targetLanguage: 'Arabisch',
-    flag: '🇸🇦',
-    available: false,
+    targetLanguage: 'Arabisch (Libanesisch)',
+    flag: '🇱🇧',
+    available: true,
   },
 ];
 

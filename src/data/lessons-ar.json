@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Hallo sagen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Hallo!",
+        "emoji": "👋",
+        "target": "مرحبا",
+        "latin": "marhaba",
+        "native": "Hallo"
+      },
+      {
+        "type": "explanation",
+        "word": "مرحبا",
+        "latin": "marhaba",
+        "meaning": "Hallo",
+        "description": "Die häufigste Begrüßung – passt zu jeder Tageszeit."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „marhaba“?",
+        "answers": [
+          {
+            "text": "Hallo",
+            "correct": true
+          },
+          {
+            "text": "Danke",
+            "correct": false
+          },
+          {
+            "text": "Tschüss",
+            "correct": false
+          }
+        ],
+        "explanation": "„marhaba“ ist die normale Begrüßung „Hallo“."
+      },
+      {
+        "type": "speaking",
+        "text": "مرحبا",
+        "latin": "marhaba"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Als Antwort hört man oft „marhabtein“ – wörtlich „zwei Hallos“, also herzlicher zurück."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Wie geht's",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Wie geht's?",
+        "emoji": "🙂",
+        "target": "كيفك؟",
+        "latin": "kīfak? / kīfik?",
+        "native": "Wie geht's? (zu m / w)"
+      },
+      {
+        "type": "explanation",
+        "word": "كيفك",
+        "latin": "kīfak",
+        "meaning": "Wie geht es dir? (zu einem Mann)",
+        "description": "Zu einer Frau: „kīfik“. Antwort: „mnīḥ“ (gut)."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie fragst du einen Mann „Wie geht's?“",
+        "answers": [
+          {
+            "text": "kīfak",
+            "correct": true
+          },
+          {
+            "text": "kīfik",
+            "correct": false
+          },
+          {
+            "text": "shukran",
+            "correct": false
+          }
+        ],
+        "explanation": "Zu einem Mann: „kīfak“, zu einer Frau: „kīfik“."
+      },
+      {
+        "type": "speaking",
+        "text": "كيفك؟",
+        "latin": "kīfak?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„mnīḥ“ = gut (m), „mnīḥa“ = gut (w). Oft ergänzt: „el-ḥamdilla“ (Gott sei Dank)."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Danke",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Danke!",
+        "emoji": "🙏",
+        "target": "شكراً",
+        "latin": "shukran",
+        "native": "Danke"
+      },
+      {
+        "type": "explanation",
+        "word": "شكراً",
+        "latin": "shukran",
+        "meaning": "Danke",
+        "description": "Sehr gebräuchlich. „Danke dir“ = „btishkrak“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „shukran“?",
+        "answers": [
+          {
+            "text": "Danke",
+            "correct": true
+          },
+          {
+            "text": "Bitte",
+            "correct": false
+          },
+          {
+            "text": "Ja",
+            "correct": false
+          }
+        ],
+        "explanation": "„shukran“ heißt Danke."
+      },
+      {
+        "type": "speaking",
+        "text": "شكراً",
+        "latin": "shukran"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Antwort auf Danke: „ʿafwan“ oder „tikram“ (gern geschehen)."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Höflich bitten",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Entschuldigung …",
+        "emoji": "🙋",
+        "target": "لو سمحت",
+        "latin": "law samaḥt",
+        "native": "Bitte / Entschuldigung"
+      },
+      {
+        "type": "explanation",
+        "word": "لو سمحت",
+        "latin": "law samaḥt",
+        "meaning": "wenn du erlaubst / bitte",
+        "description": "Um jemanden anzusprechen oder höflich zu bitten. Zu einer Frau: „law samaḥti“."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie erregst du höflich Aufmerksamkeit?",
+        "answers": [
+          {
+            "text": "law samaḥt",
+            "correct": true
+          },
+          {
+            "text": "yalla",
+            "correct": false
+          },
+          {
+            "text": "laʾ",
+            "correct": false
+          }
+        ],
+        "explanation": "„law samaḥt“ ist die höfliche Ansprache."
+      },
+      {
+        "type": "speaking",
+        "text": "لو سمحت",
+        "latin": "law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Zu einer Frau sagst du „law samaḥti“ mit „-i“ am Ende."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Ja und Nein",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ja / Nein",
+        "emoji": "✅",
+        "target": "إي / لأ",
+        "latin": "ē / laʾ",
+        "native": "Ja / Nein"
+      },
+      {
+        "type": "explanation",
+        "word": "لأ",
+        "latin": "laʾ",
+        "meaning": "Nein",
+        "description": "„Ja“ = „ē“ oder „aywa“. „laʾ“ = Nein."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „laʾ“?",
+        "answers": [
+          {
+            "text": "Nein",
+            "correct": true
+          },
+          {
+            "text": "Ja",
+            "correct": false
+          },
+          {
+            "text": "Vielleicht",
+            "correct": false
+          }
+        ],
+        "explanation": "„laʾ“ heißt Nein."
+      },
+      {
+        "type": "speaking",
+        "text": "لأ",
+        "latin": "laʾ"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„akīd“ = klar/sicher, „yemken“ = vielleicht."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Guten Morgen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Guten Morgen",
+        "emoji": "🌅",
+        "target": "صباح الخير",
+        "latin": "ṣabāḥ el-khēr",
+        "native": "Guten Morgen"
+      },
+      {
+        "type": "explanation",
+        "word": "صباح الخير",
+        "latin": "ṣabāḥ el-khēr",
+        "meaning": "Guten Morgen",
+        "description": "Antwort: „ṣabāḥ en-nūr“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was antwortest du auf „ṣabāḥ el-khēr“?",
+        "answers": [
+          {
+            "text": "ṣabāḥ en-nūr",
+            "correct": true
+          },
+          {
+            "text": "maʿ es-salāme",
+            "correct": false
+          },
+          {
+            "text": "yalla",
+            "correct": false
+          }
+        ],
+        "explanation": "Man antwortet mit „ṣabāḥ en-nūr“."
+      },
+      {
+        "type": "speaking",
+        "text": "صباح الخير",
+        "latin": "ṣabāḥ el-khēr"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "Abends: „masa el-khēr“ = Guten Abend."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Greetings",
+    "topic": "Tschüss",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Tschüss",
+        "emoji": "👋",
+        "target": "مع السلامة",
+        "latin": "maʿ es-salāme",
+        "native": "Auf Wiedersehen"
+      },
+      {
+        "type": "explanation",
+        "word": "مع السلامة",
+        "latin": "maʿ es-salāme",
+        "meaning": "Auf Wiedersehen",
+        "description": "Wörtlich „mit Frieden“. Locker sagt man auch „baibai“."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie verabschiedest du dich?",
+        "answers": [
+          {
+            "text": "maʿ es-salāme",
+            "correct": true
+          },
+          {
+            "text": "marhaba",
+            "correct": false
+          },
+          {
+            "text": "shukran",
+            "correct": false
+          }
+        ],
+        "explanation": "„maʿ es-salāme“ heißt Auf Wiedersehen."
+      },
+      {
+        "type": "speaking",
+        "text": "مع السلامة",
+        "latin": "maʿ es-salāme"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„bshūfak“ = man sieht sich / bis bald."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Greetings",
+    "topic": "Sich vorstellen",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ich heiße …",
+        "emoji": "🤝",
+        "target": "اسمي سارة",
+        "latin": "ismi Sara",
+        "native": "Ich heiße Sara"
+      },
+      {
+        "type": "explanation",
+        "word": "اسمي",
+        "latin": "ismi",
+        "meaning": "mein Name",
+        "description": "„Wie heißt du?“ (zu einem Mann) = „shu ismak?“"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie sagst du „Ich heiße Sara“?",
+        "answers": [
+          {
+            "text": "ismi Sara",
+            "correct": true
+          },
+          {
+            "text": "shu ismak",
+            "correct": false
+          },
+          {
+            "text": "ana mnīḥ",
+            "correct": false
+          }
+        ],
+        "explanation": "„ismi …“ = mein Name ist …"
+      },
+      {
+        "type": "speaking",
+        "text": "اسمي سارة",
+        "latin": "ismi Sara"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„tsharrafna“ = sehr erfreut / schön, dich kennenzulernen."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Café",
+    "topic": "Kaffee bestellen",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Im Café",
+        "emoji": "☕",
+        "target": "بدي قهوة",
+        "latin": "biddi ʾahwe",
+        "native": "Ich möchte einen Kaffee"
+      },
+      {
+        "type": "explanation",
+        "word": "بدي",
+        "latin": "biddi",
+        "meaning": "ich möchte / ich will",
+        "description": "„biddi + Sache“ für Wünsche. „ʾahwe“ = Kaffee."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „biddi“?",
+        "answers": [
+          {
+            "text": "Ich möchte",
+            "correct": true
+          },
+          {
+            "text": "Ich habe",
+            "correct": false
+          },
+          {
+            "text": "Wo ist",
+            "correct": false
+          }
+        ],
+        "explanation": "„biddi“ heißt „ich möchte / ich will“."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي قهوة لو سمحت",
+        "latin": "biddi ʾahwe law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "Das „q“ (ق) wird im Libanesischen oft wie ein Kehl-Knacklaut „ʾ“ gesprochen: „ʾahwe“."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Drinks",
+    "topic": "Wasser",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Wasser",
+        "emoji": "💧",
+        "target": "بدي مي",
+        "latin": "biddi mayy",
+        "native": "Ich möchte Wasser"
+      },
+      {
+        "type": "explanation",
+        "word": "مي",
+        "latin": "mayy",
+        "meaning": "Wasser",
+        "description": "Im Hocharabischen „māʾ“, im Libanesischen „mayy“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mayy“?",
+        "answers": [
+          {
+            "text": "Wasser",
+            "correct": true
+          },
+          {
+            "text": "Brot",
+            "correct": false
+          },
+          {
+            "text": "Tee",
+            "correct": false
+          }
+        ],
+        "explanation": "„mayy“ heißt Wasser."
+      },
+      {
+        "type": "speaking",
+        "text": "بدي مي",
+        "latin": "biddi mayy"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„shāy“ = Tee, „ʿaṣīr“ = Saft."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Restaurant",
+    "topic": "Die Rechnung",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Die Rechnung",
+        "emoji": "🧾",
+        "target": "الحساب لو سمحت",
+        "latin": "el-ḥsāb law samaḥt",
+        "native": "Die Rechnung, bitte"
+      },
+      {
+        "type": "explanation",
+        "word": "الحساب",
+        "latin": "el-ḥsāb",
+        "meaning": "die Rechnung",
+        "description": "Am Ende im Restaurant."
+      },
+      {
+        "type": "quiz",
+        "question": "Wie bittest du um die Rechnung?",
+        "answers": [
+          {
+            "text": "el-ḥsāb law samaḥt",
+            "correct": true
+          },
+          {
+            "text": "biddi mayy",
+            "correct": false
+          },
+          {
+            "text": "wēn el-ḥammēm",
+            "correct": false
+          }
+        ],
+        "explanation": "„el-ḥsāb law samaḥt“ = die Rechnung, bitte."
+      },
+      {
+        "type": "speaking",
+        "text": "الحساب لو سمحت",
+        "latin": "el-ḥsāb law samaḥt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ṣaḥtēn“ sagt man wie „guten Appetit“."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Food",
+    "topic": "Lecker",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Sehr lecker",
+        "emoji": "😋",
+        "target": "كتير طيب",
+        "latin": "ktīr ṭayyeb",
+        "native": "Sehr lecker"
+      },
+      {
+        "type": "explanation",
+        "word": "طيب",
+        "latin": "ṭayyeb",
+        "meaning": "lecker / gut",
+        "description": "„ktīr“ = sehr. „ktīr ṭayyeb“ = sehr lecker."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ktīr“?",
+        "answers": [
+          {
+            "text": "sehr",
+            "correct": true
+          },
+          {
+            "text": "wenig",
+            "correct": false
+          },
+          {
+            "text": "kalt",
+            "correct": false
+          }
+        ],
+        "explanation": "„ktīr“ heißt „sehr / viel“."
+      },
+      {
+        "type": "speaking",
+        "text": "كتير طيب",
+        "latin": "ktīr ṭayyeb"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ṭayyeb“ heißt auch einfach „okay / gut“ als Zustimmung."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Shopping",
+    "topic": "Wie viel kostet das",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Wie viel?",
+        "emoji": "🛍️",
+        "target": "قديش حقو؟",
+        "latin": "ʾaddēsh ḥaʾʾo?",
+        "native": "Wie viel kostet es?"
+      },
+      {
+        "type": "explanation",
+        "word": "قديش",
+        "latin": "ʾaddēsh",
+        "meaning": "wie viel",
+        "description": "„ʾaddēsh ḥaʾʾo?“ = wie viel kostet es?"
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ʾaddēsh“?",
+        "answers": [
+          {
+            "text": "Wie viel",
+            "correct": true
+          },
+          {
+            "text": "Wo",
+            "correct": false
+          },
+          {
+            "text": "Wann",
+            "correct": false
+          }
+        ],
+        "explanation": "„ʾaddēsh“ heißt „wie viel“."
+      },
+      {
+        "type": "speaking",
+        "text": "قديش حقو؟",
+        "latin": "ʾaddēsh ḥaʾʾo?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„ḥaʾʾo“ = sein Preis. „hayda ghāli“ = das ist teuer."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Shopping",
+    "topic": "Teuer und billig",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Teuer",
+        "emoji": "💸",
+        "target": "هيدا غالي",
+        "latin": "hayda ghāli",
+        "native": "Das ist teuer"
+      },
+      {
+        "type": "explanation",
+        "word": "غالي",
+        "latin": "ghāli",
+        "meaning": "teuer",
+        "description": "Gegenteil: „rakhīṣ“ (billig)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „ghāli“?",
+        "answers": [
+          {
+            "text": "teuer",
+            "correct": true
+          },
+          {
+            "text": "billig",
+            "correct": false
+          },
+          {
+            "text": "schön",
+            "correct": false
+          }
+        ],
+        "explanation": "„ghāli“ heißt teuer."
+      },
+      {
+        "type": "speaking",
+        "text": "هيدا غالي",
+        "latin": "hayda ghāli"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„hayda“ = das/dieser (m), „haydi“ = diese (w)."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Taxi",
+    "topic": "Zum Ziel fahren",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Zum Flughafen",
+        "emoji": "🚕",
+        "target": "خدني ع المطار",
+        "latin": "khudni ʿa l-maṭār",
+        "native": "Bring mich zum Flughafen"
+      },
+      {
+        "type": "explanation",
+        "word": "خدني",
+        "latin": "khudni",
+        "meaning": "bring/nimm mich",
+        "description": "„ʿa“ = zu/nach. „khudni ʿa …“ = bring mich nach …"
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „khudni ʿa …“?",
+        "answers": [
+          {
+            "text": "Bring mich zu …",
+            "correct": true
+          },
+          {
+            "text": "Wo ist …",
+            "correct": false
+          },
+          {
+            "text": "Ich will …",
+            "correct": false
+          }
+        ],
+        "explanation": "„khudni ʿa …“ = bring mich zu …"
+      },
+      {
+        "type": "speaking",
+        "text": "خدني ع المطار",
+        "latin": "khudni ʿa l-maṭār"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„el-maṭār“ = der Flughafen, „el-beit“ = das Zuhause."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Directions",
+    "topic": "Wo ist …?",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Wo ist …?",
+        "emoji": "🗺️",
+        "target": "وين الحمام؟",
+        "latin": "wēn el-ḥammēm?",
+        "native": "Wo ist die Toilette?"
+      },
+      {
+        "type": "explanation",
+        "word": "وين",
+        "latin": "wēn",
+        "meaning": "wo",
+        "description": "„wēn el-ḥammēm?“ = wo ist die Toilette?"
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „wēn“?",
+        "answers": [
+          {
+            "text": "Wo",
+            "correct": true
+          },
+          {
+            "text": "Wann",
+            "correct": false
+          },
+          {
+            "text": "Wer",
+            "correct": false
+          }
+        ],
+        "explanation": "„wēn“ heißt „wo“."
+      },
+      {
+        "type": "speaking",
+        "text": "وين الحمام؟",
+        "latin": "wēn el-ḥammēm?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„yamīn“ = rechts, „shmēl“ = links, „dughri“ = geradeaus."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Numbers",
+    "topic": "Zahlen 1–3",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Eins, zwei, drei",
+        "emoji": "🔢",
+        "target": "واحد، تنين، تلاتة",
+        "latin": "wāḥad, tnēn, tlēte",
+        "native": "eins, zwei, drei"
+      },
+      {
+        "type": "explanation",
+        "word": "تلاتة",
+        "latin": "tlēte",
+        "meaning": "drei",
+        "description": "wāḥad (1), tnēn (2), tlēte (3)."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „tnēn“?",
+        "answers": [
+          {
+            "text": "zwei",
+            "correct": true
+          },
+          {
+            "text": "eins",
+            "correct": false
+          },
+          {
+            "text": "drei",
+            "correct": false
+          }
+        ],
+        "explanation": "„tnēn“ heißt zwei."
+      },
+      {
+        "type": "speaking",
+        "text": "واحد، تنين، تلاتة",
+        "latin": "wāḥad, tnēn, tlēte"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„arbʿa“ = vier, „khamse“ = fünf."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "language": "Arabic",
+    "level": "A2",
+    "category": "Time",
+    "topic": "Wie spät ist es",
+    "duration": 25,
+    "xp": 12,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Wie spät?",
+        "emoji": "⏰",
+        "target": "قديش الساعة؟",
+        "latin": "ʾaddēsh es-sēʿa?",
+        "native": "Wie spät ist es?"
+      },
+      {
+        "type": "explanation",
+        "word": "الساعة",
+        "latin": "es-sēʿa",
+        "meaning": "die Uhr / die Stunde",
+        "description": "„ʾaddēsh es-sēʿa?“ = wie viel Uhr ist es?"
+      },
+      {
+        "type": "quiz",
+        "question": "Wie fragst du nach der Uhrzeit?",
+        "answers": [
+          {
+            "text": "ʾaddēsh es-sēʿa",
+            "correct": true
+          },
+          {
+            "text": "wēn es-sēʿa",
+            "correct": false
+          },
+          {
+            "text": "shu es-sēʿa",
+            "correct": false
+          }
+        ],
+        "explanation": "„ʾaddēsh es-sēʿa?“ fragt nach der Uhrzeit."
+      },
+      {
+        "type": "speaking",
+        "text": "قديش الساعة؟",
+        "latin": "ʾaddēsh es-sēʿa?"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„hallaʾ“ = jetzt, „baʿdēn“ = später."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Daily Life",
+    "topic": "Ich verstehe nicht",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Ich verstehe nicht",
+        "emoji": "🤔",
+        "target": "ما فهمت",
+        "latin": "mā fhimt",
+        "native": "Ich habe nicht verstanden"
+      },
+      {
+        "type": "explanation",
+        "word": "ما",
+        "latin": "mā",
+        "meaning": "nicht",
+        "description": "„mā“ verneint. „fhimt“ = ich habe verstanden → „mā fhimt“ = nicht verstanden."
+      },
+      {
+        "type": "quiz",
+        "question": "Was heißt „mā fhimt“?",
+        "answers": [
+          {
+            "text": "Ich habe nicht verstanden",
+            "correct": true
+          },
+          {
+            "text": "Ich weiß",
+            "correct": false
+          },
+          {
+            "text": "Ich bin müde",
+            "correct": false
+          }
+        ],
+        "explanation": "„mā fhimt“ = ich habe nicht verstanden."
+      },
+      {
+        "type": "speaking",
+        "text": "ما فهمت",
+        "latin": "mā fhimt"
+      },
+      {
+        "type": "tip",
+        "title": "Tipp",
+        "text": "„fīk tʿīd?“ = kannst du wiederholen? (zu einem Mann)"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "language": "Arabic",
+    "level": "A1",
+    "category": "Friends",
+    "topic": "Los, komm!",
+    "duration": 25,
+    "xp": 10,
+    "cards": [
+      {
+        "type": "lesson",
+        "title": "Los!",
+        "emoji": "🚀",
+        "target": "يلا!",
+        "latin": "yalla!",
+        "native": "Los! / Komm! / Auf geht's"
+      },
+      {
+        "type": "explanation",
+        "word": "يلا",
+        "latin": "yalla",
+        "meaning": "los / komm schon",
+        "description": "Extrem häufig – antreiben, aufbrechen, „na dann“."
+      },
+      {
+        "type": "quiz",
+        "question": "Was bedeutet „yalla“?",
+        "answers": [
+          {
+            "text": "Los / Komm",
+            "correct": true
+          },
+          {
+            "text": "Danke",
+            "correct": false
+          },
+          {
+            "text": "Tschüss",
+            "correct": false
+          }
+        ],
+        "explanation": "„yalla“ heißt „los / komm schon“."
+      },
+      {
+        "type": "speaking",
+        "text": "يلا!",
+        "latin": "yalla!"
+      },
+      {
+        "type": "tip",
+        "title": "Fun Fact",
+        "text": "„yalla bīna“ = „los, lass uns gehen“ – hört man ständig im Libanon."
+      }
+    ]
+  }
+]
